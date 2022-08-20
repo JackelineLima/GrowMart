@@ -55,6 +55,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		37BF25DA28B1339C00E0066A /* SuportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				37EB507F28B11CD100185E83 /* AppDelegate.swift */,
+				37EB508128B11CD100185E83 /* SceneDelegate.swift */,
+			);
+			path = SuportedFiles;
+			sourceTree = "<group>";
+		};
 		37EB507328B11CD100185E83 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +85,7 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
-				37EB507F28B11CD100185E83 /* AppDelegate.swift */,
-				37EB508128B11CD100185E83 /* SceneDelegate.swift */,
+				37BF25DA28B1339C00E0066A /* SuportedFiles */,
 				37EB508328B11CD100185E83 /* LoginViewController.swift */,
 				37EB508828B11CD100185E83 /* Assets.xcassets */,
 				37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */,
