@@ -30,15 +30,13 @@ class LoginView: UIView {
     private lazy var facebookButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("ENTRAR COM FACEBOOK", for: .normal)
-        button.backgroundColor = .blue
+        button.configuration = setButtonConfiguration(backgroundColor: .blue, title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"))
         return button
     }()
     private lazy var googleButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("ENTRAR COM GOOGLE", for: .normal)
-        button.backgroundColor = .red
+        button.configuration = setButtonConfiguration(backgroundColor: .red, title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-google"))
         return button
     }()
 
@@ -48,6 +46,18 @@ class LoginView: UIView {
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    private func setButtonConfiguration(backgroundColor: UIColor,
+                                title: String,
+                                icon: UIImage?) -> UIButton.Configuration {
+        
+        var configuration = UIButton.Configuration.filled()
+        configuration.title = title
+        configuration.image = icon
+        configuration.titlePadding = 10
+        configuration.imagePadding = 30
+        configuration.background.backgroundColor = backgroundColor
+        return configuration
     }
 }
 
@@ -62,8 +72,8 @@ extension LoginView: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 64),
-            stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -64),
+            stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 56),
+            stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -56),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
