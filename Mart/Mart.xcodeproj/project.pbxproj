@@ -11,6 +11,7 @@
 		378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4CE28B123D20058B5F2 /* ViewCodable.swift */; };
 		378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */; };
 		378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */; };
+		37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF25DB28B1349E00E0066A /* LoginView.swift */; };
 		37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB507F28B11CD100185E83 /* AppDelegate.swift */; };
 		37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB508128B11CD100185E83 /* SceneDelegate.swift */; };
 		37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB508328B11CD100185E83 /* LoginViewController.swift */; };
@@ -22,6 +23,7 @@
 		378FE4CE28B123D20058B5F2 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		37BF25DB28B1349E00E0066A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Mart/LoginView.swift; sourceTree = SOURCE_ROOT; };
 		37EB507C28B11CD100185E83 /* Mart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EB507F28B11CD100185E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EB508128B11CD100185E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,25 @@
 			path = SuportedFiles;
 			sourceTree = "<group>";
 		};
+		37BF25DD28B1356E00E0066A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37BF25DB28B1349E00E0066A /* LoginView.swift */,
+				37EB508328B11CD100185E83 /* LoginViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		37BF25DE28B1358000E0066A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */,
+				378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */,
+				378FE4CE28B123D20058B5F2 /* ViewCodable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		37EB507328B11CD100185E83 = {
 			isa = PBXGroup;
 			children = (
@@ -85,14 +106,12 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				37BF25DE28B1358000E0066A /* Utils */,
 				37BF25DA28B1339C00E0066A /* SuportedFiles */,
-				37EB508328B11CD100185E83 /* LoginViewController.swift */,
+				37BF25DD28B1356E00E0066A /* Views */,
 				37EB508828B11CD100185E83 /* Assets.xcassets */,
 				37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */,
 				37EB508D28B11CD100185E83 /* Info.plist */,
-				378FE4CE28B123D20058B5F2 /* ViewCodable.swift */,
-				378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */,
-				378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */,
 			);
 			path = Mart;
 			sourceTree = "<group>";
@@ -220,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
+				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
