@@ -8,6 +8,4 @@
 import Foundation
 import UIKit
 
-extension UIStackView {
-    
-}
+extension UIStackView {}

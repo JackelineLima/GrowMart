@@ -12,25 +12,21 @@ class LoginViewController: UIViewController {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-//        stackView.distribution = .fill
         stackView.spacing = 27
         return stackView
     }()
-    
     private lazy var logoImageView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "logo")
         return view
     }()
-    
     private lazy var bagsImageView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "bags")
         return view
     }()
-    
     private lazy var facebookButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +34,6 @@ class LoginViewController: UIViewController {
         button.backgroundColor = .blue
         return button
     }()
-    
     private lazy var googleButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
