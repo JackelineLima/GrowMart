@@ -10,35 +10,30 @@ import UIKit
 class LoginView: UIView {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 27
         return stackView
     }()
     private lazy var logoImageView: UIImageView = {
         let view = UIImageView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "logo")
         view.contentMode = .scaleAspectFit
         return view
     }()
     private lazy var bagsImageView: UIImageView = {
         let view = UIImageView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "bags")
         view.contentMode = .scaleAspectFit
         return view
     }()
     private lazy var facebookButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0x4267B2), title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"), font: .f12PrimarySemiBold)
         button.layer.cornerRadius = 8
         return button
     }()
     private lazy var googleButton: UIButton = {
         let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0xDB4437), title: "ENTRAR COM GOOGLE", icon: UIImage(named: "icon-google"), font: .f12PrimarySemiBold)
         button.layer.cornerRadius = 8
         return button
@@ -80,6 +75,8 @@ extension LoginView: ViewCodable {
         ])
     }
     func setupAdditionalConfiguration() {
+        subviews.forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
+        stackView.subviews.forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
         backgroundColor = .white
         stackView.setCustomSpacing(16, after: facebookButton)
     }
