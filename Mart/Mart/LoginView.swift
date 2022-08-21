@@ -19,24 +19,28 @@ class LoginView: UIView {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "logo")
+        view.contentMode = .scaleAspectFit
         return view
     }()
     private lazy var bagsImageView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "bags")
+        view.contentMode = .scaleAspectFit
         return view
     }()
     private lazy var facebookButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.configuration = setButtonConfiguration(backgroundColor: .blue, title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"))
+        button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0x4267B2), title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"), font: .f12PrimarySemiBold)
+        button.layer.cornerRadius = 8
         return button
     }()
     private lazy var googleButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.configuration = setButtonConfiguration(backgroundColor: .red, title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-google"))
+        button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0xDB4437), title: "ENTRAR COM GOOGLE", icon: UIImage(named: "icon-google"), font: .f12PrimarySemiBold)
+        button.layer.cornerRadius = 8
         return button
     }()
 
@@ -47,12 +51,9 @@ class LoginView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private func setButtonConfiguration(backgroundColor: UIColor,
-                                title: String,
-                                icon: UIImage?) -> UIButton.Configuration {
-        
+    private func setButtonConfiguration(backgroundColor: UIColor, title: String, icon: UIImage?, font: UIFontStyle ) -> UIButton.Configuration {
         var configuration = UIButton.Configuration.filled()
-        configuration.title = title
+        configuration.attributedTitle = AttributedString(title, attributes: .init([NSAttributedString.Key.font: UIFontStyle.customFont(name: font)]))
         configuration.image = icon
         configuration.titlePadding = 10
         configuration.imagePadding = 30
@@ -72,9 +73,10 @@ extension LoginView: ViewCodable {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 56),
-            stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -56),
-            stackView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.75),
+            facebookButton.heightAnchor.constraint(equalToConstant: 40),
+            googleButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     func setupAdditionalConfiguration() {
