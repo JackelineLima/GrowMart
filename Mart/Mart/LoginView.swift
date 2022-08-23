@@ -7,7 +7,13 @@
 
 import UIKit
 
-class LoginView: UIView {
+protocol LoginViewDelegate: AnyObject {
+    func continueButtonFacebook()
+    func continueButtonGoogle()
+}
+
+final class LoginView: UIView {
+    weak var delegate: LoginViewDelegate?
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -30,12 +36,14 @@ class LoginView: UIView {
         let button = UIButton()
         button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0x4267B2), title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"), font: .f12PrimarySemiBold)
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(continueButtonFacebook), for: .touchUpInside)
         return button
     }()
     private lazy var googleButton: UIButton = {
         let button = UIButton()
         button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0xDB4437), title: "ENTRAR COM GOOGLE", icon: UIImage(named: "icon-google"), font: .f12PrimarySemiBold)
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(continueButtonGoogle), for: .touchUpInside)
         return button
     }()
 
@@ -54,6 +62,14 @@ class LoginView: UIView {
         configuration.imagePadding = 30
         configuration.background.backgroundColor = backgroundColor
         return configuration
+    }
+    @objc
+    private func continueButtonFacebook() {
+        delegate?.continueButtonFacebook()
+    }
+    @objc
+    private func continueButtonGoogle() {
+        delegate?.continueButtonGoogle()
     }
 }
 

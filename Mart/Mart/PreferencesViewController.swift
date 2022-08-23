@@ -8,8 +8,15 @@
 import UIKit
 
 class PreferencesViewController: UIViewController {
+    
+    private let preferencesView = PreferencesView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func loadView() {
+        super.loadView()
+        view = preferencesView
     }
 }
