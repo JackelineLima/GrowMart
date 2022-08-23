@@ -92,6 +92,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		37B9C30028B548AE00134380 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
 		37BF25DA28B1339C00E0066A /* SuportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				379A1CC928B27F880090E451 /* Login */,
+				37B9C30028B548AE00134380 /* Preferences */,
 			);
 			name = Views;
 			sourceTree = "<group>";
