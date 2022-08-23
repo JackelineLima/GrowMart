@@ -11,6 +11,14 @@
 		378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4CE28B123D20058B5F2 /* ViewCodable.swift */; };
 		378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */; };
 		378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */; };
+		379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A1CC728B27E920090E451 /* UIColor+Extensions.swift */; };
+		37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF25DB28B1349E00E0066A /* LoginView.swift */; };
+		37DDF2D328B286B5003205DE /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */; };
+		37DDF2D528B286D1003205DE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */; };
+		37DDF2D728B28707003205DE /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D628B28707003205DE /* Nunito-Medium.ttf */; };
+		37DDF2D928B28716003205DE /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D828B28716003205DE /* Nunito-Regular.ttf */; };
+		37DDF2DB28B28750003205DE /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2DA28B28750003205DE /* Nunito-Bold.ttf */; };
+		37DDF2DD28B287DF003205DE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF2DC28B287DF003205DE /* UIFont.swift */; };
 		37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB507F28B11CD100185E83 /* AppDelegate.swift */; };
 		37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB508128B11CD100185E83 /* SceneDelegate.swift */; };
 		37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB508328B11CD100185E83 /* LoginViewController.swift */; };
@@ -22,6 +30,14 @@
 		378FE4CE28B123D20058B5F2 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		379A1CC728B27E920090E451 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		37BF25DB28B1349E00E0066A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Mart/LoginView.swift; sourceTree = SOURCE_ROOT; };
+		37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		37DDF2D628B28707003205DE /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		37DDF2D828B28716003205DE /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		37DDF2DA28B28750003205DE /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		37DDF2DC28B287DF003205DE /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		37EB507C28B11CD100185E83 /* Mart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EB507F28B11CD100185E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EB508128B11CD100185E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +71,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		379A1CC928B27F880090E451 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				37EB508328B11CD100185E83 /* LoginViewController.swift */,
+				37BF25DB28B1349E00E0066A /* LoginView.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		379A1CCA28B282B30090E451 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */,
+				37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */,
+				37DDF2D628B28707003205DE /* Nunito-Medium.ttf */,
+				37DDF2D828B28716003205DE /* Nunito-Regular.ttf */,
+				37DDF2DA28B28750003205DE /* Nunito-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		37BF25DA28B1339C00E0066A /* SuportedFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +99,26 @@
 				37EB508128B11CD100185E83 /* SceneDelegate.swift */,
 			);
 			path = SuportedFiles;
+			sourceTree = "<group>";
+		};
+		37BF25DD28B1356E00E0066A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				379A1CC928B27F880090E451 /* Login */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		37BF25DE28B1358000E0066A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */,
+				378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */,
+				378FE4CE28B123D20058B5F2 /* ViewCodable.swift */,
+				379A1CC728B27E920090E451 /* UIColor+Extensions.swift */,
+				37DDF2DC28B287DF003205DE /* UIFont.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		37EB507328B11CD100185E83 = {
@@ -85,14 +142,13 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				379A1CCA28B282B30090E451 /* Fonts */,
+				37BF25DE28B1358000E0066A /* Utils */,
 				37BF25DA28B1339C00E0066A /* SuportedFiles */,
-				37EB508328B11CD100185E83 /* LoginViewController.swift */,
+				37BF25DD28B1356E00E0066A /* Views */,
 				37EB508828B11CD100185E83 /* Assets.xcassets */,
 				37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */,
 				37EB508D28B11CD100185E83 /* Info.plist */,
-				378FE4CE28B123D20058B5F2 /* ViewCodable.swift */,
-				378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */,
-				378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */,
 			);
 			path = Mart;
 			sourceTree = "<group>";
@@ -116,7 +172,7 @@
 				37EB507828B11CD100185E83 /* Sources */,
 				37EB507928B11CD100185E83 /* Frameworks */,
 				37EB507A28B11CD100185E83 /* Resources */,
-				37EB509428B11E1400185E83 /* ShellScript */,
+				37EB509428B11E1400185E83 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -165,15 +221,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DDF2DB28B28750003205DE /* Nunito-Bold.ttf in Resources */,
+				37DDF2D928B28716003205DE /* Nunito-Regular.ttf in Resources */,
+				37DDF2D328B286B5003205DE /* Nunito-SemiBold.ttf in Resources */,
 				37EB508C28B11CD100185E83 /* LaunchScreen.storyboard in Resources */,
 				37EB508928B11CD100185E83 /* Assets.xcassets in Resources */,
+				37DDF2D528B286D1003205DE /* Nunito-ExtraBold.ttf in Resources */,
+				37DDF2D728B28707003205DE /* Nunito-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		37EB509428B11E1400185E83 /* ShellScript */ = {
+		37EB509428B11E1400185E83 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,6 +243,7 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -220,11 +282,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
+				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
+				379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
+				37DDF2DD28B287DF003205DE /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
