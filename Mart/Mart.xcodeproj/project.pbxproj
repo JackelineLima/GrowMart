@@ -12,6 +12,10 @@
 		378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */; };
 		378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */; };
 		379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A1CC728B27E920090E451 /* UIColor+Extensions.swift */; };
+		37B9C30228B5492F00134380 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30128B5492F00134380 /* PreferencesViewController.swift */; };
+		37B9C30428B54ABD00134380 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30328B54ABD00134380 /* PreferencesView.swift */; };
+		37B9C30628B54B4D00134380 /* PreferencesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30528B54B4D00134380 /* PreferencesCoordinator.swift */; };
+		37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30728B54D7100134380 /* LoginCoordinator.swift */; };
 		37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF25DB28B1349E00E0066A /* LoginView.swift */; };
 		37DDF2D328B286B5003205DE /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */; };
 		37DDF2D528B286D1003205DE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */; };
@@ -31,6 +35,10 @@
 		378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		379A1CC728B27E920090E451 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		37B9C30128B5492F00134380 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		37B9C30328B54ABD00134380 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		37B9C30528B54B4D00134380 /* PreferencesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesCoordinator.swift; sourceTree = "<group>"; };
+		37B9C30728B54D7100134380 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		37BF25DB28B1349E00E0066A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Mart/LoginView.swift; sourceTree = SOURCE_ROOT; };
 		37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 			children = (
 				37EB508328B11CD100185E83 /* LoginViewController.swift */,
 				37BF25DB28B1349E00E0066A /* LoginView.swift */,
+				37B9C30728B54D7100134380 /* LoginCoordinator.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -95,6 +104,9 @@
 		37B9C30028B548AE00134380 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				37B9C30128B5492F00134380 /* PreferencesViewController.swift */,
+				37B9C30328B54ABD00134380 /* PreferencesView.swift */,
+				37B9C30528B54B4D00134380 /* PreferencesCoordinator.swift */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -293,9 +305,13 @@
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
 				379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */,
+				37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
+				37B9C30228B5492F00134380 /* PreferencesViewController.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
+				37B9C30428B54ABD00134380 /* PreferencesView.swift in Sources */,
 				37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */,
+				37B9C30628B54B4D00134380 /* PreferencesCoordinator.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
 				37DDF2DD28B287DF003205DE /* UIFont.swift in Sources */,
 			);

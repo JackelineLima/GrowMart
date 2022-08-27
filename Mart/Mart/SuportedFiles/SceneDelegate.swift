@@ -10,13 +10,21 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private var coordinator: LoginCoordinatorProtocol?
+    private let navigationController: UINavigationController = {
+         let navigationController = UINavigationController()
+         return navigationController
+     }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = navigationController
+        let coordinator = LoginCoordinator(navigationController: navigationController)
+        coordinator.start()
         window?.makeKeyAndVisible()
+        self.coordinator = coordinator
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
