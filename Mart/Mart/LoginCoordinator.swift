@@ -12,16 +12,20 @@ protocol LoginCoordinatorProtocol: AnyObject {
     func navigateToPreferences()
 }
 class LoginCoordinator: LoginCoordinatorProtocol {
+    
     private var navigationController: UINavigationController
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
     func start() {
         let controller = LoginViewController(coordinator: self)
         navigationController.pushViewController(controller, animated: true)
     }
+    
     func navigateToPreferences() {
-        let controller = PreferencesViewController()
-        navigationController.pushViewController(controller, animated: true)
+        let controller = PreferencesSellViewController()
+        navigationController.setViewControllers([controller], animated: true)
     }
 }

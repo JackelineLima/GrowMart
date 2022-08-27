@@ -20,4 +20,6 @@ public extension ViewCodable {
         setupConstraints()
         setupAdditionalConfiguration()
     }
+    
+    func setupAdditionalConfiguration() {}
 }

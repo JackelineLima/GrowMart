@@ -6,16 +6,19 @@
 //
 
 import UIKit
-protocol PreferencesCoordinatorProtocol: AnyObject {
+protocol PreferencesSellCoordinatorProtocol: AnyObject {
     func start()
 }
-class PreferencesCoordinator: PreferencesCoordinatorProtocol {
+class PreferencesSellCoordinator: PreferencesSellCoordinatorProtocol {
+    
     private var navigationController: UINavigationController
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
     func start() {
-        let controller = PreferencesViewController()
+        let controller = PreferencesSellViewController()
         navigationController.pushViewController(controller, animated: true)
     }
 }
