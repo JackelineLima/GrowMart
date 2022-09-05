@@ -30,7 +30,6 @@ class PreferencesSellViewController: UIViewController {
         view = preferencesView
         
         preferencesView.buttonAction = { preference in
-//            print("******* preferencia \(preference) *******")
             self.navigateToPreferences(preference)
         }
     }

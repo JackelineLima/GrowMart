@@ -17,11 +17,11 @@ class CheckoutViewModel: CheckoutViewModelProtocol {
     
     var reloadTableView: (() -> Void)?
     
+    let coordinator: CheckoutCoordinatorProtocol
+    
     var product: [Product] = [Product(name: "título produto 1", price: "R$ 0,00"),
                               Product(name: "título produto 2", price: "R$ 0,00"),
                               Product(name: "título produto 3", price: "R$ 0,00")]
-    
-    let coordinator: CheckoutCoordinatorProtocol
     
     init(coordinator: CheckoutCoordinatorProtocol) {
         self.coordinator = coordinator

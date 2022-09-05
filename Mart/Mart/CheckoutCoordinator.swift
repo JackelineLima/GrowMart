@@ -25,6 +25,6 @@ extension CheckoutCoordinator: CheckoutCoordinatorProtocol {
     func start() {
         let viewModel = CheckoutViewModel(coordinator: self)
         let controller = CheckoutViewController(viewModel: viewModel)
-        navigationController.setViewControllers([controller], animated: true)
+        navigationController.pushViewController(controller, animated: true)
     }
 }

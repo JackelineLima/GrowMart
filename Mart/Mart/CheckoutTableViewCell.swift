@@ -72,6 +72,7 @@ class CheckoutTableViewCell: UITableViewCell, ViewCodable {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
+        selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {

@@ -9,6 +9,7 @@ import UIKit
 
 protocol CheckoutViewDelegate: AnyObject {
     func remove(product: Product)
+    func didTapCheckout()
 }
 
 final class CheckoutView: UIView, ViewCodable {
@@ -23,7 +24,7 @@ final class CheckoutView: UIView, ViewCodable {
         return view
     }()
     
-    private var footerView = TableFooterView()
+    private lazy var footerView = TableFooterView(frame: CGRect(x: 0, y: 0, width: frame.width, height: 160))
     
     private lazy var tableView: UITableView = {
         let tb = UITableView()
@@ -40,10 +41,12 @@ final class CheckoutView: UIView, ViewCodable {
     init(viewModel: CheckoutViewModelProtocol) {
         self.viewModel = viewModel
         super.init(frame: .zero)
+        
         self.viewModel.reloadTableView = {
             self.reloadTableView()
         }
         backgroundColor = .white
+        footerView.delegate = self
         setupView()
     }
 
@@ -103,5 +106,12 @@ extension CheckoutView: CheckoutTableViewCellDelegate {
     
     func remove(product: Product) {
         delegate?.remove(product: product)
+    }
+}
+
+extension CheckoutView: TableFooterViewDelegate {
+    
+    func didTapCheckout() {
+        delegate?.didTapCheckout()
     }
 }

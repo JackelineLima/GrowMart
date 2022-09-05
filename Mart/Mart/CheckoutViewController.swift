@@ -37,6 +37,10 @@ class CheckoutViewController: UIViewController {
 
 extension CheckoutViewController: CheckoutViewDelegate {
     
+    func didTapCheckout() {
+        print("button checkout")
+    }
+    
     func remove(product: Product) {
         viewModel.remove(product: product)
     }
