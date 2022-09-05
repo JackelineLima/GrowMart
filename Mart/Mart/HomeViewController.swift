@@ -3,12 +3,12 @@
 //  Mart
 //
 //  Created by Jackeline Pires De Lima on 27/08/22.
-//  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
 final class HomeViewController: UIViewController {
+    
     private lazy var contentView = HomeView()
     private let coordinator: HomeCoordinatorProtocol
 

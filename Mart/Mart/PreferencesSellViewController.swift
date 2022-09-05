@@ -30,7 +30,7 @@ class PreferencesSellViewController: UIViewController {
         view = preferencesView
         
         preferencesView.buttonAction = { preference in
-            print("******* preferencia \(preference) *******")
+//            print("******* preferencia \(preference) *******")
             self.navigateToPreferences(preference)
         }
     }
@@ -39,10 +39,15 @@ class PreferencesSellViewController: UIViewController {
         switch preference {
         case .clothes:
             print("roupas")
+//            coordinator.navigateToHome()
+            let coordinator = CheckoutCoordinator(navigationController: navigationController!)
+            coordinator.start()
         case .accessories:
             print("acessorios")
+            coordinator.navigateToHome()
         case .others:
             print("outros")
+            coordinator.navigateToHome()
         }
     }
 }

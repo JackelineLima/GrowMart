@@ -34,14 +34,14 @@ final class LoginView: UIView {
     }()
     private lazy var facebookButton: UIButton = {
         let button = UIButton()
-        button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0x4267B2), title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"), font: .f12PrimarySemiBold)
+        button.configuration = .setButtonConfiguration(backgroundColor: .init(rgb: 0x4267B2), title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"), font: .f12PrimarySemiBold, textColor: .white)
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(continueButtonFacebook), for: .touchUpInside)
         return button
     }()
     private lazy var googleButton: UIButton = {
         let button = UIButton()
-        button.configuration = setButtonConfiguration(backgroundColor: .init(rgb: 0xDB4437), title: "ENTRAR COM GOOGLE", icon: UIImage(named: "icon-google"), font: .f12PrimarySemiBold)
+        button.configuration = .setButtonConfiguration(backgroundColor: .init(rgb: 0xDB4437), title: "ENTRAR COM GOOGLE", icon: UIImage(named: "icon-google"), font: .f12PrimarySemiBold, textColor: .white)
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(continueButtonGoogle), for: .touchUpInside)
         return button
@@ -54,15 +54,9 @@ final class LoginView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private func setButtonConfiguration(backgroundColor: UIColor, title: String, icon: UIImage?, font: UIFontStyle ) -> UIButton.Configuration {
-        var configuration = UIButton.Configuration.filled()
-        configuration.attributedTitle = AttributedString(title, attributes: .init([NSAttributedString.Key.font: UIFontStyle.customFont(name: font)]))
-        configuration.image = icon
-        configuration.titlePadding = 10
-        configuration.imagePadding = 30
-        configuration.background.backgroundColor = backgroundColor
-        return configuration
-    }
+    
+
+    
     @objc
     private func continueButtonFacebook() {
         delegate?.continueButtonFacebook()

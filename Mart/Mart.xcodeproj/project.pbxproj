@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		01626404319BE44FEDB4680C /* Pods_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13348DAD6A8766C103AED09 /* Pods_Mart.framework */; };
+		373754F528C3F02B0060EF13 /* LineNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373754F428C3F02B0060EF13 /* LineNavigation.swift */; };
+		378DC46128C6888800461CBD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378DC46028C6888800461CBD /* Model.swift */; };
 		378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4CE28B123D20058B5F2 /* ViewCodable.swift */; };
 		378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */; };
 		378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */; };
+		37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37939A7628C6839D0077CF88 /* UIButton.Configuration+Extensions.swift */; };
 		3798D68428BAB7E000887BC6 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68028BAB7E000887BC6 /* HomeCoordinator.swift */; };
 		3798D68528BAB7E000887BC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68128BAB7E000887BC6 /* HomeViewController.swift */; };
 		3798D68628BAB7E000887BC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68228BAB7E000887BC6 /* HomeView.swift */; };
 		3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68328BAB7E000887BC6 /* HomeViewModel.swift */; };
 		379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A1CC728B27E920090E451 /* UIColor+Extensions.swift */; };
 		37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */; };
+		37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */; };
+		37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */; };
+		37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466D028C3ECDF006C18D8 /* CheckoutView.swift */; };
+		37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */; };
 		37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */; };
 		37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30328B54ABD00134380 /* PreferencesSellView.swift */; };
 		37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */; };
@@ -33,18 +40,27 @@
 		37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB508328B11CD100185E83 /* LoginViewController.swift */; };
 		37EB508928B11CD100185E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37EB508828B11CD100185E83 /* Assets.xcassets */; };
 		37EB508C28B11CD100185E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */; };
+		37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0D7DF28C66A860018694A /* TableFooterView.swift */; };
+		37F0D7E328C66BBF0018694A /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0D7E228C66BBF0018694A /* CheckoutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373754F428C3F02B0060EF13 /* LineNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigation.swift; sourceTree = "<group>"; };
+		378DC46028C6888800461CBD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		378FE4CE28B123D20058B5F2 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		378FE4D228B125A50058B5F2 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		37939A7628C6839D0077CF88 /* UIButton.Configuration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton.Configuration+Extensions.swift"; sourceTree = "<group>"; };
 		3798D68028BAB7E000887BC6 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3798D68128BAB7E000887BC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3798D68228BAB7E000887BC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3798D68328BAB7E000887BC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		379A1CC728B27E920090E451 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonPreferences.swift; sourceTree = "<group>"; };
+		37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
+		37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		37B466D028C3ECDF006C18D8 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
 		37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewController.swift; sourceTree = "<group>"; };
 		37B9C30328B54ABD00134380 /* PreferencesSellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellView.swift; sourceTree = "<group>"; };
 		37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellCoordinator.swift; sourceTree = "<group>"; };
@@ -63,6 +79,8 @@
 		37EB508828B11CD100185E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37EB508B28B11CD100185E83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37EB508D28B11CD100185E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37F0D7DF28C66A860018694A /* TableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFooterView.swift; sourceTree = "<group>"; };
+		37F0D7E228C66BBF0018694A /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		CB6F7802D0AFBB50CE1E8DFA /* Pods-Mart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart.release.xcconfig"; path = "Target Support Files/Pods-Mart/Pods-Mart.release.xcconfig"; sourceTree = "<group>"; };
 		E3695AB8500D66CBC9C6AF9B /* Pods-Mart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart.debug.xcconfig"; path = "Target Support Files/Pods-Mart/Pods-Mart.debug.xcconfig"; sourceTree = "<group>"; };
 		F13348DAD6A8766C103AED09 /* Pods_Mart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +151,22 @@
 			isa = PBXGroup;
 			children = (
 				37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */,
+				373754F428C3F02B0060EF13 /* LineNavigation.swift */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		37B466CD28C3ECB7006C18D8 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				37F0D7E128C66B940018694A /* Cells */,
+				37F0D7DE28C66A740018694A /* Commons */,
+				37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */,
+				37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */,
+				37B466D028C3ECDF006C18D8 /* CheckoutView.swift */,
+				37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */,
+			);
+			name = Checkout;
 			sourceTree = "<group>";
 		};
 		37B9C30028B548AE00134380 /* PreferencesSell */ = {
@@ -159,6 +191,7 @@
 		37BF25DD28B1356E00E0066A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37B466CD28C3ECB7006C18D8 /* Checkout */,
 				3798D67E28BAB7C100887BC6 /* Home */,
 				3798D67D28BAA44900887BC6 /* PreferencesBuy */,
 				37AEB5EC28BA6B6200987F56 /* Components */,
@@ -176,6 +209,7 @@
 				378FE4CE28B123D20058B5F2 /* ViewCodable.swift */,
 				379A1CC728B27E920090E451 /* UIColor+Extensions.swift */,
 				37DDF2DC28B287DF003205DE /* UIFont.swift */,
+				37939A7628C6839D0077CF88 /* UIButton.Configuration+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -208,8 +242,25 @@
 				37EB508828B11CD100185E83 /* Assets.xcassets */,
 				37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */,
 				37EB508D28B11CD100185E83 /* Info.plist */,
+				378DC46028C6888800461CBD /* Model.swift */,
 			);
 			path = Mart;
+			sourceTree = "<group>";
+		};
+		37F0D7DE28C66A740018694A /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				37F0D7DF28C66A860018694A /* TableFooterView.swift */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		37F0D7E128C66B940018694A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37F0D7E228C66BBF0018694A /* CheckoutTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		4AB03613692056891416824C /* Frameworks */ = {
@@ -340,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378DC46128C6888800461CBD /* Model.swift in Sources */,
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
 				3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */,
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
@@ -347,16 +399,24 @@
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
 				379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */,
 				3798D68628BAB7E000887BC6 /* HomeView.swift in Sources */,
+				37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */,
+				37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */,
 				37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
 				37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */,
+				373754F528C3F02B0060EF13 /* LineNavigation.swift in Sources */,
 				3798D68528BAB7E000887BC6 /* HomeViewController.swift in Sources */,
+				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
+				37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */,
+				37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */,
+				37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
 				37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */,
+				37F0D7E328C66BBF0018694A /* CheckoutTableViewCell.swift in Sources */,
 				37DDF2DD28B287DF003205DE /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
