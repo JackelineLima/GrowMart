@@ -29,17 +29,16 @@ class CheckoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func reloadTableView() {
+        checkoutView.reloadTableView()
+    }
 }
 
 extension CheckoutViewController: CheckoutViewDelegate {
     
     func remove(product: Product) {
-        print("Removeu produto: \(product.name)")
-//        viewModel.product.removeAll { cell in
-//            return cell.name == product.name
-//        }
-//
-//        checkoutView.reloadTableView()
+        viewModel.remove(product: product)
     }
 }
 

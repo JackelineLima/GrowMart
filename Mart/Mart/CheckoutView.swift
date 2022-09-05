@@ -15,7 +15,7 @@ final class CheckoutView: UIView, ViewCodable {
     
     weak var delegate: CheckoutViewDelegate?
     
-    let viewModel: CheckoutViewModelProtocol
+    var viewModel: CheckoutViewModelProtocol
     
     private lazy var lineView: LineNavigation = {
         let view = LineNavigation()
@@ -40,6 +40,9 @@ final class CheckoutView: UIView, ViewCodable {
     init(viewModel: CheckoutViewModelProtocol) {
         self.viewModel = viewModel
         super.init(frame: .zero)
+        self.viewModel.reloadTableView = {
+            self.reloadTableView()
+        }
         backgroundColor = .white
         setupView()
     }
@@ -68,7 +71,9 @@ final class CheckoutView: UIView, ViewCodable {
     }
     
     func reloadTableView() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
