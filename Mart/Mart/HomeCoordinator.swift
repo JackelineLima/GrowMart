@@ -25,7 +25,6 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
     
     func start() {
         let controller = HomeViewController(coordinator: self)
-//        navigationController.setViewControllers([controller], animated: true)
-        navigationController.pushViewController(controller, animated: true)
+        navigationController.setViewControllers([controller], animated: true)
     }
 }

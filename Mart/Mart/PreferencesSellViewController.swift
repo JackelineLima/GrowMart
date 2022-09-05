@@ -38,7 +38,6 @@ class PreferencesSellViewController: UIViewController {
         switch preference {
         case .clothes:
             print("roupas")
-//            coordinator.navigateToHome()
             let coordinator = CheckoutCoordinator(navigationController: navigationController!)
             coordinator.start()
         case .accessories:

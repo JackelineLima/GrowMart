@@ -87,8 +87,7 @@ final class PreferencesSellView: UIView {
 extension PreferencesSellView: ViewCodable {
     
     func buildViewHierarchy() {
-        addSubview(preferecensLabel)
-        addSubview(preferencesStackView)
+        addSubViews([preferecensLabel, preferencesStackView])
         preferencesStackView.addArrangedSubview(clothesButton)
         preferencesStackView.addArrangedSubview(accessoriesButton)
         preferencesStackView.addArrangedSubview(othersButton)

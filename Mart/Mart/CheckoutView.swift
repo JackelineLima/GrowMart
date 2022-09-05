@@ -55,8 +55,7 @@ final class CheckoutView: UIView, ViewCodable {
     }
 
     func buildViewHierarchy() {
-        addSubview(lineView)
-        addSubview(tableView)
+        addSubViews([lineView, tableView])
     }
     
     func setupConstraints() {

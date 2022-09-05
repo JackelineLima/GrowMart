@@ -46,7 +46,6 @@ class CheckoutTableViewCell: UITableViewCell, ViewCodable {
         label.textColor = .black
         label.numberOfLines = 0
         label.textAlignment = .left
-        label.text = "título produto 1"
         return label
     }()
 
@@ -57,7 +56,6 @@ class CheckoutTableViewCell: UITableViewCell, ViewCodable {
         label.textColor = UIColor(rgb: 0xA0A4A8)
         label.numberOfLines = 0
         label.textAlignment = .left
-        label.text = "R$ 0,00"
         return label
     }()
     

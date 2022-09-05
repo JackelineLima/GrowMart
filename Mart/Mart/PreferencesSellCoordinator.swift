@@ -19,7 +19,6 @@ class PreferencesSellCoordinator: PreferencesSellCoordinatorProtocol {
     
     func start() {
         let controller = PreferencesSellViewController(coordinator: self)
-//        navigationController.pushViewController(controller, animated: true)
         navigationController.setViewControllers([controller], animated: true)
     }
     
