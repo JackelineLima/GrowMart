@@ -117,10 +117,10 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionCell.identifier, for: indexPath) as? HomeCollectionCell else { return UICollectionViewCell() }
-        if let products = delegate?.getProducts() {
-            cell.setup(with: products[indexPath.row])
-        }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionCell.identifier, for: indexPath) as? HomeCollectionCell, let products = delegate?.getProducts() else { return UICollectionViewCell() }
+        
+        cell.setup(with: products[indexPath.row])
+        
         return cell
     }
     
