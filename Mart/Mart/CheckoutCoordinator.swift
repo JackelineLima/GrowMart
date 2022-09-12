@@ -9,6 +9,7 @@ import UIKit
 
 protocol CheckoutCoordinatorProtocol: AnyObject {
     func start()
+    func popViewController()
 }
 
 class CheckoutCoordinator {
@@ -26,5 +27,9 @@ extension CheckoutCoordinator: CheckoutCoordinatorProtocol {
         let viewModel = CheckoutViewModel(coordinator: self)
         let controller = CheckoutViewController(viewModel: viewModel)
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func popViewController() {
+        navigationController.popViewController(animated: true)
     }
 }

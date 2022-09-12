@@ -37,15 +37,13 @@ class PreferencesSellViewController: UIViewController {
     private func navigateToPreferences(_ preference: TypePreferences) {
         switch preference {
         case .clothes:
-            print("roupas")
-            let coordinator = CheckoutCoordinator(navigationController: navigationController!)
-            coordinator.start()
+            coordinator.navigateToHome(index: preference.rawValue)
+//            let coordinator = CheckoutCoordinator(navigationController: navigationController!)
+//            coordinator.start()
         case .accessories:
-            print("acessorios")
-            coordinator.navigateToHome()
+            coordinator.navigateToHome(index: preference.rawValue)
         case .others:
-            print("outros")
-            coordinator.navigateToHome()
+            coordinator.navigateToHome(index: preference.rawValue)
         }
     }
 }

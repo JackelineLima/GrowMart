@@ -15,16 +15,19 @@ protocol HomeCoordinatorProtocol: AnyObject {
 final class HomeCoordinator {
     
     private let navigationController: UINavigationController
+    private let categoryIndex: Int
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController,_ categoryIndex: Int) {
         self.navigationController = navigationController
+        self.categoryIndex = categoryIndex
     }
 }
 
 extension HomeCoordinator: HomeCoordinatorProtocol {
     
     func start() {
-        let controller = HomeViewController(coordinator: self)
+        let viewModel = HomeViewModel(coordinator: self, categoryIndex)
+        let controller = HomeViewController(viewModel: viewModel)
         navigationController.setViewControllers([controller], animated: true)
     }
 }

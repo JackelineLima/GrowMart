@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CheckoutViewController: UIViewController {
+class CheckoutViewController: DefaultViewController {
     
     private var viewModel: CheckoutViewModelProtocol
     private lazy var checkoutView = CheckoutView(viewModel: viewModel)
@@ -28,10 +28,15 @@ class CheckoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLeftButtonNavigation(action: #selector(backButton))
     }
     
     func reloadTableView() {
         checkoutView.reloadTableView()
+    }
+    
+    @objc func backButton() {
+        viewModel.backButton()
     }
 }
 

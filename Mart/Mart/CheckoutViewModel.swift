@@ -8,9 +8,10 @@
 import Foundation
 
 protocol CheckoutViewModelProtocol {
-    var product: [Product] { get set }
-    func remove(product: Product)
+    var product: [Product] { get }
     var reloadTableView: (() -> Void)? { get set }
+    func remove(product: Product)
+    func backButton()
 }
 
 class CheckoutViewModel: CheckoutViewModelProtocol {
@@ -19,9 +20,9 @@ class CheckoutViewModel: CheckoutViewModelProtocol {
     
     let coordinator: CheckoutCoordinatorProtocol
     
-    var product: [Product] = [Product(name: "título produto 1", price: "R$ 0,00"),
-                              Product(name: "título produto 2", price: "R$ 0,00"),
-                              Product(name: "título produto 3", price: "R$ 0,00")]
+    var product: [Product] = [Product(name: "título produto 1", price: "R$ 0,00", url: ""),
+                              Product(name: "título produto 2", price: "R$ 0,00", url: ""),
+                              Product(name: "título produto 3", price: "R$ 0,00", url: "")]
     
     init(coordinator: CheckoutCoordinatorProtocol) {
         self.coordinator = coordinator
@@ -34,5 +35,9 @@ class CheckoutViewModel: CheckoutViewModelProtocol {
             }
         }
         reloadTableView?()
+    }
+    
+    func backButton() {
+        coordinator.popViewController()
     }
 }

@@ -55,17 +55,12 @@ final class CheckoutView: UIView, ViewCodable {
     }
 
     func buildViewHierarchy() {
-        addSubViews([lineView, tableView])
+        addSubview(tableView)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            lineView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            lineView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            lineView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            lineView.heightAnchor.constraint(equalToConstant: 1),
-            
-            tableView.topAnchor.constraint(equalTo: lineView.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)

@@ -20,6 +20,7 @@ public enum UIFontStyle {
     case f14PrimaryRegular
     case f12PrimarySemiBold
     case f14PrimaryMedium
+    case f16PrimaryRegular
     case f16PrimaryMedium
     case f18PrimaryMedium
     case f18PrimarySemiBold
@@ -28,7 +29,7 @@ public enum UIFontStyle {
     
     public var weight: String {
         switch self {
-        case .f10PrimaryRegular, .f14PrimaryRegular:
+        case .f10PrimaryRegular, .f14PrimaryRegular, .f16PrimaryRegular:
             return UIFontWeight.primaryRegular
         case .f12PrimarySemiBold, .f18PrimarySemiBold:
             return UIFontWeight.primarySemiBold
@@ -48,7 +49,7 @@ public enum UIFontStyle {
             size = 12
         case .f14PrimaryMedium, .f14PrimaryRegular:
             size = 14
-        case .f16PrimaryMedium:
+        case .f16PrimaryMedium, .f16PrimaryRegular:
             size = 16
         case .f18PrimaryMedium, .f18PrimarySemiBold:
             size = 18

@@ -22,8 +22,8 @@ class PreferencesSellCoordinator: PreferencesSellCoordinatorProtocol {
         navigationController.setViewControllers([controller], animated: true)
     }
     
-    func navigateToHome() {
-        let coodinator = HomeCoordinator(navigationController: navigationController)
+    func navigateToHome(index category: Int) {
+        let coodinator = HomeCoordinator(navigationController: navigationController, category)
         coodinator.start()
     }
 }
