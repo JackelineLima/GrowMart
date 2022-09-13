@@ -23,6 +23,7 @@
 		3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68328BAB7E000887BC6 /* HomeViewModel.swift */; };
 		379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A1CC728B27E920090E451 /* UIColor+Extensions.swift */; };
 		37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A12C6128C7812C00E12950 /* DefaultViewController.swift */; };
+		37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */; };
 		37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */; };
 		37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */; };
 		37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */; };
@@ -66,6 +67,7 @@
 		3798D68328BAB7E000887BC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		379A1CC728B27E920090E451 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		37A12C6128C7812C00E12950 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonPreferences.swift; sourceTree = "<group>"; };
 		37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
 		37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				3798D68128BAB7E000887BC6 /* HomeViewController.swift */,
 				3798D68228BAB7E000887BC6 /* HomeView.swift */,
 				3798D68328BAB7E000887BC6 /* HomeViewModel.swift */,
+				37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			files = (
 				378DC46128C6888800461CBD /* ProductModel.swift in Sources */,
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
+				37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */,
 				3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */,
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
 				3798D68428BAB7E000887BC6 /* HomeCoordinator.swift in Sources */,

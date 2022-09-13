@@ -12,3 +12,14 @@ struct Product {
     let price: String
     let url: String
 }
+
+struct SectionHome {
+    let type: CategorySections
+    let data: Any
+}
+
+enum CategorySections: Int, CaseIterable {
+    case banner
+    case segmentedControl
+    case collection
+}

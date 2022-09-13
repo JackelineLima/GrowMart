@@ -9,7 +9,8 @@ import UIKit
 
 final class HomeViewController: DefaultViewController {
     
-    private lazy var homeView = HomeView(categoryIndex: viewModel.categoryIndex)
+//    private lazy var homeView = HomeView(categoryIndex: viewModel.categoryIndex)
+    private lazy var homeView = HomeView2()
     private var viewModel: HomeViewModelProtocol
 
     init(viewModel: HomeViewModelProtocol) {
@@ -31,6 +32,19 @@ final class HomeViewController: DefaultViewController {
         isHiddenLineView()
         setupRightButtonNavigation(action: nil)
         viewModel.loadCategory()
+//        homeView.collectionView.layoutIfNeeded()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        print(homeView.collectionView.contentSize.height)
+        homeView.configCollection()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print(homeView.collectionView.contentSize.height)
+        homeView.configCollection()
     }
 }
 
@@ -53,5 +67,16 @@ extension HomeViewController: HomeViewDelegate {
     
     func didTapCell() {
         print("abrir celula")
+    }
+}
+
+extension HomeViewController: HomeView2Delegate {
+    
+    func numberOfSections() -> Int {
+        viewModel.section.count
+    }
+    
+    func loadTypeCategory(index: Int) -> CategorySections {
+        viewModel.loadCellType(index: index)
     }
 }
