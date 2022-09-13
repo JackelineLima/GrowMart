@@ -35,7 +35,7 @@ final class HomeViewController: DefaultViewController {
     }
 }
 
-extension HomeViewController: HomeViewDelegate {
+extension HomeViewController: HomeViewDelegate, HomeView2Delegate {
     
     func numberOfRows() -> Int {
         viewModel.products.count
@@ -54,16 +54,5 @@ extension HomeViewController: HomeViewDelegate {
     
     func didTapCell() {
         print("abrir celula")
-    }
-}
-
-extension HomeViewController: HomeView2Delegate {
-    
-    func numberOfSections() -> Int {
-        viewModel.section.count
-    }
-    
-    func loadTypeCategory(index: Int) -> CategorySections {
-        viewModel.loadCellType(index: index)
     }
 }

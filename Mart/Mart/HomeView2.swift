@@ -8,14 +8,15 @@
 import UIKit
 
 protocol HomeView2Delegate: AnyObject {
-    func numberOfSections() -> Int
-    func loadTypeCategory(index: Int) -> CategorySections
+    func didTapCell()
+    func didTapSegmented(index: Int)
+    func numberOfRows() -> Int
+    func getProducts() -> [Product]
 }
 
 final class HomeView2: UIView, ViewCodable {
     
     weak var delegate: HomeView2Delegate?
-    private var collectionHeight: CGFloat = 500.00
 
     private lazy var search: SearchBar = {
         let search = SearchBar()
@@ -35,14 +36,12 @@ final class HomeView2: UIView, ViewCodable {
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.showsVerticalScrollIndicator = false
         scroll.autoresizingMask = .flexibleHeight
-        scroll.backgroundColor = .blue
         return scroll
     }()
     
     private lazy var contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
         return view
     }()
     
@@ -115,8 +114,8 @@ final class HomeView2: UIView, ViewCodable {
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 32),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -32),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
         ])
         
@@ -148,16 +147,10 @@ final class HomeView2: UIView, ViewCodable {
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
-        
     }
     
     func reloadCollection() {
         collectionView.reloadData()
-    }
-    
-    func configCollection() {
-        collectionHeight = collectionView.contentSize.height
-        
     }
     
 }
@@ -165,14 +158,14 @@ final class HomeView2: UIView, ViewCodable {
 extension HomeView2: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        delegate?.numberOfRows() ?? 0
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionCell.identifier, for: indexPath) as? HomeCollectionCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionCell.identifier, for: indexPath) as? HomeCollectionCell, let products = delegate?.getProducts() else { return UICollectionViewCell() }
         
-//        cell.setup(with: products[indexPath.row])
+        cell.setup(with: products[indexPath.row])
         
         return cell
     }
@@ -186,7 +179,7 @@ extension HomeView2: UICollectionViewDelegate, UICollectionViewDataSource {
 extension HomeView2: SegmentedBarDelegate {
 
     func didTapSegmented(index: Int) {
-        
+        delegate?.didTapSegmented(index: index)
     }
 }
 
