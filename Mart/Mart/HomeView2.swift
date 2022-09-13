@@ -62,7 +62,7 @@ final class HomeView2: UIView, ViewCodable {
         return segmented
     }()
     
-    lazy var collectionView: UICollectionView = {
+    lazy var collectionView: HomeCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = .init(top: 32, left: 0, bottom: 16, right: 0)
         let spacesBetweenItens: CGFloat = 80
@@ -70,7 +70,7 @@ final class HomeView2: UIView, ViewCodable {
         layout.minimumInteritemSpacing = 16
         layout.minimumLineSpacing = 16
         
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collection = HomeCollectionView(frame: .zero, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.delegate = self
         collection.dataSource = self
@@ -83,7 +83,9 @@ final class HomeView2: UIView, ViewCodable {
 //        self.categoryIndex = categoryIndex
         super.init(frame: .zero)
         backgroundColor = .white
+        collectionView.isScrollEnabled = false
         setupView()
+
     }
     
     required init?(coder: NSCoder) {
@@ -145,8 +147,6 @@ final class HomeView2: UIView, ViewCodable {
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-//            collectionView.heightAnchor.constraint(equalToConstant: collectionView.contentSize.height),
-            collectionView.heightAnchor.constraint(equalToConstant: collectionHeight),
         ])
         
     }
@@ -157,7 +157,7 @@ final class HomeView2: UIView, ViewCodable {
     
     func configCollection() {
         collectionHeight = collectionView.contentSize.height
-        collectionView.isScrollEnabled = false
+        
     }
     
 }

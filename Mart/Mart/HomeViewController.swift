@@ -32,19 +32,6 @@ final class HomeViewController: DefaultViewController {
         isHiddenLineView()
         setupRightButtonNavigation(action: nil)
         viewModel.loadCategory()
-//        homeView.collectionView.layoutIfNeeded()
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        print(homeView.collectionView.contentSize.height)
-        homeView.configCollection()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        print(homeView.collectionView.contentSize.height)
-        homeView.configCollection()
     }
 }
 

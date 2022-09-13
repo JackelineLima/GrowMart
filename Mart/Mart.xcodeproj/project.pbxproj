@@ -22,6 +22,7 @@
 		3798D68628BAB7E000887BC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68228BAB7E000887BC6 /* HomeView.swift */; };
 		3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68328BAB7E000887BC6 /* HomeViewModel.swift */; };
 		379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A1CC728B27E920090E451 /* UIColor+Extensions.swift */; };
+		37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A07ADE28D12694006295FB /* HomeCollectionView.swift */; };
 		37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A12C6128C7812C00E12950 /* DefaultViewController.swift */; };
 		37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */; };
 		37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */; };
@@ -66,6 +67,7 @@
 		3798D68228BAB7E000887BC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3798D68328BAB7E000887BC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		379A1CC728B27E920090E451 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		37A07ADE28D12694006295FB /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 		37A12C6128C7812C00E12950 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonPreferences.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				37852F5028CCE1EE00DD2425 /* SearchBar.swift */,
 				37852F5228CCE24A00DD2425 /* SegmentedBar.swift */,
+				37A07ADE28D12694006295FB /* HomeCollectionView.swift */,
 			);
 			name = Commons;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */,
 				37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
+				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
 				37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */,
 				37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
