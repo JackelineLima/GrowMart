@@ -17,6 +17,8 @@ protocol HomeView2Delegate: AnyObject {
 final class HomeView2: UIView, ViewCodable {
     
     weak var delegate: HomeView2Delegate?
+    private var categoryIndex: Int
+    private let accessories: [String] = ["roupas", "acessórios", "outros"]
 
     private lazy var search: SearchBar = {
         let search = SearchBar()
@@ -55,7 +57,7 @@ final class HomeView2: UIView, ViewCodable {
     }()
     
     private lazy var segmentedControl: SegmentedBar = {
-        let segmented = SegmentedBar(collections: ["roupas", "acessórios", "outros"], index: 0)
+        let segmented = SegmentedBar(collections: accessories, index: categoryIndex)
         segmented.translatesAutoresizingMaskIntoConstraints = false
         segmented.delegate = self
         return segmented
@@ -78,8 +80,8 @@ final class HomeView2: UIView, ViewCodable {
         return collection
     }()
     
-    init() {
-//        self.categoryIndex = categoryIndex
+    init(categoryIndex: Int) {
+        self.categoryIndex = categoryIndex
         super.init(frame: .zero)
         backgroundColor = .white
         collectionView.isScrollEnabled = false

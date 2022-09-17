@@ -10,7 +10,7 @@ import UIKit
 final class HomeViewController: DefaultViewController {
     
 //    private lazy var homeView = HomeView(categoryIndex: viewModel.categoryIndex)
-    private lazy var homeView = HomeView2()
+    private lazy var homeView = HomeView2(categoryIndex: viewModel.categoryIndex)
     private var viewModel: HomeViewModelProtocol
 
     init(viewModel: HomeViewModelProtocol) {
