@@ -43,6 +43,14 @@
 		37DDF2D928B28716003205DE /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D828B28716003205DE /* Nunito-Regular.ttf */; };
 		37DDF2DB28B28750003205DE /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2DA28B28750003205DE /* Nunito-Bold.ttf */; };
 		37DDF2DD28B287DF003205DE /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DDF2DC28B287DF003205DE /* UIFont.swift */; };
+		37E1009D28D8A7CA008E461F /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1009928D8A7CA008E461F /* ProfileCoordinator.swift */; };
+		37E1009E28D8A7CA008E461F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1009A28D8A7CA008E461F /* ProfileViewController.swift */; };
+		37E1009F28D8A7CA008E461F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1009B28D8A7CA008E461F /* ProfileView.swift */; };
+		37E100A028D8A7CA008E461F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1009C28D8A7CA008E461F /* ProfileViewModel.swift */; };
+		37E100A528D8A7D9008E461F /* EditProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E100A128D8A7D9008E461F /* EditProfileCoordinator.swift */; };
+		37E100A628D8A7D9008E461F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E100A228D8A7D9008E461F /* EditProfileViewController.swift */; };
+		37E100A728D8A7D9008E461F /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E100A328D8A7D9008E461F /* EditProfileView.swift */; };
+		37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E100A428D8A7D9008E461F /* EditProfileViewModel.swift */; };
 		37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB507F28B11CD100185E83 /* AppDelegate.swift */; };
 		37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB508128B11CD100185E83 /* SceneDelegate.swift */; };
 		37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB508328B11CD100185E83 /* LoginViewController.swift */; };
@@ -88,6 +96,14 @@
 		37DDF2D828B28716003205DE /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		37DDF2DA28B28750003205DE /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		37DDF2DC28B287DF003205DE /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		37E1009928D8A7CA008E461F /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		37E1009A28D8A7CA008E461F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		37E1009B28D8A7CA008E461F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		37E1009C28D8A7CA008E461F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		37E100A128D8A7D9008E461F /* EditProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCoordinator.swift; sourceTree = "<group>"; };
+		37E100A228D8A7D9008E461F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		37E100A328D8A7D9008E461F /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		37E100A428D8A7D9008E461F /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		37EB507C28B11CD100185E83 /* Mart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EB507F28B11CD100185E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37EB508128B11CD100185E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +245,8 @@
 		37BF25DD28B1356E00E0066A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37E1009828D8A7A8008E461F /* EditProfile */,
+				37E1009728D8A79F008E461F /* Profile */,
 				37B466CD28C3ECB7006C18D8 /* Checkout */,
 				3798D67E28BAB7C100887BC6 /* Home */,
 				3798D67D28BAA44900887BC6 /* PreferencesBuy */,
@@ -260,6 +278,28 @@
 				37C3B37E28CF780500CFA1EE /* HomeCollectionCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		37E1009728D8A79F008E461F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				37E1009928D8A7CA008E461F /* ProfileCoordinator.swift */,
+				37E1009A28D8A7CA008E461F /* ProfileViewController.swift */,
+				37E1009B28D8A7CA008E461F /* ProfileView.swift */,
+				37E1009C28D8A7CA008E461F /* ProfileViewModel.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		37E1009828D8A7A8008E461F /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				37E100A128D8A7D9008E461F /* EditProfileCoordinator.swift */,
+				37E100A228D8A7D9008E461F /* EditProfileViewController.swift */,
+				37E100A328D8A7D9008E461F /* EditProfileView.swift */,
+				37E100A428D8A7D9008E461F /* EditProfileViewModel.swift */,
+			);
+			name = EditProfile;
 			sourceTree = "<group>";
 		};
 		37EB507328B11CD100185E83 = {
@@ -439,8 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E100A728D8A7D9008E461F /* EditProfileView.swift in Sources */,
 				378DC46128C6888800461CBD /* ProductModel.swift in Sources */,
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
+				37E100A528D8A7D9008E461F /* EditProfileCoordinator.swift in Sources */,
 				37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */,
 				3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */,
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
@@ -452,9 +494,12 @@
 				37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */,
 				37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */,
 				37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */,
+				37E100A628D8A7D9008E461F /* EditProfileViewController.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
 				37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */,
+				37E1009F28D8A7CA008E461F /* ProfileView.swift in Sources */,
+				37E1009D28D8A7CA008E461F /* ProfileCoordinator.swift in Sources */,
 				37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
@@ -465,6 +510,7 @@
 				37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */,
 				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
+				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
 				37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */,
 				37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */,
@@ -472,6 +518,8 @@
 				37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
 				37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */,
+				37E1009E28D8A7CA008E461F /* ProfileViewController.swift in Sources */,
+				37E100A028D8A7CA008E461F /* ProfileViewModel.swift in Sources */,
 				37F0D7E328C66BBF0018694A /* CheckoutTableViewCell.swift in Sources */,
 				37DDF2DD28B287DF003205DE /* UIFont.swift in Sources */,
 			);

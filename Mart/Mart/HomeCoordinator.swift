@@ -30,4 +30,9 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
         let controller = HomeViewController(viewModel: viewModel)
         navigationController.setViewControllers([controller], animated: true)
     }
+    
+    func navigateToCar() {
+        let coodinator = ProfileCoordinator(navigationController: navigationController)
+        coodinator.start()
+    }
 }

@@ -10,19 +10,20 @@ import UIKit
 
 protocol HomeViewModelProtocol {
     func loadCategory()
-    func loadCellType(index: Int) -> CategorySections
+    func navigatoToCar()
+//    func loadCellType(index: Int) -> CategorySections
     var products: [Product] { get }
     var categoryIndex: Int { get set }
-    var section: [SectionHome] { get }
+//    var section: [SectionHome] { get }
 }
 
 class HomeViewModel: HomeViewModelProtocol {
     
     let coordinator: HomeCoordinator
     var categoryIndex: Int
-    var section: [SectionHome] = [
-        SectionHome(type: .banner, data: "banner"),
-        SectionHome(type: .segmentedControl, data: ["roupas", "acessorios", "outros"])]
+//    var section: [SectionHome] = [
+//        SectionHome(type: .banner, data: "banner"),
+//        SectionHome(type: .segmentedControl, data: ["roupas", "acessorios", "outros"])]
     var products: [Product] = []
     
     private let clothesUrl = "https://fjallraven.vteximg.com.br/arquivos/ids/156206-751-936/F87314620_Camiseta_Masculina_Tornetrask_T-shirt_M_front_1.png"
@@ -47,8 +48,12 @@ class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
-    func loadCellType(index: Int) -> CategorySections {
-        return section[index].type
+//    func loadCellType(index: Int) -> CategorySections {
+//        return section[index].type
+//    }
+    
+    func navigatoToCar() {
+        coordinator.navigateToCar()
     }
     
     private func addFakeProducts(name: String, imageUrl: String) {

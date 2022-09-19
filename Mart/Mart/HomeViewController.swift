@@ -30,8 +30,12 @@ final class HomeViewController: DefaultViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isHiddenLineView()
-        setupRightButtonNavigation(action: nil)
+        setupRightButtonNavigation(action: #selector(didTapButtonNavigation))
         viewModel.loadCategory()
+    }
+    
+    @objc private func didTapButtonNavigation() {
+        viewModel.navigatoToCar()
     }
 }
 
@@ -50,7 +54,6 @@ extension HomeViewController: HomeViewDelegate, HomeView2Delegate {
         viewModel.loadCategory()
         homeView.reloadCollection()
     }
-    
     
     func didTapCell() {
         print("abrir celula")
