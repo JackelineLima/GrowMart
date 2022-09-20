@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LineNavigation: UIView {
+class LineNavigationView: UIView {
     
     private lazy var backgroundView: UIView = {
         let view = UIView()

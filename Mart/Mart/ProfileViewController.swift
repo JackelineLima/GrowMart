@@ -26,6 +26,7 @@ final class ProfileViewController: DefaultViewController {
     }
 
     override func loadView() {
+        profileView.delegate = self
         view = profileView
     }
 
@@ -34,6 +35,32 @@ final class ProfileViewController: DefaultViewController {
     }
 }
 
-extension ProfileViewController: ProfileDisplayable {
-    func displaySomething() { }
+extension ProfileViewController: ProfileViewDelegate {
+    
+    func didTapActionButton() {
+        viewModel.navigateToEditPerfil()
+    }
+    
+    
+    func didTapProfileImage() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        present(picker, animated: true)
+    }
 }
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            dismiss(animated: true)
+            return
+        }
+        
+        profileView.updateImageView(image: image)
+        dismiss(animated: true)
+    }
+}
+    

@@ -45,8 +45,8 @@ public class DefaultViewController: UIViewController {
         self.navigationItem.setLeftBarButtonItems([spacer, backButton], animated: false)
     }
     
-    private lazy var lineView: LineNavigation = {
-        let view = LineNavigation()
+    private lazy var lineView: LineNavigationView = {
+        let view = LineNavigationView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

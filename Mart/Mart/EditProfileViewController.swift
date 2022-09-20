@@ -14,10 +14,10 @@ protocol EditProfileDisplayable: AnyObject {
 final class EditProfileViewController: UIViewController {
     
     private lazy var editProfileView = EditProfileView()
-    private let coordinator: EditProfileViewModelProtocol
+    private let viewModel: EditProfileViewModelProtocol
 
-    init(coordinator: EditProfileViewModelProtocol) {
-      self.coordinator = coordinator
+    init(viewModel: EditProfileViewModelProtocol) {
+      self.viewModel = viewModel
       super.init(nibName: nil, bundle: .main)
     }
 

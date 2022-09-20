@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01626404319BE44FEDB4680C /* Pods_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13348DAD6A8766C103AED09 /* Pods_Mart.framework */; };
-		373754F528C3F02B0060EF13 /* LineNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373754F428C3F02B0060EF13 /* LineNavigation.swift */; };
+		373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373754F428C3F02B0060EF13 /* LineNavigationView.swift */; };
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
 		37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */; };
@@ -30,6 +30,8 @@
 		37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */; };
 		37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466D028C3ECDF006C18D8 /* CheckoutView.swift */; };
 		37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */; };
+		37B7C13628D8DFB7003ADDBC /* InfoGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B7C13528D8DFB7003ADDBC /* InfoGroupView.swift */; };
+		37B7C13828D8E61B003ADDBC /* LabelValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B7C13728D8E61B003ADDBC /* LabelValueView.swift */; };
 		37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */; };
 		37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30328B54ABD00134380 /* PreferencesSellView.swift */; };
 		37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */; };
@@ -37,6 +39,7 @@
 		37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF25DB28B1349E00E0066A /* LoginView.swift */; };
 		37C3B37F28CF780500CFA1EE /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3B37E28CF780500CFA1EE /* HomeCollectionCell.swift */; };
 		37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3B38028CF7D3F00CFA1EE /* UIImageView+Extensions.swift */; };
+		37CE7FF128D91804009F04CC /* GrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE7FF028D91804009F04CC /* GrowButton.swift */; };
 		37DDF2D328B286B5003205DE /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */; };
 		37DDF2D528B286D1003205DE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */; };
 		37DDF2D728B28707003205DE /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D628B28707003205DE /* Nunito-Medium.ttf */; };
@@ -61,7 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		373754F428C3F02B0060EF13 /* LineNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigation.swift; sourceTree = "<group>"; };
+		373754F428C3F02B0060EF13 /* LineNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigationView.swift; sourceTree = "<group>"; };
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
 		37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 		37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		37B466D028C3ECDF006C18D8 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
+		37B7C13528D8DFB7003ADDBC /* InfoGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoGroupView.swift; sourceTree = "<group>"; };
+		37B7C13728D8E61B003ADDBC /* LabelValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelValueView.swift; sourceTree = "<group>"; };
 		37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewController.swift; sourceTree = "<group>"; };
 		37B9C30328B54ABD00134380 /* PreferencesSellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellView.swift; sourceTree = "<group>"; };
 		37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellCoordinator.swift; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 		37BF25DB28B1349E00E0066A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Mart/LoginView.swift; sourceTree = SOURCE_ROOT; };
 		37C3B37E28CF780500CFA1EE /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		37C3B38028CF7D3F00CFA1EE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		37CE7FF028D91804009F04CC /* GrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowButton.swift; sourceTree = "<group>"; };
 		37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		37DDF2D628B28707003205DE /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
@@ -197,7 +203,10 @@
 			children = (
 				37A12C6128C7812C00E12950 /* DefaultViewController.swift */,
 				37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */,
-				373754F428C3F02B0060EF13 /* LineNavigation.swift */,
+				373754F428C3F02B0060EF13 /* LineNavigationView.swift */,
+				37B7C13528D8DFB7003ADDBC /* InfoGroupView.swift */,
+				37B7C13728D8E61B003ADDBC /* LabelValueView.swift */,
+				37CE7FF028D91804009F04CC /* GrowButton.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -494,6 +503,7 @@
 				37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */,
 				37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */,
 				37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */,
+				37B7C13628D8DFB7003ADDBC /* InfoGroupView.swift in Sources */,
 				37E100A628D8A7D9008E461F /* EditProfileViewController.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
@@ -504,7 +514,7 @@
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
 				37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */,
-				373754F528C3F02B0060EF13 /* LineNavigation.swift in Sources */,
+				373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */,
 				3798D68528BAB7E000887BC6 /* HomeViewController.swift in Sources */,
 				37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */,
 				37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */,
@@ -513,10 +523,12 @@
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
 				37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */,
+				37B7C13828D8E61B003ADDBC /* LabelValueView.swift in Sources */,
 				37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */,
 				37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */,
 				37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
+				37CE7FF128D91804009F04CC /* GrowButton.swift in Sources */,
 				37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */,
 				37E1009E28D8A7CA008E461F /* ProfileViewController.swift in Sources */,
 				37E100A028D8A7CA008E461F /* ProfileViewModel.swift in Sources */,

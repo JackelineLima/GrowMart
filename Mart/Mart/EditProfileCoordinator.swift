@@ -23,6 +23,8 @@ final class EditProfileCoordinator {
 extension EditProfileCoordinator: EditProfileCoordinatorProtocol {
     
     func start() {
-        
+        let viewModel = EditProfileViewModel(coordinator: self)
+        let controller = EditProfileViewController(viewModel: viewModel)
+        navigationController.present(controller, animated: true)
     }
 }
