@@ -12,6 +12,7 @@
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
 		37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */; };
+		378D30AD28D93C7400E021A8 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D30AC28D93C7400E021A8 /* EditProfile.swift */; };
 		378DC46128C6888800461CBD /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378DC46028C6888800461CBD /* ProductModel.swift */; };
 		378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4CE28B123D20058B5F2 /* ViewCodable.swift */; };
 		378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */; };
@@ -26,6 +27,7 @@
 		37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A12C6128C7812C00E12950 /* DefaultViewController.swift */; };
 		37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */; };
 		37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */; };
+		37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3682228D9FB9C0044ED58 /* HeaderView.swift */; };
 		37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */; };
 		37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */; };
 		37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466D028C3ECDF006C18D8 /* CheckoutView.swift */; };
@@ -68,6 +70,7 @@
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
 		37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		378D30AC28D93C7400E021A8 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		378DC46028C6888800461CBD /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		378FE4CE28B123D20058B5F2 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		378FE4D028B1257B0058B5F2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		37A12C6128C7812C00E12950 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonPreferences.swift; sourceTree = "<group>"; };
+		37B3682228D9FB9C0044ED58 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
 		37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		37B466D028C3ECDF006C18D8 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
@@ -155,11 +159,12 @@
 			name = Commons;
 			sourceTree = "<group>";
 		};
-		3798D67D28BAA44900887BC6 /* PreferencesBuy */ = {
+		378D30AB28D93C5900E021A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				378D30AC28D93C7400E021A8 /* EditProfile.swift */,
 			);
-			name = PreferencesBuy;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		3798D67E28BAB7C100887BC6 /* Home */ = {
@@ -207,6 +212,7 @@
 				37B7C13528D8DFB7003ADDBC /* InfoGroupView.swift */,
 				37B7C13728D8E61B003ADDBC /* LabelValueView.swift */,
 				37CE7FF028D91804009F04CC /* GrowButton.swift */,
+				37B3682228D9FB9C0044ED58 /* HeaderView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -258,7 +264,6 @@
 				37E1009728D8A79F008E461F /* Profile */,
 				37B466CD28C3ECB7006C18D8 /* Checkout */,
 				3798D67E28BAB7C100887BC6 /* Home */,
-				3798D67D28BAA44900887BC6 /* PreferencesBuy */,
 				37AEB5EC28BA6B6200987F56 /* Components */,
 				379A1CC928B27F880090E451 /* Login */,
 				37B9C30028B548AE00134380 /* PreferencesSell */,
@@ -303,6 +308,7 @@
 		37E1009828D8A7A8008E461F /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				378D30AB28D93C5900E021A8 /* Model */,
 				37E100A128D8A7D9008E461F /* EditProfileCoordinator.swift */,
 				37E100A228D8A7D9008E461F /* EditProfileViewController.swift */,
 				37E100A328D8A7D9008E461F /* EditProfileView.swift */,
@@ -519,8 +525,10 @@
 				37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */,
 				37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */,
 				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
+				37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
+				378D30AD28D93C7400E021A8 /* EditProfile.swift in Sources */,
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
 				37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */,
 				37B7C13828D8E61B003ADDBC /* LabelValueView.swift in Sources */,

@@ -16,22 +16,9 @@ final class ProfileView: UIView, ViewCodable {
     
     weak var delegate: ProfileViewDelegate?
     
-    private lazy var titleProfileLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "meu perfil"
-        label.font = UIFontStyle.customFont(name: .f22PrimaryExtraBold)
-        label.textColor = .black
-        return label
-    }()
-    
-    private lazy var profileImage: UIImageView = {
-        let view = UIImageView()
+    private lazy var headerView: HeaderView = {
+        let view = HeaderView(textLabel: "meu perfil", imageStrig: "profile", cornerRadiusValue: 25)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = UIImage(named: "profile")
-        view.isUserInteractionEnabled = true
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 25
         return view
     }()
     
@@ -62,22 +49,18 @@ final class ProfileView: UIView, ViewCodable {
     }
 
     func buildViewHierarchy() {
-        addSubViews([titleProfileLabel, profileImage, infoView, profileButton])
+        addSubViews([headerView, infoView, profileButton])
     }
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            titleProfileLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-            titleProfileLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            headerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
+            headerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            headerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             
-            profileImage.centerYAnchor.constraint(equalTo: titleProfileLabel.centerYAnchor),
-            profileImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
-            profileImage.heightAnchor.constraint(equalToConstant: 50),
-            profileImage.widthAnchor.constraint(equalToConstant: 50),
-            
-            infoView.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 32),
+            infoView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 32),
             infoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             infoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            
+
             profileButton.topAnchor.constraint(equalTo: infoView.bottomAnchor, constant: 32),
             profileButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             profileButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
@@ -88,8 +71,9 @@ final class ProfileView: UIView, ViewCodable {
     func setupAdditionalConfiguration() {
         backgroundColor = .white
         
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapProfileImage))
-        profileImage.addGestureRecognizer(gesture)
+        headerView.didTapIcon  = {
+            self.delegate?.didTapProfileImage()
+        }
         
         profileButton.onTapAction = {
             self.delegate?.didTapActionButton()
@@ -97,10 +81,6 @@ final class ProfileView: UIView, ViewCodable {
     }
     
     func updateImageView(image: UIImage) {
-        profileImage.image = image
-    }
-    
-    @objc private func didTapProfileImage() {
-        delegate?.didTapProfileImage()
+        headerView.updateImageView(image: image)
     }
 }

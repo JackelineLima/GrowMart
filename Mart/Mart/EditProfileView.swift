@@ -9,19 +9,9 @@ import UIKit
 
 final class EditProfileView: UIView, ViewCodable {
     
-    private lazy var titleProfileLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "editar perfil"
-        label.font = UIFontStyle.customFont(name: .f22PrimaryExtraBold)
-        label.textColor = .black
-        return label
-    }()
-    
-    private lazy var profileImage: UIImageView = {
-        let view = UIImageView()
+    private lazy var headerView: HeaderView = {
+        let view = HeaderView(textLabel: "editar perfil", imageStrig: "edit-profile")
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = UIImage(named: "edit-profile")
         return view
     }()
     
@@ -35,15 +25,14 @@ final class EditProfileView: UIView, ViewCodable {
     }
 
     func buildViewHierarchy() {
-        addSubViews([titleProfileLabel, profileImage])
+        addSubViews([headerView])
     }
+    
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            titleProfileLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
-            titleProfileLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            
-            profileImage.centerYAnchor.constraint(equalTo: titleProfileLabel.centerYAnchor),
-            profileImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+            headerView.topAnchor.constraint(equalTo: topAnchor, constant: 40),
+            headerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            headerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
         ])
     }
     
