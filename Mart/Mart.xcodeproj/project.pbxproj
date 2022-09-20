@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01626404319BE44FEDB4680C /* Pods_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13348DAD6A8766C103AED09 /* Pods_Mart.framework */; };
 		373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373754F428C3F02B0060EF13 /* LineNavigationView.swift */; };
+		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
 		37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		373754F428C3F02B0060EF13 /* LineNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigationView.swift; sourceTree = "<group>"; };
+		377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
 		37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				37939A7628C6839D0077CF88 /* UIButton.Configuration+Extensions.swift */,
 				37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */,
 				37C3B38028CF7D3F00CFA1EE /* UIImageView+Extensions.swift */,
+				377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
 				379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */,
 				3798D68628BAB7E000887BC6 /* HomeView.swift in Sources */,
+				377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */,
 				37C3B37F28CF780500CFA1EE /* HomeCollectionCell.swift in Sources */,
 				37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */,
 				37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */,
