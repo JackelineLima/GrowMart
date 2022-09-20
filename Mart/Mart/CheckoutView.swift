@@ -18,8 +18,8 @@ final class CheckoutView: UIView, ViewCodable {
     
     var viewModel: CheckoutViewModelProtocol
     
-    private lazy var lineView: LineNavigation = {
-        let view = LineNavigation()
+    private lazy var lineView: LineNavigationView = {
+        let view = LineNavigationView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

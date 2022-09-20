@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProfileViewModelProtocol {
-    
+    func navigateToEditPerfil()
 }
 
 class ProfileViewModel: ProfileViewModelProtocol {
@@ -17,5 +17,9 @@ class ProfileViewModel: ProfileViewModelProtocol {
     
     init(coordinator: ProfileCoordinatorProtocol) {
         self.coordinator = coordinator
+    }
+    
+    func navigateToEditPerfil() {
+        coordinator.navigateToEditPerfil()
     }
 }
