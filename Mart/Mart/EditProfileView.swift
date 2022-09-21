@@ -96,19 +96,60 @@ final class EditProfileView: UIView, ViewCodable {
         return view
     }
     
-    private func setupValues() {
+    private func cellType(for index: IndexPath) -> CellType? {
+        guard index.row < cells.count else {
+            return nil
+        }
         
+        return cells[index.row]
+    }
+    
+    private func setupValues() {
+        values = [
+            (field: .name, value: profile?.name ?? ""),
+            (field: .address, value: profile?.address ?? ""),
+            (field: .number, value: profile?.number ?? ""),
+            (field: .complement, value: profile?.complement ?? ""),
+            (field: .email, value: profile?.email ?? ""),
+            (field: .cellphone, value: profile?.cellphone ?? ""),
+            (field: .canShareWhatsapp, value: profile?.canShareWhatsapp ?? false)
+        ]
     }
     
     private func setupCells() {
-        
+        cells.removeAll()
+        values.forEach { item in
+            if let cellType: CellType = .getCellType(from: item.field) {
+                cells.append(cellType)
+            }
+        }
+        cells.append(.button)
+    }
+    
+    private func updateProfile(field: Profile.Field, value: Any?) {
+        switch field {
+        case .name:
+            profile?.name = value as? String
+        case .address:
+            profile?.address = value as? String
+        case .number:
+            profile?.number = value as? String
+        case .complement:
+            profile?.complement = value as? String
+        case .email:
+            profile?.email = value as? String
+        case .cellphone:
+            profile?.cellphone = value as? String
+        case .canShareWhatsapp:
+            profile?.canShareWhatsapp = value as? Bool
+        }
     }
 }
 
 extension EditProfileView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
