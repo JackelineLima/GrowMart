@@ -41,8 +41,8 @@ final class EditProfileView: UIView, ViewCodable {
     
     private weak var delegate: EditProfileViewDelegate?
     private var profile: Profile?
-    private var values: [(field: Profile.Field, value: Any)] = []
-    private var cells: [CellType] = []
+    private var values: [(typeTextfield: Profile.Field, value: Any)] = []
+    private var cellsType: [CellType] = []
     
     private lazy var tableview: UITableView = {
         let table = UITableView()
@@ -51,6 +51,10 @@ final class EditProfileView: UIView, ViewCodable {
         table.dataSource = self
         table.delegate = self
         table.separatorStyle = .none
+        table.register(ButtonCell.self, forCellReuseIdentifier: ButtonCell.reuseIdentifier)
+//        table.register(CheckboxCell.self, forCellReuseIdentifier: CheckboxCell.reuseIdentifier)
+        table.register(CustomTextFieldCell.self, forCellReuseIdentifier: CustomTextFieldCell.reuseIdentifier)
+        table.register(DoubleCustomTextFieldCell.self, forCellReuseIdentifier: DoubleCustomTextFieldCell.reuseIdentifier)
         return table
     }()
 
@@ -96,34 +100,34 @@ final class EditProfileView: UIView, ViewCodable {
         return view
     }
     
-    private func cellType(for index: IndexPath) -> CellType? {
-        guard index.row < cells.count else {
-            return nil
-        }
-        
-        return cells[index.row]
-    }
-    
     private func setupValues() {
         values = [
-            (field: .name, value: profile?.name ?? ""),
-            (field: .address, value: profile?.address ?? ""),
-            (field: .number, value: profile?.number ?? ""),
-            (field: .complement, value: profile?.complement ?? ""),
-            (field: .email, value: profile?.email ?? ""),
-            (field: .cellphone, value: profile?.cellphone ?? ""),
-            (field: .canShareWhatsapp, value: profile?.canShareWhatsapp ?? false)
+            (typeTextfield: .name, value: profile?.name ?? ""),
+            (typeTextfield: .address, value: profile?.address ?? ""),
+            (typeTextfield: .number, value: profile?.number ?? ""),
+            (typeTextfield: .complement, value: profile?.complement ?? ""),
+            (typeTextfield: .email, value: profile?.email ?? ""),
+            (typeTextfield: .cellphone, value: profile?.cellphone ?? ""),
+            (typeTextfield: .canShareWhatsapp, value: profile?.canShareWhatsapp ?? false)
         ]
     }
     
     private func setupCells() {
-        cells.removeAll()
+        cellsType.removeAll()
         values.forEach { item in
-            if let cellType: CellType = .getCellType(from: item.field) {
-                cells.append(cellType)
+            if let cellType: CellType = .getCellType(from: item.typeTextfield) {
+                cellsType.append(cellType)
             }
         }
-        cells.append(.button)
+        cellsType.append(.button)
+    }
+    
+    private func setupCellType(for index: IndexPath) -> CellType? {
+        guard index.row < cellsType.count else {
+            return nil
+        }
+    
+        return cellsType[index.row]
     }
     
     private func updateProfile(field: Profile.Field, value: Any?) {
@@ -144,16 +148,71 @@ final class EditProfileView: UIView, ViewCodable {
             profile?.canShareWhatsapp = value as? Bool
         }
     }
+    
+    private func getFieldValue(field: Profile.Field) -> Any? {
+        switch field {
+        case .name:
+            return profile?.name
+        case .address:
+            return profile?.address
+        case .number:
+            return profile?.number
+        case .complement:
+            return profile?.complement
+        case .email:
+            return profile?.email
+        case .cellphone:
+            return profile?.cellphone
+        case .canShareWhatsapp:
+            return profile?.canShareWhatsapp
+        }
+    }
+    
+    private func validateDelegates(propertyName: String?, value: Any?) {
+        guard let propertyName = propertyName,
+              let field = Profile.Field(rawValue: propertyName) else {
+            return
+        }
+        
+        updateProfile(field: field, value: value)
+    }
 }
 
 extension EditProfileView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cells.count
+        cellsType.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        
+        guard let cellType = setupCellType(for: indexPath) else { return UITableViewCell() }
+        
+        switch cellType {
+        case .textField(let field):
+            guard let cell: CustomTextFieldCell = .createCell(for: tableView, at: indexPath) else { return UITableViewCell() }
+            cell.propertyName = field.rawValue
+            cell.delegate = self
+            cell.setData(title: field.getFormattedName(),
+                         value: getFieldValue(field: field) as? String)
+            return cell
+        case .doubleTextField(let leftTitle, let rightTitle):
+            guard let cell: DoubleCustomTextFieldCell = .createCell(for: tableView, at: indexPath) else { return UITableViewCell() }
+            cell.leftFieldPropertyName = leftTitle.rawValue
+            cell.rightFieldPropertyName = rightTitle.rawValue
+            cell.delegate = self
+            cell.setData(leftTitle: leftTitle.getFormattedName(),
+                         leftValue: getFieldValue(field: leftTitle) as? String,
+                         rightTitle: rightTitle.getFormattedName(),
+                         rightValue: getFieldValue(field: rightTitle) as? String)
+            return cell
+        case .checkbox(let field):
+            return UITableViewCell()
+        case .button:
+            guard let cell: ButtonCell = .createCell(for: tableView, at: indexPath) else { return UITableViewCell() }
+            cell.delegate = self
+            return cell
+        }
     }
     
 
@@ -171,3 +230,17 @@ extension EditProfileView: UITableViewDataSource {
 }
 
 extension EditProfileView: UITableViewDelegate { }
+
+extension EditProfileView: CustomTextFieldCellDelegate, DoubleCustomTextFieldCellDelegate {
+    
+    func didChangeValue(propertyName: String?, value: String) {
+        validateDelegates(propertyName: propertyName, value: value)
+    }
+}
+
+extension EditProfileView: ButtonCellDelegate {
+    
+    func didTapButton() {
+        print(profile)
+    }
+}

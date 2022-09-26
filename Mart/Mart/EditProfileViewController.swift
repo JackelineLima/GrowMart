@@ -13,7 +13,9 @@ protocol EditProfileDisplayable: AnyObject {
 
 final class EditProfileViewController: UIViewController {
     
-    private lazy var editProfileView = EditProfileView(delegate: self, profile: .init())
+    private lazy var editProfileView = EditProfileView(delegate: self, profile: .init(
+        name: "Jackeline",
+        address: "José Bonifácio"))
     private let viewModel: EditProfileViewModelProtocol
 
     init(viewModel: EditProfileViewModelProtocol) {

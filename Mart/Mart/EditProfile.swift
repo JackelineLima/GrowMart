@@ -8,6 +8,14 @@
 import Foundation
 
 public struct Profile {
+    var name: String?
+    var address: String?
+    var number: String?
+    var complement: String?
+    var email: String?
+    var cellphone: String?
+    var canShareWhatsapp: Bool?
+    
     enum Field: String {
         case name
         case address
@@ -36,12 +44,4 @@ public struct Profile {
             }
         }
     }
-    
-    var name: String?
-    var address: String?
-    var number: String?
-    var complement: String?
-    var email: String?
-    var cellphone: String?
-    var canShareWhatsapp: Bool?
 }

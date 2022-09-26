@@ -24,6 +24,7 @@
 		3798D68628BAB7E000887BC6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68228BAB7E000887BC6 /* HomeView.swift */; };
 		3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3798D68328BAB7E000887BC6 /* HomeViewModel.swift */; };
 		379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379A1CC728B27E920090E451 /* UIColor+Extensions.swift */; };
+		379F4E7128E21F7000C703A4 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F4E7028E21F7000C703A4 /* ButtonCell.swift */; };
 		37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A07ADE28D12694006295FB /* HomeCollectionView.swift */; };
 		37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A12C6128C7812C00E12950 /* DefaultViewController.swift */; };
 		37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */; };
@@ -43,6 +44,9 @@
 		37C3B37F28CF780500CFA1EE /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3B37E28CF780500CFA1EE /* HomeCollectionCell.swift */; };
 		37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3B38028CF7D3F00CFA1EE /* UIImageView+Extensions.swift */; };
 		37CE7FF128D91804009F04CC /* GrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE7FF028D91804009F04CC /* GrowButton.swift */; };
+		37D5C56B28E1D6D800385B06 /* SimpleTextfieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5C56A28E1D6D800385B06 /* SimpleTextfieldCell.swift */; };
+		37D5C56D28E1D74400385B06 /* DoubleCustomTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5C56C28E1D74400385B06 /* DoubleCustomTextFieldCell.swift */; };
+		37D5C56F28E1D80600385B06 /* CustomTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5C56E28E1D80600385B06 /* CustomTextFieldCell.swift */; };
 		37DDF2D328B286B5003205DE /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */; };
 		37DDF2D528B286D1003205DE /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */; };
 		37DDF2D728B28707003205DE /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37DDF2D628B28707003205DE /* Nunito-Medium.ttf */; };
@@ -83,6 +87,7 @@
 		3798D68228BAB7E000887BC6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3798D68328BAB7E000887BC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		379A1CC728B27E920090E451 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		379F4E7028E21F7000C703A4 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		37A07ADE28D12694006295FB /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 		37A12C6128C7812C00E12950 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
@@ -102,6 +107,9 @@
 		37C3B37E28CF780500CFA1EE /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		37C3B38028CF7D3F00CFA1EE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		37CE7FF028D91804009F04CC /* GrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowButton.swift; sourceTree = "<group>"; };
+		37D5C56A28E1D6D800385B06 /* SimpleTextfieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextfieldCell.swift; sourceTree = "<group>"; };
+		37D5C56C28E1D74400385B06 /* DoubleCustomTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCustomTextFieldCell.swift; sourceTree = "<group>"; };
+		37D5C56E28E1D80600385B06 /* CustomTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldCell.swift; sourceTree = "<group>"; };
 		37DDF2D228B286B5003205DE /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		37DDF2D428B286D1003205DE /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		37DDF2D628B28707003205DE /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
@@ -205,9 +213,21 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		379F4E6F28E21F4200C703A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37D5C56A28E1D6D800385B06 /* SimpleTextfieldCell.swift */,
+				37D5C56C28E1D74400385B06 /* DoubleCustomTextFieldCell.swift */,
+				37D5C56E28E1D80600385B06 /* CustomTextFieldCell.swift */,
+				379F4E7028E21F7000C703A4 /* ButtonCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		37AEB5EC28BA6B6200987F56 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				379F4E6F28E21F4200C703A4 /* Cells */,
 				37A12C6128C7812C00E12950 /* DefaultViewController.swift */,
 				37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */,
 				373754F428C3F02B0060EF13 /* LineNavigationView.swift */,
@@ -497,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379F4E7128E21F7000C703A4 /* ButtonCell.swift in Sources */,
 				37E100A728D8A7D9008E461F /* EditProfileView.swift in Sources */,
 				378DC46128C6888800461CBD /* ProductModel.swift in Sources */,
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
@@ -517,11 +538,13 @@
 				37E100A628D8A7D9008E461F /* EditProfileViewController.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
+				37D5C56F28E1D80600385B06 /* CustomTextFieldCell.swift in Sources */,
 				37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */,
 				37E1009F28D8A7CA008E461F /* ProfileView.swift in Sources */,
 				37E1009D28D8A7CA008E461F /* ProfileCoordinator.swift in Sources */,
 				37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
+				37D5C56B28E1D6D800385B06 /* SimpleTextfieldCell.swift in Sources */,
 				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
 				37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */,
 				373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */,
@@ -532,6 +555,7 @@
 				37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
+				37D5C56D28E1D74400385B06 /* DoubleCustomTextFieldCell.swift in Sources */,
 				378D30AD28D93C7400E021A8 /* EditProfile.swift in Sources */,
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
 				37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */,
