@@ -205,6 +205,7 @@
 				37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */,
 			);
 			name = Home;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		379A1CC928B27F880090E451 /* Login */ = {
@@ -301,7 +302,6 @@
 				37E1009828D8A7A8008E461F /* EditProfile */,
 				37E1009728D8A79F008E461F /* Profile */,
 				37B466CD28C3ECB7006C18D8 /* Checkout */,
-				3798D67E28BAB7C100887BC6 /* Home */,
 				37AEB5EC28BA6B6200987F56 /* Components */,
 				379A1CC928B27F880090E451 /* Login */,
 				37B9C30028B548AE00134380 /* PreferencesSell */,
@@ -418,6 +418,7 @@
 		37F3B3F128E36DC7000BC793 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3798D67E28BAB7C100887BC6 /* Home */,
 			);
 			path = Home;
 			sourceTree = "<group>";
