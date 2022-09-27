@@ -410,8 +410,16 @@
 		37F3B3F028E36D98000BC793 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37F3B3F128E36DC7000BC793 /* Home */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		37F3B3F128E36DC7000BC793 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		4AB03613692056891416824C /* Frameworks */ = {
