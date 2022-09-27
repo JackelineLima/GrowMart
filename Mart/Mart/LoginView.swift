@@ -39,7 +39,11 @@ final class LoginView: UIView {
     
     private lazy var facebookButton: UIButton = {
         let button = UIButton()
-        button.configuration = .setButtonConfiguration(backgroundColor: .init(rgb: 0x4267B2), title: "ENTRAR COM FACEBOOK", icon: UIImage(named: "icon-facebook"), font: .f12PrimarySemiBold, textColor: .white)
+        button.configuration = .setButtonConfiguration(backgroundColor: .init(rgb: 0x4267B2),
+                                                       title: MartStrings.Localizable.loginWithFacebook,
+                                                       icon: UIImage(named: "icon-facebook"),
+                                                       font: .f12PrimarySemiBold,
+                                                       textColor: .white)
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(continueButtonFacebook), for: .touchUpInside)
         return button
@@ -47,7 +51,11 @@ final class LoginView: UIView {
     
     private lazy var googleButton: UIButton = {
         let button = UIButton()
-        button.configuration = .setButtonConfiguration(backgroundColor: .init(rgb: 0xDB4437), title: "ENTRAR COM GOOGLE", icon: UIImage(named: "icon-google"), font: .f12PrimarySemiBold, textColor: .white)
+        button.configuration = .setButtonConfiguration(backgroundColor: .init(rgb: 0xDB4437),
+                                                       title: MartStrings.Localizable.loginWithGoogle,
+                                                       icon: UIImage(named: "icon-google"),
+                                                       font: .f12PrimarySemiBold,
+                                                       textColor: .white)
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(continueButtonGoogle), for: .touchUpInside)
         return button

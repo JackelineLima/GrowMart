@@ -13,6 +13,9 @@
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
 		37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */; };
+		3789949C28E35DDE00605063 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3789949B28E35DDE00605063 /* Localizable.strings */; };
+		3789949E28E361A900605063 /* MartStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789949D28E361A900605063 /* MartStrings.swift */; };
+		378994A028E362F000605063 /* BundleFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789949F28E362F000605063 /* BundleFinder.swift */; };
 		378D30AD28D93C7400E021A8 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D30AC28D93C7400E021A8 /* EditProfile.swift */; };
 		378DC46128C6888800461CBD /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378DC46028C6888800461CBD /* ProductModel.swift */; };
 		378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FE4CE28B123D20058B5F2 /* ViewCodable.swift */; };
@@ -76,6 +79,9 @@
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
 		37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		3789949B28E35DDE00605063 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3789949D28E361A900605063 /* MartStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartStrings.swift; sourceTree = "<group>"; };
+		3789949F28E362F000605063 /* BundleFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleFinder.swift; sourceTree = "<group>"; };
 		378D30AC28D93C7400E021A8 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 		378DC46028C6888800461CBD /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		378FE4CE28B123D20058B5F2 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
@@ -167,6 +173,16 @@
 				37A07ADE28D12694006295FB /* HomeCollectionView.swift */,
 			);
 			name = Commons;
+			sourceTree = "<group>";
+		};
+		3789949A28E35DCF00605063 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3789949B28E35DDE00605063 /* Localizable.strings */,
+				3789949D28E361A900605063 /* MartStrings.swift */,
+				3789949F28E362F000605063 /* BundleFinder.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		378D30AB28D93C5900E021A8 /* Model */ = {
@@ -361,6 +377,7 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				3789949A28E35DCF00605063 /* Resources */,
 				37B0700928C6B2B7004490B3 /* Model */,
 				37BF25DA28B1339C00E0066A /* SuportedFiles */,
 				379A1CCA28B282B30090E451 /* Fonts */,
@@ -462,6 +479,7 @@
 				37DDF2D328B286B5003205DE /* Nunito-SemiBold.ttf in Resources */,
 				37EB508C28B11CD100185E83 /* LaunchScreen.storyboard in Resources */,
 				37EB508928B11CD100185E83 /* Assets.xcassets in Resources */,
+				3789949C28E35DDE00605063 /* Localizable.strings in Resources */,
 				37DDF2D528B286D1003205DE /* Nunito-ExtraBold.ttf in Resources */,
 				37DDF2D728B28707003205DE /* Nunito-Medium.ttf in Resources */,
 			);
@@ -551,6 +569,7 @@
 				3798D68528BAB7E000887BC6 /* HomeViewController.swift in Sources */,
 				37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */,
 				37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */,
+				3789949E28E361A900605063 /* MartStrings.swift in Sources */,
 				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
 				37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
@@ -562,6 +581,7 @@
 				37B7C13828D8E61B003ADDBC /* LabelValueView.swift in Sources */,
 				37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */,
 				37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */,
+				378994A028E362F000605063 /* BundleFinder.swift in Sources */,
 				37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
 				37CE7FF128D91804009F04CC /* GrowButton.swift in Sources */,
