@@ -377,6 +377,7 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				37F3B3F028E36D98000BC793 /* View */,
 				3789949A28E35DCF00605063 /* Resources */,
 				37B0700928C6B2B7004490B3 /* Model */,
 				37BF25DA28B1339C00E0066A /* SuportedFiles */,
@@ -404,6 +405,13 @@
 				37F0D7E228C66BBF0018694A /* CheckoutTableViewCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		37F3B3F028E36D98000BC793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4AB03613692056891416824C /* Frameworks */ = {
