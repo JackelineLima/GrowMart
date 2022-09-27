@@ -413,7 +413,6 @@
 		37F3B3F028E36D98000BC793 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				37F3B3F128E36DC7000BC793 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +428,7 @@
 		37F3B3F228E36E20000BC793 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				37F3B3F128E36DC7000BC793 /* Home */,
 				37F3B3F328E36E31000BC793 /* Teste.swift */,
 			);
 			path = Modules;
