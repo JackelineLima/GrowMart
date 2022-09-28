@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		01626404319BE44FEDB4680C /* Pods_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13348DAD6A8766C103AED09 /* Pods_Mart.framework */; };
 		373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373754F428C3F02B0060EF13 /* LineNavigationView.swift */; };
+		37542B5828E4E35F000C8791 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37542B5728E4E35F000C8791 /* Strings.swift */; };
+		37542B5B28E4E3D6000C8791 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37542B5928E4E3D6000C8791 /* Localizable.strings */; };
 		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
 		37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */; };
-		3789949C28E35DDE00605063 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3789949B28E35DDE00605063 /* Localizable.strings */; };
 		3789949E28E361A900605063 /* MartStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789949D28E361A900605063 /* MartStrings.swift */; };
 		378994A028E362F000605063 /* BundleFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789949F28E362F000605063 /* BundleFinder.swift */; };
 		378D30AD28D93C7400E021A8 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D30AC28D93C7400E021A8 /* EditProfile.swift */; };
@@ -75,11 +76,13 @@
 
 /* Begin PBXFileReference section */
 		373754F428C3F02B0060EF13 /* LineNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigationView.swift; sourceTree = "<group>"; };
+		37542B5428E4DFE1000C8791 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		37542B5728E4E35F000C8791 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		37542B5A28E4E3D6000C8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
 		37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		3789949B28E35DDE00605063 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3789949D28E361A900605063 /* MartStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartStrings.swift; sourceTree = "<group>"; };
 		3789949F28E362F000605063 /* BundleFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleFinder.swift; sourceTree = "<group>"; };
 		378D30AC28D93C7400E021A8 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
@@ -165,6 +168,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		37542B5C28E4E493000C8791 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				37542B5928E4E3D6000C8791 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		37852F4F28CCE1DD00DD2425 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +189,7 @@
 		3789949A28E35DCF00605063 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3789949B28E35DDE00605063 /* Localizable.strings */,
+				37542B5728E4E35F000C8791 /* Strings.swift */,
 				3789949D28E361A900605063 /* MartStrings.swift */,
 				3789949F28E362F000605063 /* BundleFinder.swift */,
 			);
@@ -359,6 +370,7 @@
 		37EB507328B11CD100185E83 = {
 			isa = PBXGroup;
 			children = (
+				37542B5428E4DFE1000C8791 /* swiftgen.yml */,
 				37EB507E28B11CD100185E83 /* Mart */,
 				37EB507D28B11CD100185E83 /* Products */,
 				1E110A858558004C1451B45C /* Pods */,
@@ -377,6 +389,7 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				37542B5C28E4E493000C8791 /* Localizable */,
 				3789949A28E35DCF00605063 /* Resources */,
 				37B0700928C6B2B7004490B3 /* Model */,
 				37BF25DA28B1339C00E0066A /* SuportedFiles */,
@@ -426,6 +439,7 @@
 				37EB507928B11CD100185E83 /* Frameworks */,
 				37EB507A28B11CD100185E83 /* Resources */,
 				37EB509428B11E1400185E83 /* SwiftLint */,
+				37A86C6F28E37ADF001BE1C8 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -479,7 +493,7 @@
 				37DDF2D328B286B5003205DE /* Nunito-SemiBold.ttf in Resources */,
 				37EB508C28B11CD100185E83 /* LaunchScreen.storyboard in Resources */,
 				37EB508928B11CD100185E83 /* Assets.xcassets in Resources */,
-				3789949C28E35DDE00605063 /* Localizable.strings in Resources */,
+				37542B5B28E4E3D6000C8791 /* Localizable.strings in Resources */,
 				37DDF2D528B286D1003205DE /* Nunito-ExtraBold.ttf in Resources */,
 				37DDF2D728B28707003205DE /* Nunito-Medium.ttf in Resources */,
 			);
@@ -488,6 +502,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		37A86C6F28E37ADF001BE1C8 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#if [ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"]; then \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n#else \n#    echo \"error SwiftGen not installed, download from https://github.com/SwiftGen/SwiftGen\"\n #   exit 1\n";
+		};
 		37EB509428B11E1400185E83 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,6 +601,7 @@
 				3798D68528BAB7E000887BC6 /* HomeViewController.swift in Sources */,
 				37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */,
 				37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */,
+				37542B5828E4E35F000C8791 /* Strings.swift in Sources */,
 				3789949E28E361A900605063 /* MartStrings.swift in Sources */,
 				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
 				37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */,
@@ -596,6 +629,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		37542B5928E4E3D6000C8791 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37542B5A28E4E3D6000C8791 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Mart
+
+  Created by Jackeline Pires De Lima on 28/09/22.
+  
+*/
+
+"login-with-facebook" = "ENTRAR COM FACEBOOK";
+"login-with-google" = "ENTRAR COM GOOGLE";
+"search" = "buscar";

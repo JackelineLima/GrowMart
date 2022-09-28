@@ -8,5 +8,6 @@ target 'Mart' do
   # Pods for Mart
 
 pod 'SwiftLint'
+pod 'SwiftGen'
 
 end

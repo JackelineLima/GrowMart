@@ -1,0 +1,7 @@
+strings:
+  inputs: Mart/Localizable
+  outputs:
+    - templateName: structured-swift5
+      output: Mart/Resources/Strings.swift
+      params:
+        enumName: GrowMartLocalizable

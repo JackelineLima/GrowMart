@@ -21,7 +21,7 @@ final class HomeView: UIView, ViewCodable {
     
     private lazy var search: SearchBar = {
         let search = SearchBar()
-        search.placeholder = "buscar"
+        search.placeholder = GrowMartLocalizable.search
         search.borderStyle = .roundedRect
         search.layer.borderColor = UIColor.black.cgColor
         search.layer.cornerRadius = 5
