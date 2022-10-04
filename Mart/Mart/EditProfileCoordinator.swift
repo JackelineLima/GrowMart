@@ -8,7 +8,8 @@
 import UIKit
 
 protocol EditProfileCoordinatorProtocol: AnyObject {
-    func start()
+    func start(delegate: EditProfileViewControllerDelegate)
+    func dismiss()
 }
 
 final class EditProfileCoordinator {
@@ -22,9 +23,14 @@ final class EditProfileCoordinator {
 
 extension EditProfileCoordinator: EditProfileCoordinatorProtocol {
     
-    func start() {
+    func start(delegate: EditProfileViewControllerDelegate) {
         let viewModel = EditProfileViewModel(coordinator: self)
         let controller = EditProfileViewController(viewModel: viewModel)
+        controller.delegate = delegate
         navigationController.pushViewController(controller, animated: true)
+    }
+    
+    func dismiss() {
+        navigationController.popViewController(animated: true)
     }
 }

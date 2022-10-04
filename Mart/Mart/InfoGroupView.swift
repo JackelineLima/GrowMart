@@ -9,9 +9,9 @@ import UIKit
 
 class InfoGroupView: UIStackView {
     
-    private let title: String
-    private let infos: [(leftValue: String, rightValue: String)]
-    private let footerMessage: String?
+    private var title: String
+    private var infos: [(leftValue: String, rightValue: String)]
+    private var footerMessage: String?
     private var labelValues = [LabelValueView]()
     
     private lazy var dataLabel: UILabel = {
@@ -111,5 +111,14 @@ class InfoGroupView: UIStackView {
                 footerLabel.heightAnchor.constraint(equalToConstant: 25)
             ])
         }
+    }
+    
+    func updateData(infos: [(String, String)],
+                    footerMessage: String? = nil) {
+        self.infos = infos
+        self.footerMessage = footerMessage
+        arrangedSubviews.forEach({ $0.removeFromSuperview() })
+        labelValues.removeAll()
+        setupLayout()
     }
 }

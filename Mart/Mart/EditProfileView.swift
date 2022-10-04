@@ -34,7 +34,7 @@ private enum CellType {
 }
 
 protocol EditProfileViewDelegate: AnyObject {
-
+    func updateProfile(data: Profile)
 }
 
 final class EditProfileView: UIView, ViewCodable {
@@ -244,6 +244,7 @@ extension EditProfileView: CustomTextFieldCellDelegate, DoubleCustomTextFieldCel
 extension EditProfileView: ButtonCellDelegate {
     
     func didTapButton() {
-        print(profile)
+        guard let profile = profile else { return }
+        delegate?.updateProfile(data: profile)
     }
 }

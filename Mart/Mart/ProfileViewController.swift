@@ -11,11 +11,25 @@ protocol ProfileDisplayable: AnyObject {
     func displaySomething()
 }
 
-final class ProfileViewController: DefaultViewController {
+class ProfileViewController: DefaultViewController {
     
-    private lazy var profileView = ProfileView()
+    private lazy var profileView: ProfileView = {
+        let element = ProfileView(profile: profile,
+                                  memberSince: "membro desde: dd/mm/yy")
+        return element
+    }()
+    
+    
+    private var profile: Profile = .init(name: "Michelli Cristina",
+                                         address: "Rua das Flores",
+                                         number: "099",
+                                         complement: "00000-000",
+                                         email: "teste@teste.com",
+                                         cellphone: "(00) 00000-0000",
+                                         canShareWhatsapp: true)
+    
     private let viewModel: ProfileViewModelProtocol
-
+    
     init(viewModel: ProfileViewModelProtocol) {
       self.viewModel = viewModel
       super.init(nibName: nil, bundle: .main)
@@ -38,7 +52,7 @@ final class ProfileViewController: DefaultViewController {
 extension ProfileViewController: ProfileViewDelegate {
     
     func didTapActionButton() {
-        viewModel.navigateToEditPerfil()
+        viewModel.navigateToEditPerfil(delegate: self)
     }
     
     
@@ -61,6 +75,14 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         profileView.updateImageView(image: image)
         dismiss(animated: true)
+    }
+}
+
+extension ProfileViewController: EditProfileViewControllerDelegate {
+    
+    func updateProfile(data: Profile) {
+        self.profile = data
+        profileView.reloadData(profile: profile)
     }
 }
     

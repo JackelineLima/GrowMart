@@ -8,7 +8,7 @@
 import Foundation
 
 protocol EditProfileViewModelProtocol {
-    
+    func dismiss()
 }
 
 class EditProfileViewModel: EditProfileViewModelProtocol {
@@ -17,5 +17,9 @@ class EditProfileViewModel: EditProfileViewModelProtocol {
     
     init(coordinator: EditProfileCoordinatorProtocol) {
         self.coordinator = coordinator
+    }
+    
+    func dismiss() {
+        coordinator.dismiss()
     }
 }

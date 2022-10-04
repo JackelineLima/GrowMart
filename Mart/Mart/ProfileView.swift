@@ -15,6 +15,8 @@ protocol ProfileViewDelegate: AnyObject {
 final class ProfileView: UIView, ViewCodable {
     
     weak var delegate: ProfileViewDelegate?
+    private var profile: Profile
+    private let memberSince: String?
     
     private lazy var headerView: HeaderView = {
         let view = HeaderView(textLabel: "meu perfil", imageStrig: "profile", cornerRadiusValue: 25)
@@ -24,10 +26,7 @@ final class ProfileView: UIView, ViewCodable {
     
     private lazy var infoView: InfoGroupView = {
         let view = InfoGroupView(title: "DADOS PESSOAIS",
-                                 infos: [(leftValue: "nome", rightValue: "Jackeline Lima"),
-                                         (leftValue: "endereço", rightValue: "Rua José Bonifácio"),
-                                         (leftValue: "cep", rightValue: "89066-370"),
-                                         (leftValue: "email", rightValue: "nomeemail@gmail.com")],
+                                 infos: getProfileInfo(),
                                  footerMessage: "membro desde: dd/mm/yy")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -39,18 +38,22 @@ final class ProfileView: UIView, ViewCodable {
         return button
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(profile: Profile,
+         memberSince: String? = nil) {
+        self.profile = profile
+        self.memberSince = memberSince
+        super.init(frame: .zero)
         setupView()
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        nil
     }
 
     func buildViewHierarchy() {
         addSubViews([headerView, infoView, profileButton])
     }
+    
     func setupConstraints() {
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 40),
@@ -83,4 +86,21 @@ final class ProfileView: UIView, ViewCodable {
     func updateImageView(image: UIImage) {
         headerView.updateImageView(image: image)
     }
+    
+    func reloadData(profile: Profile) {
+        self.profile = profile
+        infoView.updateData(infos: getProfileInfo(),
+                                footerMessage: memberSince)
+    }
+    
+    private func getProfileInfo() -> [(String, String)] {
+           return [
+               ("nome", profile.name ?? ""),
+               ("endereço", profile.address ?? ""),
+               ("número", profile.number ?? ""),
+               ("complemento", profile.complement ?? ""),
+               ("email", profile.email ?? ""),
+               ("celular", profile.cellphone ?? "")
+           ]
+       }
 }

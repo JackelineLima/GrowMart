@@ -7,12 +7,13 @@
 
 import UIKit
 
-protocol EditProfileDisplayable: AnyObject {
-    func displaySomething()
+protocol EditProfileViewControllerDelegate: AnyObject {
+    func updateProfile(data: Profile)
 }
 
 final class EditProfileViewController: DefaultViewController {
     
+    weak var delegate: EditProfileViewControllerDelegate?
     private lazy var editProfileView = EditProfileView(delegate: self, profile: .init(
         name: "Jackeline",
         address: "José Bonifácio"))
@@ -38,4 +39,8 @@ final class EditProfileViewController: DefaultViewController {
 
 extension EditProfileViewController: EditProfileViewDelegate {
     
+    func updateProfile(data: Profile) {
+        delegate?.updateProfile(data: data)
+        viewModel.dismiss()
+    }
 }

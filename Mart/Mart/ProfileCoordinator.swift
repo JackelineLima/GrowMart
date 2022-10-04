@@ -9,7 +9,7 @@ import UIKit
 
 protocol ProfileCoordinatorProtocol: AnyObject {
     func start()
-    func navigateToEditPerfil()
+    func navigateToEditPerfil(delegate: EditProfileViewControllerDelegate)
 }
 
 final class ProfileCoordinator {
@@ -29,8 +29,8 @@ extension ProfileCoordinator: ProfileCoordinatorProtocol {
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func navigateToEditPerfil() {
+    func navigateToEditPerfil(delegate: EditProfileViewControllerDelegate) {
         let coordinator = EditProfileCoordinator(navigationController: navigationController)
-        coordinator.start()
+        coordinator.start(delegate: delegate)
     }
 }
