@@ -33,6 +33,11 @@
 		37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A12C6128C7812C00E12950 /* DefaultViewController.swift */; };
 		37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */; };
 		37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */; };
+		37AF8DD328E87EB800AD5693 /* EntryPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DD228E87EB800AD5693 /* EntryPointFactory.swift */; };
+		37AF8DD528E87EF500AD5693 /* CompositeEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DD428E87EF500AD5693 /* CompositeEntryPoint.swift */; };
+		37AF8DD728E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DD628E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift */; };
+		37AF8DD928E8814100AD5693 /* StartupConfiguratorEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DD828E8814100AD5693 /* StartupConfiguratorEntryPoint.swift */; };
+		37AF8DDB28E881EE00AD5693 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DDA28E881EE00AD5693 /* ApplicationCoordinator.swift */; };
 		37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3682228D9FB9C0044ED58 /* HeaderView.swift */; };
 		37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */; };
 		37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */; };
@@ -101,6 +106,11 @@
 		37A12C6128C7812C00E12950 /* DefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
 		37A9C7D428CFBE5E0036FE76 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		37AEB5ED28BA6B8000987F56 /* UIButtonPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonPreferences.swift; sourceTree = "<group>"; };
+		37AF8DD228E87EB800AD5693 /* EntryPointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointFactory.swift; sourceTree = "<group>"; };
+		37AF8DD428E87EF500AD5693 /* CompositeEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeEntryPoint.swift; sourceTree = "<group>"; };
+		37AF8DD628E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfiguratorEntryPoint.swift; sourceTree = "<group>"; };
+		37AF8DD828E8814100AD5693 /* StartupConfiguratorEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupConfiguratorEntryPoint.swift; sourceTree = "<group>"; };
+		37AF8DDA28E881EE00AD5693 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		37B3682228D9FB9C0044ED58 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
 		37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +196,15 @@
 			name = Commons;
 			sourceTree = "<group>";
 		};
+		3786587428E88B3B00597599 /* Compositions */ = {
+			isa = PBXGroup;
+			children = (
+				37AF8DD628E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift */,
+				37AF8DD828E8814100AD5693 /* StartupConfiguratorEntryPoint.swift */,
+			);
+			path = Compositions;
+			sourceTree = "<group>";
+		};
 		3789949A28E35DCF00605063 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +285,19 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		37AF8DD128E87E8900AD5693 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3786587428E88B3B00597599 /* Compositions */,
+				37AF8DD228E87EB800AD5693 /* EntryPointFactory.swift */,
+				37AF8DD428E87EF500AD5693 /* CompositeEntryPoint.swift */,
+				37AF8DDA28E881EE00AD5693 /* ApplicationCoordinator.swift */,
+				37EB507F28B11CD100185E83 /* AppDelegate.swift */,
+				37EB508128B11CD100185E83 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		37B0700928C6B2B7004490B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,15 +327,6 @@
 				37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */,
 			);
 			name = PreferencesSell;
-			sourceTree = "<group>";
-		};
-		37BF25DA28B1339C00E0066A /* SuportedFiles */ = {
-			isa = PBXGroup;
-			children = (
-				37EB507F28B11CD100185E83 /* AppDelegate.swift */,
-				37EB508128B11CD100185E83 /* SceneDelegate.swift */,
-			);
-			path = SuportedFiles;
 			sourceTree = "<group>";
 		};
 		37BF25DD28B1356E00E0066A /* Views */ = {
@@ -389,10 +412,10 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				37AF8DD128E87E8900AD5693 /* AppDelegate */,
 				37542B5C28E4E493000C8791 /* Localizable */,
 				3789949A28E35DCF00605063 /* Resources */,
 				37B0700928C6B2B7004490B3 /* Model */,
-				37BF25DA28B1339C00E0066A /* SuportedFiles */,
 				379A1CCA28B282B30090E451 /* Fonts */,
 				37BF25DE28B1358000E0066A /* Utils */,
 				37BF25DD28B1356E00E0066A /* Views */,
@@ -570,6 +593,7 @@
 				379F4E7128E21F7000C703A4 /* ButtonCell.swift in Sources */,
 				37E100A728D8A7D9008E461F /* EditProfileView.swift in Sources */,
 				378DC46128C6888800461CBD /* ProductModel.swift in Sources */,
+				37AF8DD928E8814100AD5693 /* StartupConfiguratorEntryPoint.swift in Sources */,
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
 				37E100A528D8A7D9008E461F /* EditProfileCoordinator.swift in Sources */,
 				37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */,
@@ -589,10 +613,12 @@
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
 				37D5C56F28E1D80600385B06 /* CustomTextFieldCell.swift in Sources */,
+				37AF8DD328E87EB800AD5693 /* EntryPointFactory.swift in Sources */,
 				37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */,
 				37E1009F28D8A7CA008E461F /* ProfileView.swift in Sources */,
 				37E1009D28D8A7CA008E461F /* ProfileCoordinator.swift in Sources */,
 				37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */,
+				37AF8DD728E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37D5C56B28E1D6D800385B06 /* SimpleTextfieldCell.swift in Sources */,
 				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
@@ -605,6 +631,7 @@
 				3789949E28E361A900605063 /* MartStrings.swift in Sources */,
 				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
 				37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */,
+				37AF8DD528E87EF500AD5693 /* CompositeEntryPoint.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
 				37D5C56D28E1D74400385B06 /* DoubleCustomTextFieldCell.swift in Sources */,
@@ -612,6 +639,7 @@
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
 				37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */,
 				37B7C13828D8E61B003ADDBC /* LabelValueView.swift in Sources */,
+				37AF8DDB28E881EE00AD5693 /* ApplicationCoordinator.swift in Sources */,
 				37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */,
 				37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */,
 				378994A028E362F000605063 /* BundleFinder.swift in Sources */,

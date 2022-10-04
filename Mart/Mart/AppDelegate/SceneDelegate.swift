@@ -10,6 +10,9 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var applicationCoordinator: ApplicationCoordinator?
+    let sceneDelegate = EntryPointFactory.makeEntryPoints()
+    
     private var coordinator: LoginCoordinatorProtocol?
     private let navigationController: UINavigationController = {
          let navigationController = UINavigationController()
@@ -17,14 +20,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
      }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
-        window?.rootViewController = navigationController
-        let coordinator = LoginCoordinator(navigationController: navigationController)
-        coordinator.start()
-        window?.makeKeyAndVisible()
-        self.coordinator = coordinator
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+//        window?.windowScene = windowScene
+//        window?.rootViewController = navigationController
+//        let coordinator = LoginCoordinator(navigationController: navigationController)
+//        coordinator.start()
+//        window?.makeKeyAndVisible()
+//        self.coordinator = coordinator
+        
+        sceneDelegate.scene(scene, willConnectTo: session, options: connectionOptions)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
