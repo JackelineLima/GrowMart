@@ -45,7 +45,7 @@ final class EditProfileView: UIView, ViewCodable {
     private var cellsType: [CellType] = []
     
     private lazy var tableview: UITableView = {
-        let table = UITableView()
+        let table = UITableView(frame: .zero, style: .grouped)
         table.translatesAutoresizingMaskIntoConstraints = false
         table.backgroundColor = .white
         table.dataSource = self
@@ -89,15 +89,18 @@ final class EditProfileView: UIView, ViewCodable {
         tableview.contentInset = .init(top: 32, left: 0, bottom: 32, right: 0)
     }
     
-    private func setupHeaderView() -> HeaderView {
+    private func setupHeaderView() -> UIView {
+        let headerView = UIView()
         let view = HeaderView(textLabel: "editar perfil", imageStrig: "edit-profile")
         view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 40).isActive = true
-        view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32).isActive = true
-        view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32).isActive = true
+        addSubview(headerView)
+        headerView.addSubview(view)
+        view.topAnchor.constraint(equalTo: headerView.topAnchor).isActive = true
+        view.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 32).isActive = true
+        view.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -32).isActive = true
+        view.bottomAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
         
-        return view
+        return headerView
     }
     
     private func setupValues() {

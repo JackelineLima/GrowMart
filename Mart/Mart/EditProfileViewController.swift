@@ -11,7 +11,7 @@ protocol EditProfileDisplayable: AnyObject {
     func displaySomething()
 }
 
-final class EditProfileViewController: UIViewController {
+final class EditProfileViewController: DefaultViewController {
     
     private lazy var editProfileView = EditProfileView(delegate: self, profile: .init(
         name: "Jackeline",
