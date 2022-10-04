@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01626404319BE44FEDB4680C /* Pods_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13348DAD6A8766C103AED09 /* Pods_Mart.framework */; };
 		373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373754F428C3F02B0060EF13 /* LineNavigationView.swift */; };
+		3740F95F28EC992700D0AC3F /* BaseViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3740F95E28EC992700D0AC3F /* BaseViewTable.swift */; };
 		37542B5828E4E35F000C8791 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37542B5728E4E35F000C8791 /* Strings.swift */; };
 		37542B5B28E4E3D6000C8791 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37542B5928E4E3D6000C8791 /* Localizable.strings */; };
 		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
@@ -81,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		373754F428C3F02B0060EF13 /* LineNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigationView.swift; sourceTree = "<group>"; };
+		3740F95E28EC992700D0AC3F /* BaseViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewTable.swift; sourceTree = "<group>"; };
 		37542B5428E4DFE1000C8791 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		37542B5728E4E35F000C8791 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		37542B5A28E4E3D6000C8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				37B7C13728D8E61B003ADDBC /* LabelValueView.swift */,
 				37CE7FF028D91804009F04CC /* GrowButton.swift */,
 				37B3682228D9FB9C0044ED58 /* HeaderView.swift */,
+				3740F95E28EC992700D0AC3F /* BaseViewTable.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37D5C56B28E1D6D800385B06 /* SimpleTextfieldCell.swift in Sources */,
 				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
+				3740F95F28EC992700D0AC3F /* BaseViewTable.swift in Sources */,
 				37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */,
 				373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */,
 				3798D68528BAB7E000887BC6 /* HomeViewController.swift in Sources */,

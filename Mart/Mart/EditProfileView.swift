@@ -37,26 +37,12 @@ protocol EditProfileViewDelegate: AnyObject {
     func updateProfile(data: Profile)
 }
 
-final class EditProfileView: UIView, ViewCodable {
+final class EditProfileView: BaseViewTable {
     
     private weak var delegate: EditProfileViewDelegate?
     private var profile: Profile?
     private var values: [(typeTextfield: Profile.Field, value: Any)] = []
     private var cellsType: [CellType] = []
-    
-    private lazy var tableview: UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
-        table.translatesAutoresizingMaskIntoConstraints = false
-        table.backgroundColor = .white
-        table.dataSource = self
-        table.delegate = self
-        table.separatorStyle = .none
-        table.register(ButtonCell.self, forCellReuseIdentifier: ButtonCell.reuseIdentifier)
-//        table.register(CheckboxCell.self, forCellReuseIdentifier: CheckboxCell.reuseIdentifier)
-        table.register(CustomTextFieldCell.self, forCellReuseIdentifier: CustomTextFieldCell.reuseIdentifier)
-        table.register(DoubleCustomTextFieldCell.self, forCellReuseIdentifier: DoubleCustomTextFieldCell.reuseIdentifier)
-        return table
-    }()
 
     init(delegate: EditProfileViewDelegate?, profile: Profile) {
         self.delegate = delegate
@@ -70,23 +56,19 @@ final class EditProfileView: UIView, ViewCodable {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    func buildViewHierarchy() {
-        addSubViews([tableview])
-    }
     
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            tableview.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            tableview.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            tableview.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            tableview.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-        ])
-    }
-    
-    func setupAdditionalConfiguration() {
+    override func setupAdditionalConfiguration() {
+        super.setupAdditionalConfiguration()
+        
+        setupTableContentInset()
+        setTableViewDelegate(delegate: self)
+        setTableViewDataSource(dataSource: self)
+        tableViewComponent.register(ButtonCell.self, forCellReuseIdentifier: ButtonCell.reuseIdentifier)
+//        table.register(CheckboxCell.self, forCellReuseIdentifier: CheckboxCell.reuseIdentifier)
+        tableViewComponent.register(CustomTextFieldCell.self, forCellReuseIdentifier: CustomTextFieldCell.reuseIdentifier)
+        tableViewComponent.register(DoubleCustomTextFieldCell.self, forCellReuseIdentifier: DoubleCustomTextFieldCell.reuseIdentifier)
+        
         backgroundColor = .white
-        tableview.contentInset = .init(top: 32, left: 0, bottom: 32, right: 0)
     }
     
     private func setupHeaderView() -> UIView {
