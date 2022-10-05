@@ -21,6 +21,9 @@ public final class SelectorCell: UITableViewCell {
         element.translatesAutoresizingMaskIntoConstraints = false
         element.borderStyle = .roundedRect
         element.tintColor = .black
+        element.layer.borderColor = UIColor.black.cgColor
+        element.layer.borderWidth = 1
+        element.layer.cornerRadius = 5
         element.font = UIFontStyle.customFont(name: .f18PrimaryMedium)
         element.delegate = self
         element.rightViewMode = .always

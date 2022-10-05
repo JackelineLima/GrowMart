@@ -53,6 +53,7 @@ extension ButtonCell: ViewCodable {
     
     public func setupConstraints() {
         NSLayoutConstraint.activate([
+            button.heightAnchor.constraint(equalToConstant: 45),
             button.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32),
             button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
             button.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32),

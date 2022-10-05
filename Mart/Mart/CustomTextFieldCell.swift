@@ -70,12 +70,12 @@ extension CustomTextFieldCell: ViewCodable {
     public func setupConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 64),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 47),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32),
             titleLabel.heightAnchor.constraint(equalToConstant: 23),
 
             textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
-            textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 64),
+            textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 47),
             textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32),
             textField.heightAnchor.constraint(equalToConstant: 31),
 

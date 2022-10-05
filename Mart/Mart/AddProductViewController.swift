@@ -33,11 +33,53 @@ class AddProductViewController: DefaultViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    private func openGalery() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.allowsEditing = false
+        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true)
+    }
+    
+    private func confirmPhotoDeletion(index: Int) {
+        
+        let confirmAlert = UIAlertController(title: "Atenção", message: "Deseja realmente remover esta foto?", preferredStyle: .alert)
+        
+        confirmAlert.addAction(.init(title: "OK", style: .default, handler: { [weak self] _ in
+            self?.contentView.removePhoto(index)
+        }))
+        
+        confirmAlert.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
+        present(confirmAlert, animated: true)
+    }
 }
 
 extension AddProductViewController: AddProductViewDelegate {
     
     func addProduct(_ product: Product) {
         print("adicionar produtos")
+    }
+    
+    func didTapAddPhotoButton() {
+        openGalery()
+    }
+    
+    func didTapPhoto(at index: Int) {
+        confirmPhotoDeletion(index: index)
+    }
+
+}
+
+extension AddProductViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            dismiss(animated: true)
+            return
+        }
+        
+        contentView.addPhoto(image: image)
+        dismiss(animated: true)
     }
 }

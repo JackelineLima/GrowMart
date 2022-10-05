@@ -8,6 +8,7 @@
 import UIKit
 
 private enum CellType {
+    case photos([Photo])
     case textField(Product.Field)
     case selector(Product.Field)
     case button
@@ -24,6 +25,8 @@ private enum CellType {
 
 protocol AddProductViewDelegate: AnyObject {
     func addProduct(_ product: Product)
+    func didTapAddPhotoButton()
+    func didTapPhoto(at index: Int)
 }
 
 final class AddProductView: BaseViewTable {
@@ -33,6 +36,7 @@ final class AddProductView: BaseViewTable {
     private var product = Product()
     private var values: [(field: Product.Field, value: Any)] = []
     private var cellsType: [CellType] = []
+//    private var photos: [Photo] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,6 +68,7 @@ final class AddProductView: BaseViewTable {
     }
     
     private func registerTableViewCells() {
+        tableViewComponent.register(CarouselPhotosCell.self, forCellReuseIdentifier: CarouselPhotosCell.reuseIdentifier)
         tableViewComponent.register(ButtonCell.self, forCellReuseIdentifier: ButtonCell.reuseIdentifier)
         tableViewComponent.register(SimpleTextfieldCell.self, forCellReuseIdentifier: SimpleTextfieldCell.reuseIdentifier)
         tableViewComponent.register(SelectorCell.self, forCellReuseIdentifier: SelectorCell.reuseIdentifier)
@@ -83,11 +88,13 @@ final class AddProductView: BaseViewTable {
     
     private func setupCells() {
         cellsType.removeAll()
+        cellsType.append(.photos(product.photo ?? []))
         values.forEach { item in
             if let cellType: CellType = .getCellType(from: item.field) {
                 cellsType.append(cellType)
             }
         }
+        
         cellsType.append(.button)
     }
     
@@ -139,6 +146,27 @@ final class AddProductView: BaseViewTable {
             return []
         }
     }
+    
+    private func reloadPhotos() {
+        setupCells()
+        let indexPath = IndexPath(row: 0, section: 0)
+        if tableViewComponent.visibleCells.contains(where: { $0 is CarouselPhotosCell }) {
+            tableViewComponent.reloadRows(at: [indexPath], with: .right)
+        }
+    }
+    
+    func addPhoto(image: UIImage) {
+        if product.photo == nil {
+            product.photo = []
+        }
+        product.photo?.insert(.init(id: nil, imageUrl: nil, imageToUpload: image), at: 0)
+        reloadPhotos()
+    }
+    
+    func removePhoto(_ index: Int) {
+        product.photo?.remove(at: index)
+        reloadPhotos()
+    }
 }
 
 extension AddProductView: UITableViewDataSource, UITableViewDelegate {
@@ -150,6 +178,11 @@ extension AddProductView: UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch cellsType[indexPath.row] {
+        case let .photos(photos):
+            guard let cell: CarouselPhotosCell = .createCell(for: tableView, at: indexPath) else { return UITableViewCell() }
+            cell.setPhotos(photos: photos)
+            cell.delegate = self
+            return cell
         case let .textField(field):
             guard let cell: SimpleTextfieldCell = .createCell(for: tableView, at: indexPath) else {
                 return UITableViewCell()
@@ -197,5 +230,18 @@ extension AddProductView: SimpleTextfieldCellDelegate, SelectorCellDelegate {
         }
         
         updateProduct(field: field, value: value)
+    }
+}
+
+extension AddProductView: CarouselPhotosCellDelegate {
+    
+    func didTapAddPhotoButton() {
+        endEditing(true)
+        delegate?.didTapAddPhotoButton()
+    }
+    
+    func didTapPhoto(at index: Int) {
+        endEditing(true)
+        delegate?.didTapPhoto(at: index)
     }
 }

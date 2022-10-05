@@ -15,6 +15,10 @@
 		3740F96728EC9E8E00D0AC3F /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3740F96328EC9E8E00D0AC3F /* AddProductView.swift */; };
 		3740F96828EC9E8E00D0AC3F /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3740F96428EC9E8E00D0AC3F /* AddProductViewModel.swift */; };
 		3740F96A28ECA79600D0AC3F /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3740F96928ECA79600D0AC3F /* SelectorCell.swift */; };
+		374A0E6B28EDDAC000D2D396 /* CarouselPhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A0E6A28EDDAC000D2D396 /* CarouselPhotosCell.swift */; };
+		374A0E6D28EDDCDC00D2D396 /* AddPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A0E6C28EDDCDC00D2D396 /* AddPhotoCell.swift */; };
+		374A0E6F28EDDCF000D2D396 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A0E6E28EDDCF000D2D396 /* PhotoCell.swift */; };
+		374A0E7128EDE16600D2D396 /* UICollectionViewCell+Extensios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A0E7028EDE16600D2D396 /* UICollectionViewCell+Extensios.swift */; };
 		37542B5828E4E35F000C8791 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37542B5728E4E35F000C8791 /* Strings.swift */; };
 		37542B5B28E4E3D6000C8791 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37542B5928E4E3D6000C8791 /* Localizable.strings */; };
 		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
@@ -96,6 +100,10 @@
 		3740F96328EC9E8E00D0AC3F /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		3740F96428EC9E8E00D0AC3F /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
 		3740F96928ECA79600D0AC3F /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
+		374A0E6A28EDDAC000D2D396 /* CarouselPhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPhotosCell.swift; sourceTree = "<group>"; };
+		374A0E6C28EDDCDC00D2D396 /* AddPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCell.swift; sourceTree = "<group>"; };
+		374A0E6E28EDDCF000D2D396 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		374A0E7028EDE16600D2D396 /* UICollectionViewCell+Extensios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensios.swift"; sourceTree = "<group>"; };
 		37542B5428E4DFE1000C8791 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		37542B5728E4E35F000C8791 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		37542B5A28E4E3D6000C8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -199,12 +207,23 @@
 		3740F96028EC9E7400D0AC3F /* AddProduct */ = {
 			isa = PBXGroup;
 			children = (
+				374A0E6928EDD97200D2D396 /* Cells */,
 				3740F96128EC9E8E00D0AC3F /* AddProductCoordinator.swift */,
 				3740F96228EC9E8E00D0AC3F /* AddProductViewController.swift */,
 				3740F96328EC9E8E00D0AC3F /* AddProductView.swift */,
 				3740F96428EC9E8E00D0AC3F /* AddProductViewModel.swift */,
 			);
 			name = AddProduct;
+			sourceTree = "<group>";
+		};
+		374A0E6928EDD97200D2D396 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				374A0E6A28EDDAC000D2D396 /* CarouselPhotosCell.swift */,
+				374A0E6C28EDDCDC00D2D396 /* AddPhotoCell.swift */,
+				374A0E6E28EDDCF000D2D396 /* PhotoCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		37542B5C28E4E493000C8791 /* Localizable */ = {
@@ -383,6 +402,7 @@
 				37C3B38028CF7D3F00CFA1EE /* UIImageView+Extensions.swift */,
 				377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */,
 				378CD49128ECA91E0047EE21 /* UITextField+Extensions.swift */,
+				374A0E7028EDE16600D2D396 /* UICollectionViewCell+Extensios.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -629,6 +649,7 @@
 				3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */,
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
 				3798D68428BAB7E000887BC6 /* HomeCoordinator.swift in Sources */,
+				374A0E6F28EDDCF000D2D396 /* PhotoCell.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
 				379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */,
 				3798D68628BAB7E000887BC6 /* HomeView.swift in Sources */,
@@ -641,6 +662,7 @@
 				37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */,
 				37B7C13628D8DFB7003ADDBC /* InfoGroupView.swift in Sources */,
 				37E100A628D8A7D9008E461F /* EditProfileViewController.swift in Sources */,
+				374A0E6D28EDDCDC00D2D396 /* AddPhotoCell.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				378CD49028ECA8A30047EE21 /* RightIconTextField.swift in Sources */,
 				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
@@ -651,6 +673,7 @@
 				37E1009D28D8A7CA008E461F /* ProfileCoordinator.swift in Sources */,
 				37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */,
 				37AF8DD728E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift in Sources */,
+				374A0E6B28EDDAC000D2D396 /* CarouselPhotosCell.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37D5C56B28E1D6D800385B06 /* SimpleTextfieldCell.swift in Sources */,
 				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
@@ -674,6 +697,7 @@
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
 				37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */,
 				37B7C13828D8E61B003ADDBC /* LabelValueView.swift in Sources */,
+				374A0E7128EDE16600D2D396 /* UICollectionViewCell+Extensios.swift in Sources */,
 				37AF8DDB28E881EE00AD5693 /* ApplicationCoordinator.swift in Sources */,
 				37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */,
 				37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */,

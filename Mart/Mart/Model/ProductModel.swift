@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Product {
     var name: String?
@@ -16,6 +17,7 @@ struct Product {
     var brand: String?
     var description: String?
     var url: String?
+    var photo: [Photo]?
     
     enum Field: String {
         case name
@@ -45,4 +47,10 @@ struct Product {
             }
         }
     }
+}
+
+struct Photo {
+    var id: String?
+    var imageUrl: String?
+    var imageToUpload: UIImage?
 }

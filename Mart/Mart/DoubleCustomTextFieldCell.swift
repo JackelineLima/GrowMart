@@ -144,10 +144,10 @@ extension DoubleCustomTextFieldCell: ViewCodable {
             mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32),
             mainStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
-            leftTitleLabel.leadingAnchor.constraint(equalTo: leftStackView.leadingAnchor, constant: 32),
+            leftTitleLabel.leadingAnchor.constraint(equalTo: leftStackView.leadingAnchor, constant: 12),
             leftTitleLabel.heightAnchor.constraint(equalToConstant: 23),
             
-            leftTextField.leadingAnchor.constraint(equalTo: leftStackView.leadingAnchor, constant: 32),
+            leftTextField.leadingAnchor.constraint(equalTo: leftStackView.leadingAnchor, constant: 12),
             leftTextField.heightAnchor.constraint(equalToConstant: 31),
             
             leftLineView.leadingAnchor.constraint(equalTo: leftStackView.leadingAnchor),
