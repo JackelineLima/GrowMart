@@ -9,5 +9,6 @@ target 'Mart' do
 
 pod 'SwiftLint'
 pod 'SwiftGen'
+pod 'SnapshotTesting'
 
 end
