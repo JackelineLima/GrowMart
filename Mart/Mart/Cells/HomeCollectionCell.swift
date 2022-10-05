@@ -94,8 +94,10 @@ class HomeCollectionCell: UICollectionViewCell, ViewCodable {
     }
     
     public func setup(with product: Product) {
-        productImageView.addImageFromURL(urlString: product.url)
         priceLabel.text = product.price
         nameLabel.text = product.name
+        
+        guard let url = product.url else { return }
+        productImageView.addImageFromURL(urlString: url)
     }
 }

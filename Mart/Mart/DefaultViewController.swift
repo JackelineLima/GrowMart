@@ -13,6 +13,13 @@ public class DefaultViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        
+        let tapGestureReconizer = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
+        view.addGestureRecognizer(tapGestureReconizer)
+    }
+    
+    @objc private func tap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     override public func viewWillDisappear(_ animated: Bool) {
@@ -26,7 +33,7 @@ public class DefaultViewController: UIViewController {
     func configure() {
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "logo_navigation"))
         navigationItem.setHidesBackButton(true, animated: true)
-
+        
         buildViewHierarchy()
         setupConstraints()
     }

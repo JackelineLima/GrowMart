@@ -20,9 +20,9 @@ class CheckoutViewModel: CheckoutViewModelProtocol {
     
     let coordinator: CheckoutCoordinatorProtocol
     
-    var product: [Product] = [Product(name: "título produto 1", price: "R$ 0,00", url: ""),
-                              Product(name: "título produto 2", price: "R$ 0,00", url: ""),
-                              Product(name: "título produto 3", price: "R$ 0,00", url: "")]
+    var product: [Product] = [Product(name: "título produto 1", price: "R$ 0,00"),
+                              Product(name: "título produto 2", price: "R$ 0,00"),
+                              Product(name: "título produto 3", price: "R$ 0,00")]
     
     init(coordinator: CheckoutCoordinatorProtocol) {
         self.coordinator = coordinator

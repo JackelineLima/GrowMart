@@ -8,18 +8,41 @@
 import Foundation
 
 struct Product {
-    let name: String
-    let price: String
-    let url: String
-}
-
-struct SectionHome {
-    let type: CategorySections
-    let data: Any
-}
-
-enum CategorySections: Int, CaseIterable {
-    case banner
-    case segmentedControl
-    case collection
+    var name: String?
+    var price: String?
+    var category: String?
+    var size: String?
+    var condition: String?
+    var brand: String?
+    var description: String?
+    var url: String?
+    
+    enum Field: String {
+        case name
+        case price
+        case category
+        case size
+        case condition
+        case brand
+        case description
+        
+        func getFormattedName() -> String {
+            switch self {
+            case .name:
+                return "título"
+            case .price:
+                return "preço"
+            case .category:
+                return "categoria"
+            case .size:
+                return "tamanho"
+            case .condition:
+                return "condição"
+            case .brand:
+                return "marca"
+            case .description:
+                return "descrição"
+            }
+        }
+    }
 }
