@@ -10,6 +10,7 @@ import UIKit
 private enum CellType {
     case photos([Photo])
     case textField(Product.Field)
+    case textView(Product.Field)
     case selector(Product.Field)
     case button
     
@@ -17,6 +18,8 @@ private enum CellType {
         switch field {
         case .category, .condition:
             return .selector(field)
+        case .description:
+            return .textView(field)
         default:
             return .textField(field)
         }
@@ -72,6 +75,7 @@ final class AddProductView: BaseViewTable {
         tableViewComponent.register(ButtonCell.self, forCellReuseIdentifier: ButtonCell.reuseIdentifier)
         tableViewComponent.register(SimpleTextfieldCell.self, forCellReuseIdentifier: SimpleTextfieldCell.reuseIdentifier)
         tableViewComponent.register(SelectorCell.self, forCellReuseIdentifier: SelectorCell.reuseIdentifier)
+        tableViewComponent.register(SimpleTextViewCell.self, forCellReuseIdentifier: SimpleTextViewCell.reuseIdentifier)
     }
     
     private func setupValues() {
@@ -212,6 +216,16 @@ extension AddProductView: UITableViewDataSource, UITableViewDelegate {
             cell.setTitle("publicar", color: .black)
             cell.delegate = self
             return cell
+        case let .textView(field):
+            guard let cell: SimpleTextViewCell = .createCell(for: tableView, at: indexPath) else {
+                return UITableViewCell()
+            }
+            
+            cell.propertyName = field.rawValue
+            cell.delegate = self
+            cell.setData(placeholder: field.getFormattedName(),
+                         value: getFieldValue(field: field) as? String)
+            return cell
         }
     }
 }
@@ -222,7 +236,7 @@ extension AddProductView: ButtonCellDelegate {
     }
 }
 
-extension AddProductView: SimpleTextfieldCellDelegate, SelectorCellDelegate {
+extension AddProductView: SimpleTextfieldCellDelegate, SelectorCellDelegate, SimpleTextViewCellDelegate {
     public func didChangeValue(propertyName: String?, value: String) {
         guard let propertyName = propertyName,
               let field = Product.Field(rawValue: propertyName) else {

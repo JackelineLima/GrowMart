@@ -27,6 +27,8 @@
 		37852F5528CCE6AE00DD2425 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */; };
 		3789949E28E361A900605063 /* MartStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789949D28E361A900605063 /* MartStrings.swift */; };
 		378994A028E362F000605063 /* BundleFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789949F28E362F000605063 /* BundleFinder.swift */; };
+		378CA00F28EF37EB003DE99F /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CA00E28EF37EB003DE99F /* LoginViewTests.swift */; };
+		378CA01128EF3FCC003DE99F /* SimpleTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CA01028EF3FCC003DE99F /* SimpleTextViewCell.swift */; };
 		378CD49028ECA8A30047EE21 /* RightIconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CD48F28ECA8A30047EE21 /* RightIconTextField.swift */; };
 		378CD49228ECA91E0047EE21 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CD49128ECA91E0047EE21 /* UITextField+Extensions.swift */; };
 		378CD49428ECA9620047EE21 /* UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CD49328ECA9620047EE21 /* UIPickerView.swift */; };
@@ -51,6 +53,14 @@
 		37AF8DD728E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DD628E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift */; };
 		37AF8DD928E8814100AD5693 /* StartupConfiguratorEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DD828E8814100AD5693 /* StartupConfiguratorEntryPoint.swift */; };
 		37AF8DDB28E881EE00AD5693 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF8DDA28E881EE00AD5693 /* ApplicationCoordinator.swift */; };
+		37B2C28528EE5E4400E8F6B4 /* MartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C28428EE5E4400E8F6B4 /* MartTests.swift */; };
+		37B2C28D28EE5F1500E8F6B4 /* UIButtonPreferencesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C28C28EE5F1500E8F6B4 /* UIButtonPreferencesTests.swift */; };
+		37B2C28F28EE634200E8F6B4 /* SegmentedBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C28E28EE634200E8F6B4 /* SegmentedBarTests.swift */; };
+		37B2C29228EE652C00E8F6B4 /* ButtonCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29128EE652C00E8F6B4 /* ButtonCellTests.swift */; };
+		37B2C29528EE671800E8F6B4 /* Mirror+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29428EE671800E8F6B4 /* Mirror+Extensions.swift */; };
+		37B2C29728EE693300E8F6B4 /* ButtonCellSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29628EE693300E8F6B4 /* ButtonCellSpy.swift */; };
+		37B2C29B28EE6E4800E8F6B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29A28EE6E4800E8F6B4 /* LoginViewController.swift */; };
+		37B2C29E28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29D28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift */; };
 		37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3682228D9FB9C0044ED58 /* HeaderView.swift */; };
 		37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */; };
 		37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */; };
@@ -90,9 +100,21 @@
 		37EB508C28B11CD100185E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */; };
 		37F0D7E028C66A860018694A /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0D7DF28C66A860018694A /* TableFooterView.swift */; };
 		37F0D7E328C66BBF0018694A /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0D7E228C66BBF0018694A /* CheckoutTableViewCell.swift */; };
+		EA6579C6B6F340109A56705E /* Pods_Mart_MartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD4005AFF7B0DD102110CFE /* Pods_Mart_MartTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		37B2C28628EE5E4400E8F6B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37EB507428B11CD100185E83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37EB507B28B11CD100185E83;
+			remoteInfo = Mart;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		32E1FA8309F12CE5A5BC9458 /* Pods-Mart-MartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart-MartTests.release.xcconfig"; path = "Target Support Files/Pods-Mart-MartTests/Pods-Mart-MartTests.release.xcconfig"; sourceTree = "<group>"; };
 		373754F428C3F02B0060EF13 /* LineNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigationView.swift; sourceTree = "<group>"; };
 		3740F95E28EC992700D0AC3F /* BaseViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewTable.swift; sourceTree = "<group>"; };
 		3740F96128EC9E8E00D0AC3F /* AddProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductCoordinator.swift; sourceTree = "<group>"; };
@@ -113,6 +135,8 @@
 		37852F5428CCE6AE00DD2425 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		3789949D28E361A900605063 /* MartStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartStrings.swift; sourceTree = "<group>"; };
 		3789949F28E362F000605063 /* BundleFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleFinder.swift; sourceTree = "<group>"; };
+		378CA00E28EF37EB003DE99F /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
+		378CA01028EF3FCC003DE99F /* SimpleTextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextViewCell.swift; sourceTree = "<group>"; };
 		378CD48F28ECA8A30047EE21 /* RightIconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightIconTextField.swift; sourceTree = "<group>"; };
 		378CD49128ECA91E0047EE21 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		378CD49328ECA9620047EE21 /* UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerView.swift; sourceTree = "<group>"; };
@@ -137,6 +161,15 @@
 		37AF8DD628E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfiguratorEntryPoint.swift; sourceTree = "<group>"; };
 		37AF8DD828E8814100AD5693 /* StartupConfiguratorEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupConfiguratorEntryPoint.swift; sourceTree = "<group>"; };
 		37AF8DDA28E881EE00AD5693 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		37B2C28228EE5E4400E8F6B4 /* MartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B2C28428EE5E4400E8F6B4 /* MartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartTests.swift; sourceTree = "<group>"; };
+		37B2C28C28EE5F1500E8F6B4 /* UIButtonPreferencesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonPreferencesTests.swift; sourceTree = "<group>"; };
+		37B2C28E28EE634200E8F6B4 /* SegmentedBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBarTests.swift; sourceTree = "<group>"; };
+		37B2C29128EE652C00E8F6B4 /* ButtonCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellTests.swift; sourceTree = "<group>"; };
+		37B2C29428EE671800E8F6B4 /* Mirror+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+Extensions.swift"; sourceTree = "<group>"; };
+		37B2C29628EE693300E8F6B4 /* ButtonCellSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellSpy.swift; sourceTree = "<group>"; };
+		37B2C29A28EE6E4800E8F6B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37B2C29D28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorMock.swift; sourceTree = "<group>"; };
 		37B3682228D9FB9C0044ED58 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
 		37B466CF28C3ECDF006C18D8 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
@@ -178,12 +211,22 @@
 		37EB508D28B11CD100185E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37F0D7DF28C66A860018694A /* TableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFooterView.swift; sourceTree = "<group>"; };
 		37F0D7E228C66BBF0018694A /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		7CD4005AFF7B0DD102110CFE /* Pods_Mart_MartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mart_MartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6F7802D0AFBB50CE1E8DFA /* Pods-Mart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart.release.xcconfig"; path = "Target Support Files/Pods-Mart/Pods-Mart.release.xcconfig"; sourceTree = "<group>"; };
+		DFCF3BAB4FFF10EAB4E87518 /* Pods-Mart-MartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart-MartTests.debug.xcconfig"; path = "Target Support Files/Pods-Mart-MartTests/Pods-Mart-MartTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3695AB8500D66CBC9C6AF9B /* Pods-Mart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart.debug.xcconfig"; path = "Target Support Files/Pods-Mart/Pods-Mart.debug.xcconfig"; sourceTree = "<group>"; };
 		F13348DAD6A8766C103AED09 /* Pods_Mart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		37B2C27F28EE5E4400E8F6B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6579C6B6F340109A56705E /* Pods_Mart_MartTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37EB507928B11CD100185E83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +243,8 @@
 			children = (
 				E3695AB8500D66CBC9C6AF9B /* Pods-Mart.debug.xcconfig */,
 				CB6F7802D0AFBB50CE1E8DFA /* Pods-Mart.release.xcconfig */,
+				DFCF3BAB4FFF10EAB4E87518 /* Pods-Mart-MartTests.debug.xcconfig */,
+				32E1FA8309F12CE5A5BC9458 /* Pods-Mart-MartTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -307,6 +352,7 @@
 				37D5C56E28E1D80600385B06 /* CustomTextFieldCell.swift */,
 				379F4E7028E21F7000C703A4 /* ButtonCell.swift */,
 				3740F96928ECA79600D0AC3F /* SelectorCell.swift */,
+				378CA01028EF3FCC003DE99F /* SimpleTextViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -349,6 +395,70 @@
 				378D30AC28D93C7400E021A8 /* EditProfile.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		37B2C28328EE5E4400E8F6B4 /* MartTests */ = {
+			isa = PBXGroup;
+			children = (
+				37B2C29928EE6E3100E8F6B4 /* ViewControllers */,
+				37B2C29328EE670300E8F6B4 /* Extensions */,
+				37B2C28B28EE5EEE00E8F6B4 /* Components */,
+				37B2C28428EE5E4400E8F6B4 /* MartTests.swift */,
+			);
+			path = MartTests;
+			sourceTree = "<group>";
+		};
+		37B2C28B28EE5EEE00E8F6B4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				37B2C29028EE651800E8F6B4 /* Cells */,
+				37B2C28C28EE5F1500E8F6B4 /* UIButtonPreferencesTests.swift */,
+				37B2C28E28EE634200E8F6B4 /* SegmentedBarTests.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		37B2C29028EE651800E8F6B4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37B2C29828EE696400E8F6B4 /* ButtonCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		37B2C29328EE670300E8F6B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37B2C29428EE671800E8F6B4 /* Mirror+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37B2C29828EE696400E8F6B4 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				37B2C29128EE652C00E8F6B4 /* ButtonCellTests.swift */,
+				37B2C29628EE693300E8F6B4 /* ButtonCellSpy.swift */,
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		37B2C29928EE6E3100E8F6B4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				37B2C29C28EE6E9D00E8F6B4 /* Login */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		37B2C29C28EE6E9D00E8F6B4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				37B2C29A28EE6E4800E8F6B4 /* LoginViewController.swift */,
+				37B2C29D28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift */,
+				378CA00E28EF37EB003DE99F /* LoginViewTests.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		37B466CD28C3ECB7006C18D8 /* Checkout */ = {
@@ -442,6 +552,7 @@
 			children = (
 				37542B5428E4DFE1000C8791 /* swiftgen.yml */,
 				37EB507E28B11CD100185E83 /* Mart */,
+				37B2C28328EE5E4400E8F6B4 /* MartTests */,
 				37EB507D28B11CD100185E83 /* Products */,
 				1E110A858558004C1451B45C /* Pods */,
 				4AB03613692056891416824C /* Frameworks */,
@@ -452,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				37EB507C28B11CD100185E83 /* Mart.app */,
+				37B2C28228EE5E4400E8F6B4 /* MartTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -493,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				F13348DAD6A8766C103AED09 /* Pods_Mart.framework */,
+				7CD4005AFF7B0DD102110CFE /* Pods_Mart_MartTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -500,6 +613,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		37B2C28128EE5E4400E8F6B4 /* MartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37B2C28828EE5E4400E8F6B4 /* Build configuration list for PBXNativeTarget "MartTests" */;
+			buildPhases = (
+				AEF5EA23A333F54D4241C26F /* [CP] Check Pods Manifest.lock */,
+				37B2C27E28EE5E4400E8F6B4 /* Sources */,
+				37B2C27F28EE5E4400E8F6B4 /* Frameworks */,
+				37B2C28028EE5E4400E8F6B4 /* Resources */,
+				E915FC2AD52E291E1E7CA509 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37B2C28728EE5E4400E8F6B4 /* PBXTargetDependency */,
+			);
+			name = MartTests;
+			productName = MartTests;
+			productReference = 37B2C28228EE5E4400E8F6B4 /* MartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		37EB507B28B11CD100185E83 /* Mart */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37EB509028B11CD100185E83 /* Build configuration list for PBXNativeTarget "Mart" */;
@@ -527,9 +660,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					37B2C28128EE5E4400E8F6B4 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 37EB507B28B11CD100185E83;
+					};
 					37EB507B28B11CD100185E83 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -549,11 +686,19 @@
 			projectRoot = "";
 			targets = (
 				37EB507B28B11CD100185E83 /* Mart */,
+				37B2C28128EE5E4400E8F6B4 /* MartTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		37B2C28028EE5E4400E8F6B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37EB507A28B11CD100185E83 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,9 +775,64 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AEF5EA23A333F54D4241C26F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mart-MartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E915FC2AD52E291E1E7CA509 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mart-MartTests/Pods-Mart-MartTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mart-MartTests/Pods-Mart-MartTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mart-MartTests/Pods-Mart-MartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		37B2C27E28EE5E4400E8F6B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B2C29B28EE6E4800E8F6B4 /* LoginViewController.swift in Sources */,
+				378CA00F28EF37EB003DE99F /* LoginViewTests.swift in Sources */,
+				37B2C29528EE671800E8F6B4 /* Mirror+Extensions.swift in Sources */,
+				37B2C29728EE693300E8F6B4 /* ButtonCellSpy.swift in Sources */,
+				37B2C28D28EE5F1500E8F6B4 /* UIButtonPreferencesTests.swift in Sources */,
+				37B2C29E28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift in Sources */,
+				37B2C28F28EE634200E8F6B4 /* SegmentedBarTests.swift in Sources */,
+				37B2C28528EE5E4400E8F6B4 /* MartTests.swift in Sources */,
+				37B2C29228EE652C00E8F6B4 /* ButtonCellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37EB507828B11CD100185E83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -692,6 +892,7 @@
 				37AF8DD528E87EF500AD5693 /* CompositeEntryPoint.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
+				378CA01128EF3FCC003DE99F /* SimpleTextViewCell.swift in Sources */,
 				37D5C56D28E1D74400385B06 /* DoubleCustomTextFieldCell.swift in Sources */,
 				378D30AD28D93C7400E021A8 /* EditProfile.swift in Sources */,
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
@@ -716,6 +917,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		37B2C28728EE5E4400E8F6B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37EB507B28B11CD100185E83 /* Mart */;
+			targetProxy = 37B2C28628EE5E4400E8F6B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		37542B5928E4E3D6000C8791 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -736,6 +945,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		37B2C28928EE5E4400E8F6B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFCF3BAB4FFF10EAB4E87518 /* Pods-Mart-MartTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jackeline.lima.MartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mart";
+			};
+			name = Debug;
+		};
+		37B2C28A28EE5E4400E8F6B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E1FA8309F12CE5A5BC9458 /* Pods-Mart-MartTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jackeline.lima.MartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mart.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mart";
+			};
+			name = Release;
+		};
 		37EB508E28B11CD100185E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -864,6 +1113,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -891,6 +1141,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -907,6 +1158,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		37B2C28828EE5E4400E8F6B4 /* Build configuration list for PBXNativeTarget "MartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37B2C28928EE5E4400E8F6B4 /* Debug */,
+				37B2C28A28EE5E4400E8F6B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37EB507728B11CD100185E83 /* Build configuration list for PBXProject "Mart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
