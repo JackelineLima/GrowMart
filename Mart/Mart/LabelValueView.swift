@@ -30,7 +30,6 @@ class LabelValueView: UIStackView {
         return element
     }()
     
-    // MARK: - Inits
     init(leftValue: String, rightValue: String) {
         self.leftValue = leftValue
         self.rightValue = rightValue
