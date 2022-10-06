@@ -35,8 +35,7 @@ public final class ButtonCell: UITableViewCell {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupView()
+        nil
     }
 
     public func setTitle(_ title: String, color: UIColor) {

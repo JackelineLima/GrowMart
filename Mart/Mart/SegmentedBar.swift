@@ -44,7 +44,7 @@ class SegmentedBar: UISegmentedControl {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        nil
     }
     
     private func background(color: UIColor) -> UIImage? {
