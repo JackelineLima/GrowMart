@@ -9,6 +9,7 @@ target 'Mart' do
 
 pod 'SwiftLint'
 pod 'SwiftGen'
+pod 'Alamofire'
 
 target 'MartTests' do
     pod 'SnapshotTesting'

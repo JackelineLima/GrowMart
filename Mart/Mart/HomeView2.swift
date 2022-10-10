@@ -38,6 +38,7 @@ final class HomeView2: UIView, ViewCodable {
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.showsVerticalScrollIndicator = false
         scroll.autoresizingMask = .flexibleHeight
+        scroll.delegate = self
         return scroll
     }()
     
@@ -118,7 +119,7 @@ final class HomeView2: UIView, ViewCodable {
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 32),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -32),
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -32),
         ])
         
         let contentViewCenterY = contentView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor)
@@ -185,3 +186,16 @@ extension HomeView2: SegmentedBarDelegate {
     }
 }
 
+extension HomeView2: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("position y \(scrollView.contentOffset.y)")
+        if scrollView.contentOffset.y == 183.0 {
+//            collectionView.isScrollEnabled = true
+//            self.scrollView.isScrollEnabled = false
+        } else if scrollView.contentOffset.y < -0 {
+//            collectionView.isScrollEnabled = false
+//            self.scrollView.isScrollEnabled = true
+        }
+    }
+}
