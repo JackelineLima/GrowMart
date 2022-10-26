@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		01626404319BE44FEDB4680C /* Pods_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13348DAD6A8766C103AED09 /* Pods_Mart.framework */; };
+		3714E1FD29099D7600EC08C0 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E1FC29099D7600EC08C0 /* JSONParameterEncoder.swift */; };
+		3714E1FF29099D9E00EC08C0 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E1FE29099D9E00EC08C0 /* ParameterEncoding.swift */; };
+		3714E20129099DBC00EC08C0 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E20029099DBC00EC08C0 /* URLParameterEncoder.swift */; };
+		3714E20429099DF000EC08C0 /* CategoriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E20329099DF000EC08C0 /* CategoriesEndpoint.swift */; };
+		3714E20629099E1800EC08C0 /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E20529099E1800EC08C0 /* HomeEndpoint.swift */; };
+		3714E20929099E4D00EC08C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E20829099E4D00EC08C0 /* NetworkManager.swift */; };
+		3714E20E29099EBB00EC08C0 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E20D29099EBB00EC08C0 /* EndpointType.swift */; };
+		3714E21029099ED900EC08C0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E20F29099ED900EC08C0 /* HTTPMethod.swift */; };
+		3714E21229099EED00EC08C0 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E21129099EED00EC08C0 /* HTTPTask.swift */; };
+		3714E21429099F0200EC08C0 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E21329099F0200EC08C0 /* NetworkEnvironment.swift */; };
+		3714E21629099F1800EC08C0 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E21529099F1800EC08C0 /* NetworkLogger.swift */; };
+		3714E21829099F3300EC08C0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E21729099F3300EC08C0 /* Router.swift */; };
+		3714E21A29099F5500EC08C0 /* AFRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3714E21929099F5500EC08C0 /* AFRouter.swift */; };
 		373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373754F428C3F02B0060EF13 /* LineNavigationView.swift */; };
 		3740F95F28EC992700D0AC3F /* BaseViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3740F95E28EC992700D0AC3F /* BaseViewTable.swift */; };
 		3740F96528EC9E8E00D0AC3F /* AddProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3740F96128EC9E8E00D0AC3F /* AddProductCoordinator.swift */; };
@@ -115,6 +128,20 @@
 
 /* Begin PBXFileReference section */
 		32E1FA8309F12CE5A5BC9458 /* Pods-Mart-MartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart-MartTests.release.xcconfig"; path = "Target Support Files/Pods-Mart-MartTests/Pods-Mart-MartTests.release.xcconfig"; sourceTree = "<group>"; };
+		3714E1FC29099D7600EC08C0 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		3714E1FE29099D9E00EC08C0 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		3714E20029099DBC00EC08C0 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		3714E20329099DF000EC08C0 /* CategoriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesEndpoint.swift; sourceTree = "<group>"; };
+		3714E20529099E1800EC08C0 /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
+		3714E20829099E4D00EC08C0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3714E20B29099E9100EC08C0 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		3714E20D29099EBB00EC08C0 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		3714E20F29099ED900EC08C0 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3714E21129099EED00EC08C0 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		3714E21329099F0200EC08C0 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		3714E21529099F1800EC08C0 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		3714E21729099F3300EC08C0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3714E21929099F5500EC08C0 /* AFRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFRouter.swift; sourceTree = "<group>"; };
 		373754F428C3F02B0060EF13 /* LineNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNavigationView.swift; sourceTree = "<group>"; };
 		3740F95E28EC992700D0AC3F /* BaseViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewTable.swift; sourceTree = "<group>"; };
 		3740F96128EC9E8E00D0AC3F /* AddProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductCoordinator.swift; sourceTree = "<group>"; };
@@ -247,6 +274,67 @@
 				32E1FA8309F12CE5A5BC9458 /* Pods-Mart-MartTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3714E1FA29099CFE00EC08C0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3714E20C29099EA900EC08C0 /* Service */,
+				3714E20A29099E7000EC08C0 /* Mocks */,
+				3714E20729099E3D00EC08C0 /* Manager */,
+				3714E20229099DD700EC08C0 /* Endpoint */,
+				3714E1FB29099D5C00EC08C0 /* Encoding */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3714E1FB29099D5C00EC08C0 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				3714E1FC29099D7600EC08C0 /* JSONParameterEncoder.swift */,
+				3714E1FE29099D9E00EC08C0 /* ParameterEncoding.swift */,
+				3714E20029099DBC00EC08C0 /* URLParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		3714E20229099DD700EC08C0 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				3714E20329099DF000EC08C0 /* CategoriesEndpoint.swift */,
+				3714E20529099E1800EC08C0 /* HomeEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		3714E20729099E3D00EC08C0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3714E20829099E4D00EC08C0 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		3714E20A29099E7000EC08C0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3714E20B29099E9100EC08C0 /* categories.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3714E20C29099EA900EC08C0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3714E20D29099EBB00EC08C0 /* EndpointType.swift */,
+				3714E20F29099ED900EC08C0 /* HTTPMethod.swift */,
+				3714E21129099EED00EC08C0 /* HTTPTask.swift */,
+				3714E21329099F0200EC08C0 /* NetworkEnvironment.swift */,
+				3714E21529099F1800EC08C0 /* NetworkLogger.swift */,
+				3714E21729099F3300EC08C0 /* Router.swift */,
+				3714E21929099F5500EC08C0 /* AFRouter.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3740F96028EC9E7400D0AC3F /* AddProduct */ = {
@@ -571,6 +659,7 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				3714E1FA29099CFE00EC08C0 /* Networking */,
 				37AF8DD128E87E8900AD5693 /* AppDelegate */,
 				37542B5C28E4E493000C8791 /* Localizable */,
 				3789949A28E35DCF00605063 /* Resources */,
@@ -855,6 +944,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3714E21229099EED00EC08C0 /* HTTPTask.swift in Sources */,
+				3714E20929099E4D00EC08C0 /* NetworkManager.swift in Sources */,
 				378CD49228ECA91E0047EE21 /* UITextField+Extensions.swift in Sources */,
 				3740F96828EC9E8E00D0AC3F /* AddProductViewModel.swift in Sources */,
 				379F4E7128E21F7000C703A4 /* ButtonCell.swift in Sources */,
@@ -863,18 +954,22 @@
 				37AF8DD928E8814100AD5693 /* StartupConfiguratorEntryPoint.swift in Sources */,
 				37EB508428B11CD100185E83 /* LoginViewController.swift in Sources */,
 				37E100A528D8A7D9008E461F /* EditProfileCoordinator.swift in Sources */,
+				3714E20129099DBC00EC08C0 /* URLParameterEncoder.swift in Sources */,
 				37A9C7D828CFBE5F0036FE76 /* HomeView2.swift in Sources */,
 				3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */,
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
 				3798D68428BAB7E000887BC6 /* HomeCoordinator.swift in Sources */,
 				374A0E6F28EDDCF000D2D396 /* PhotoCell.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
+				3714E21A29099F5500EC08C0 /* AFRouter.swift in Sources */,
 				379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */,
 				3798D68628BAB7E000887BC6 /* HomeView.swift in Sources */,
 				377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */,
 				3740F96728EC9E8E00D0AC3F /* AddProductView.swift in Sources */,
+				3714E20E29099EBB00EC08C0 /* EndpointType.swift in Sources */,
 				37C3B37F28CF780500CFA1EE /* HomeCollectionCell.swift in Sources */,
 				37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */,
+				3714E21029099ED900EC08C0 /* HTTPMethod.swift in Sources */,
 				37B466D328C3ECDF006C18D8 /* CheckoutViewController.swift in Sources */,
 				378CD49428ECA9620047EE21 /* UIPickerView.swift in Sources */,
 				37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */,
@@ -886,6 +981,7 @@
 				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
 				37D5C56F28E1D80600385B06 /* CustomTextFieldCell.swift in Sources */,
 				37AF8DD328E87EB800AD5693 /* EntryPointFactory.swift in Sources */,
+				3714E20429099DF000EC08C0 /* CategoriesEndpoint.swift in Sources */,
 				37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */,
 				37E1009F28D8A7CA008E461F /* ProfileView.swift in Sources */,
 				37E1009D28D8A7CA008E461F /* ProfileCoordinator.swift in Sources */,
@@ -904,6 +1000,7 @@
 				3740F96A28ECA79600D0AC3F /* SelectorCell.swift in Sources */,
 				37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */,
 				37542B5828E4E35F000C8791 /* Strings.swift in Sources */,
+				3714E1FF29099D9E00EC08C0 /* ParameterEncoding.swift in Sources */,
 				3789949E28E361A900605063 /* MartStrings.swift in Sources */,
 				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
 				37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */,
@@ -911,6 +1008,7 @@
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
 				378CA01128EF3FCC003DE99F /* SimpleTextViewCell.swift in Sources */,
+				3714E1FD29099D7600EC08C0 /* JSONParameterEncoder.swift in Sources */,
 				37D5C56D28E1D74400385B06 /* DoubleCustomTextFieldCell.swift in Sources */,
 				378D30AD28D93C7400E021A8 /* EditProfile.swift in Sources */,
 				37C3B38128CF7D4000CFA1EE /* UIImageView+Extensions.swift in Sources */,
@@ -922,9 +1020,13 @@
 				37B466D428C3ECDF006C18D8 /* CheckoutView.swift in Sources */,
 				378994A028E362F000605063 /* BundleFinder.swift in Sources */,
 				37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */,
+				3714E20629099E1800EC08C0 /* HomeEndpoint.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
 				37CE7FF128D91804009F04CC /* GrowButton.swift in Sources */,
+				3714E21429099F0200EC08C0 /* NetworkEnvironment.swift in Sources */,
+				3714E21829099F3300EC08C0 /* Router.swift in Sources */,
 				37AEB5EE28BA6B8000987F56 /* UIButtonPreferences.swift in Sources */,
+				3714E21629099F1800EC08C0 /* NetworkLogger.swift in Sources */,
 				3740F96528EC9E8E00D0AC3F /* AddProductCoordinator.swift in Sources */,
 				37E1009E28D8A7CA008E461F /* ProfileViewController.swift in Sources */,
 				37E100A028D8A7CA008E461F /* ProfileViewModel.swift in Sources */,
