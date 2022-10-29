@@ -15,7 +15,8 @@ enum TypePreferences: Int {
 }
 
 final class PreferencesSellView: UIView {
-    
+
+    private var categories: [CategoryResponse] = []
     var buttonAction: ((TypePreferences) -> Void)?
     
     private lazy var preferencesStackView: UIStackView = {
@@ -41,19 +42,16 @@ final class PreferencesSellView: UIView {
     
     private let clothesButton: UIButtonPreferences = {
         let button = UIButtonPreferences()
-        button.setupLayout(.left, nameLabel: "Roupas", imageName: "clothes")
         return button
     }()
     
     private let accessoriesButton: UIButtonPreferences = {
         let button = UIButtonPreferences()
-        button.setupLayout(nameLabel: "Acessórios", imageName: "accessories")
         return button
     }()
     
     private let othersButton: UIButtonPreferences = {
         let button = UIButtonPreferences()
-        button.setupLayout(.left, nameLabel: "Outros", imageName: "others")
         return button
     }()
     
@@ -81,6 +79,13 @@ final class PreferencesSellView: UIView {
         clothesButton.setAction {
             self.buttonAction?(.clothes)
         }
+    }
+    
+    func renderButtons(categories: [CategoryResponse]) {
+        self.categories = categories
+        clothesButton.setupLayout(.left, nameLabel: self.categories[0].name ?? "", imageName: "clothes")
+        accessoriesButton.setupLayout(nameLabel: self.categories[1].name ?? "", imageName: "accessories")
+        othersButton.setupLayout(.left, nameLabel: self.categories[2].name ?? "", imageName: "others")
     }
 }
 

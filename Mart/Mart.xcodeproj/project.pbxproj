@@ -34,6 +34,9 @@
 		374A0E7128EDE16600D2D396 /* UICollectionViewCell+Extensios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A0E7028EDE16600D2D396 /* UICollectionViewCell+Extensios.swift */; };
 		37542B5828E4E35F000C8791 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37542B5728E4E35F000C8791 /* Strings.swift */; };
 		37542B5B28E4E3D6000C8791 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37542B5928E4E3D6000C8791 /* Localizable.strings */; };
+		375DD4B4290D63480058C05B /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DD4B3290D63480058C05B /* AuthEndpoint.swift */; };
+		375DD4B6290D63840058C05B /* ProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DD4B5290D63840058C05B /* ProductsEndpoint.swift */; };
+		375DD4B8290D63F50058C05B /* PreferencesSellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DD4B7290D63F50058C05B /* PreferencesSellViewModel.swift */; };
 		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
@@ -156,6 +159,9 @@
 		37542B5428E4DFE1000C8791 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		37542B5728E4E35F000C8791 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		37542B5A28E4E3D6000C8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		375DD4B3290D63480058C05B /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		375DD4B5290D63840058C05B /* ProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndpoint.swift; sourceTree = "<group>"; };
+		375DD4B7290D63F50058C05B /* PreferencesSellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewModel.swift; sourceTree = "<group>"; };
 		377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
@@ -303,6 +309,8 @@
 			children = (
 				3714E20329099DF000EC08C0 /* CategoriesEndpoint.swift */,
 				3714E20529099E1800EC08C0 /* HomeEndpoint.swift */,
+				375DD4B3290D63480058C05B /* AuthEndpoint.swift */,
+				375DD4B5290D63840058C05B /* ProductsEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -568,6 +576,7 @@
 				37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */,
 				37B9C30328B54ABD00134380 /* PreferencesSellView.swift */,
 				37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */,
+				375DD4B7290D63F50058C05B /* PreferencesSellViewModel.swift */,
 			);
 			name = PreferencesSell;
 			sourceTree = "<group>";
@@ -946,6 +955,7 @@
 			files = (
 				3714E21229099EED00EC08C0 /* HTTPTask.swift in Sources */,
 				3714E20929099E4D00EC08C0 /* NetworkManager.swift in Sources */,
+				375DD4B6290D63840058C05B /* ProductsEndpoint.swift in Sources */,
 				378CD49228ECA91E0047EE21 /* UITextField+Extensions.swift in Sources */,
 				3740F96828EC9E8E00D0AC3F /* AddProductViewModel.swift in Sources */,
 				379F4E7128E21F7000C703A4 /* ButtonCell.swift in Sources */,
@@ -1004,6 +1014,8 @@
 				3789949E28E361A900605063 /* MartStrings.swift in Sources */,
 				37939A7728C6839E0077CF88 /* UIButton.Configuration+Extensions.swift in Sources */,
 				37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */,
+				375DD4B4290D63480058C05B /* AuthEndpoint.swift in Sources */,
+				375DD4B8290D63F50058C05B /* PreferencesSellViewModel.swift in Sources */,
 				37AF8DD528E87EF500AD5693 /* CompositeEntryPoint.swift in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
@@ -1098,6 +1110,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_SCHEME_NAME = Mock;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1249,6 +1262,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_SCHEME_NAME = Debug;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1309,6 +1323,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_SCHEME_NAME = Release;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

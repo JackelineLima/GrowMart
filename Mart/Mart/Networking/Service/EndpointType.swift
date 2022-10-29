@@ -18,7 +18,6 @@ protocol EndpointType {
     func getFullURL() -> URL
 }
 
-// MARK: - Default implementations
 extension EndpointType {
     var baseURL: URL {
         guard let schemeName = Bundle.main.infoDictionary?["CURRENT_SCHEME_NAME"] as? String,

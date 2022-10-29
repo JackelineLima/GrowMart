@@ -33,6 +33,17 @@ final class NetworkManager {
                                 completion: completion)
         }
     }
+    
+    public func executeExemple<T: Decodable>(endpoint: EndpointType,
+                                             completion: @escaping (Result<T, NetworkResponse>) -> Void
+    ) {
+        router.request(endpoint) { [weak self] data, response, error in
+            self?.handleReponse(data: data,
+                                response: response,
+                                error: error,
+                                completion: completion)
+        }
+    }
 
     // MARK: - Private Methods
     

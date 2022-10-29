@@ -8,6 +8,7 @@
 import UIKit
 protocol PreferencesSellCoordinatorProtocol: AnyObject {
     func start()
+    func navigateToHome(index category: Int)
 }
 class PreferencesSellCoordinator: PreferencesSellCoordinatorProtocol {
     
@@ -18,7 +19,8 @@ class PreferencesSellCoordinator: PreferencesSellCoordinatorProtocol {
     }
     
     func start() {
-        let controller = PreferencesSellViewController(coordinator: self)
+        let viewModel = PreferencesSellViewModel(coordinator: self)
+        let controller = PreferencesSellViewController(viewModel: viewModel)
         navigationController.setViewControllers([controller], animated: true)
     }
     

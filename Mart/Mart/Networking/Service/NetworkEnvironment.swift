@@ -14,9 +14,8 @@ enum NetworkEnvironment: String {
     
     func getBaseUrl() -> String {
         switch self {
-        case .debug: return "https://growmart-api.herokuapp.com/v1/"
+        case .debug, .release: return "https://growmart-api.herokuapp.com/v1/"
         case .mock: return ""
-        case .release: return "https://growmart-api.herokuapp.com/v1/"
         }
     }
 }

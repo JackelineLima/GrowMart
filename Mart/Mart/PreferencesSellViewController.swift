@@ -7,13 +7,18 @@
 
 import UIKit
 
+protocol PreferencesSellViewControllerDelegate: AnyObject {
+    func renderButtons(categories: [CategoryResponse]?)
+}
+
 class PreferencesSellViewController: UIViewController {
     
-    private var coordinator: PreferencesSellCoordinator
-    private let preferencesView = PreferencesSellView()
+    private var viewModel: PreferencesSellProtocol
+    private lazy var preferencesView = PreferencesSellView()
+    let networkManager = NetworkManager()
     
-    init(coordinator: PreferencesSellCoordinator) {
-        self.coordinator = coordinator
+    init(viewModel: PreferencesSellProtocol) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -23,12 +28,13 @@ class PreferencesSellViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.callService()
+        viewModel.delegate(self)
     }
     
     override func loadView() {
         super.loadView()
         view = preferencesView
-        
         preferencesView.buttonAction = { preference in
             self.navigateToPreferences(preference)
         }
@@ -37,12 +43,23 @@ class PreferencesSellViewController: UIViewController {
     private func navigateToPreferences(_ preference: TypePreferences) {
         switch preference {
         case .clothes:
-            let coordinator = AddProductCoordinator(navigationController: navigationController!)
-            coordinator.start()
+            //            let coordinator = AddProductCoordinator(navigationController: navigationController!)
+            //            coordinator.start()
+            viewModel.navigateToHome(index: preference.rawValue)
         case .accessories:
-            coordinator.navigateToHome(index: preference.rawValue)
+            viewModel.navigateToHome(index: preference.rawValue)
         case .others:
-            coordinator.navigateToHome(index: preference.rawValue)
+            viewModel.navigateToHome(index: preference.rawValue)
+        }
+    }
+}
+
+extension PreferencesSellViewController: PreferencesSellViewControllerDelegate {
+    func renderButtons(categories: [CategoryResponse]?) {
+        if let categories = categories {
+            DispatchQueue.main.async {
+                self.preferencesView.renderButtons(categories: categories)
+            }
         }
     }
 }
