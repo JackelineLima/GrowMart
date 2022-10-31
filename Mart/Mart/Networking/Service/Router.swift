@@ -10,6 +10,7 @@ import Foundation
 public typealias NetworkRouterCompletion = (_ data: Data?,_ response: URLResponse?,_ error: Error?) -> Void
 
 // MARK: Protocols
+//Protocolo do Router
 protocol NetworkRouter: AnyObject {
     func request(_ endpoint: EndpointType, completion: @escaping NetworkRouterCompletion)
     func cancel()

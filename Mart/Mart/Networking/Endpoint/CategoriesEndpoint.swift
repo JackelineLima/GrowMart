@@ -13,6 +13,7 @@ public enum CategoriesApi {
 }
 
 extension CategoriesApi: EndpointType {
+    
     var path: String {
         switch self {
         case let .get(id): return "categorie/\(id)"

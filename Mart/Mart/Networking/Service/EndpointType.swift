@@ -7,6 +7,8 @@
 
 import Foundation
 
+//ENDPOINTBASE
+
 protocol EndpointType {
     var baseURL: URL { get }
     var path: String { get }
