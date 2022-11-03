@@ -9,48 +9,42 @@ import Foundation
 import UIKit
 
 protocol HomeViewModelProtocol {
-    func loadCategory()
+    func callService()
     func navigatoToCar()
-    var products: [Product] { get }
+    var products: [ProductResponse] { get }
     var categoryIndex: Int { get set }
+    var delegate: HomeViewControllerDelegate? { get set }
 }
 
 class HomeViewModel: HomeViewModelProtocol {
     
+    private var network = NetworkManager()
+    internal var products: [ProductResponse] = []
     let coordinator: HomeCoordinator
     var categoryIndex: Int
-    var products: [Product] = []
-    
-    private let clothesUrl = "https://fjallraven.vteximg.com.br/arquivos/ids/156206-751-936/F87314620_Camiseta_Masculina_Tornetrask_T-shirt_M_front_1.png"
-        private let acessoriesUrl = "https://secure-static.arezzo.com.br/medias/sys_master/arezzo/arezzo/h79/h77/h00/h00/10406142246942/5002305310001U-01-BASEIMAGE-Midres.jpg"
-        private let othersUrl = "https://www.mariapiacasa.com.br/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/t/o/toca-discos-vinil-retro-dallas-classic-35309-1.jpg"
+    weak var delegate: HomeViewControllerDelegate?
     
     init(coordinator: HomeCoordinator,_ categoryIndex: Int) {
         self.coordinator = coordinator
         self.categoryIndex = categoryIndex
     }
     
-    func loadCategory() {
-        switch categoryIndex {
-        case 0:
-            addFakeProducts(name: "Roupas", imageUrl: clothesUrl)
-        case 1:
-            addFakeProducts(name: "Acessórios", imageUrl: acessoriesUrl)
-        case 2:
-            addFakeProducts(name: "Outros", imageUrl: othersUrl)
-        default:
-            break
+    func callService() {
+        network.execute(endpoint: ProductsApi.list(page: 20)) { [weak self] (response: Result<ProductsResponse, NetworkResponse>) in
+            switch response {
+            case .success(let data):
+                guard let products = data.entries else {
+                    return
+                }
+                self?.products.append(contentsOf: products)
+                self?.delegate?.reload()
+            case .failure:
+                print("error")
+            }
         }
     }
     
     func navigatoToCar() {
         coordinator.navigateToCar()
-    }
-    
-    private func addFakeProducts(name: String, imageUrl: String) {
-        products.removeAll()
-        for i in 0...10 {
-            products.append(.init(name: "\(name) \(i)", price: "R$ 99.00", url: imageUrl))
-        }
     }
 }

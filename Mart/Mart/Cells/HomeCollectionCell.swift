@@ -93,11 +93,11 @@ class HomeCollectionCell: UICollectionViewCell, ViewCodable {
         contentView.clipsToBounds = true
     }
     
-    public func setup(with product: Product) {
+    public func setup(with product: ProductResponse) {
         priceLabel.text = product.price
         nameLabel.text = product.name
         
-        guard let url = product.url else { return }
+        guard let url = product.image else { return }
         productImageView.addImageFromURL(urlString: url)
     }
 }

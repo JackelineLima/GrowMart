@@ -20,5 +20,553 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1844E51-892F-4B2F-898F-9C7AFE068017"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "request(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADD6E9B3-576D-462A-9101-207977A7CEFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "request(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F26C9FAE-18EE-4B08-AC70-DCC1D30EB360"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "request(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "822EA58B-7167-4FFA-B031-5DF5702645B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "handleReponse(data:response:error:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B9F9581-7F87-46C0-9AD2-F1B112013D53"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "handleReponse(data:response:error:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38A3CA16-7943-492E-91FA-BE3EE597F357"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "handleReponse(data:response:error:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B160663C-C892-4449-9796-FBBB5E3608BD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "handleReponse(data:response:error:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4A21425-BBAC-430D-A6B7-D0229F4B9418"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/EndpointType.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "baseURL"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E4A21425-BBAC-430D-A6B7-D0229F4B9418 - fe0e0e832555c64f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.ProductsApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1076">
+               </Location>
+               <Location
+                  uuid = "E4A21425-BBAC-430D-A6B7-D0229F4B9418 - 7e113bd02670c598"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.CategoriesApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+               <Location
+                  uuid = "E4A21425-BBAC-430D-A6B7-D0229F4B9418 - 69ddb5d373babcb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.AuthApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1008">
+               </Location>
+               <Location
+                  uuid = "E4A21425-BBAC-430D-A6B7-D0229F4B9418 - 82e4a3f0025fbdbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.HomeApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1048">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7858260-8897-4A88-B6A2-8B1493FE879C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/EndpointType.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "getFullURL()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D7858260-8897-4A88-B6A2-8B1493FE879C - 4bcfade16d5bb8e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.ProductsApi&gt; of Mart.EndpointType.getFullURL() -&gt; Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "D7858260-8897-4A88-B6A2-8B1493FE879C - 1923637f95891695"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.CategoriesApi&gt; of Mart.EndpointType.getFullURL() -&gt; Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "D7858260-8897-4A88-B6A2-8B1493FE879C - c62eba5249117813"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.AuthApi&gt; of Mart.EndpointType.getFullURL() -&gt; Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "D7858260-8897-4A88-B6A2-8B1493FE879C - 4a5c77c9d0b8721a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.HomeApi&gt; of Mart.EndpointType.getFullURL() -&gt; Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0269695-C180-4FD8-86E7-A5526C114432"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "handleReponse(data:response:error:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8014455-5FFC-4144-AC62-0BF17C1EAE30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "buildRequest(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0929AE75-A54E-4B8E-96F8-4D10E9E020E5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Endpoint/ProductsEndpoint.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getMockName()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/EndpointType.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "baseURL"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - fe0e0e832555c66c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.ProductsApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - fe0e0e832555c66c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.ProductsApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "592">
+               </Location>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - 7e113bd02670c5bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.CategoriesApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - 7e113bd02670c5bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.CategoriesApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "568">
+               </Location>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - 69ddb5d373babc96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.AuthApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - 69ddb5d373babc96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.AuthApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - 82e4a3f0025fbd9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.HomeApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "82660A7D-42A4-4C54-B62C-EF01A48764D3 - 82e4a3f0025fbd9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.HomeApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "564">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6D210CA-71DB-4EFB-9E5D-F0BBC113F073"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/Networking/Service/EndpointType.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "baseURL"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "D6D210CA-71DB-4EFB-9E5D-F0BBC113F073 - fe0e0e832555c7aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.ProductsApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "744">
+               </Location>
+               <Location
+                  uuid = "D6D210CA-71DB-4EFB-9E5D-F0BBC113F073 - 7e113bd02670c47d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.CategoriesApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "720">
+               </Location>
+               <Location
+                  uuid = "D6D210CA-71DB-4EFB-9E5D-F0BBC113F073 - 69ddb5d373babd50"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.AuthApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "676">
+               </Location>
+               <Location
+                  uuid = "D6D210CA-71DB-4EFB-9E5D-F0BBC113F073 - 82e4a3f0025fbc59"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;Mart.HomeApi&gt; of Mart.EndpointType.baseURL.getter : Foundation.URL"
+                  moduleName = "Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jackeline.lima/Desktop/GrowMart/Mart/Mart/Networking/Service/EndpointType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "716">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD27648A-CF42-4BBA-9A33-7C36CE1A2CD4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mart/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "reload()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

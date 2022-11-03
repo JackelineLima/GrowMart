@@ -7,7 +7,11 @@
 
 import UIKit
 
-final class HomeViewController: DefaultViewController {
+protocol HomeViewControllerDelegate: AnyObject {
+    func reload()
+}
+
+class HomeViewController: DefaultViewController {
     
     private lazy var homeView = HomeView2(categoryIndex: viewModel.categoryIndex)
     private var viewModel: HomeViewModelProtocol
@@ -30,7 +34,8 @@ final class HomeViewController: DefaultViewController {
         super.viewDidLoad()
         isHiddenLineView()
         setupRightButtonNavigation(action: #selector(didTapButtonNavigation))
-        viewModel.loadCategory()
+        viewModel.delegate = self
+        viewModel.callService()
     }
     
     @objc private func didTapButtonNavigation() {
@@ -38,23 +43,30 @@ final class HomeViewController: DefaultViewController {
     }
 }
 
-extension HomeViewController: HomeViewDelegate, HomeView2Delegate {
+extension HomeViewController: HomeView2Delegate {
     
     func numberOfRows() -> Int {
         viewModel.products.count
     }
     
-    func getProducts() -> [Product] {
+    func getProducts() -> [ProductResponse] {
         viewModel.products
     }
     
     func didTapSegmented(index: Int) {
         viewModel.categoryIndex = index
-        viewModel.loadCategory()
+        viewModel.callService()
         homeView.reloadCollection()
     }
     
     func didTapCell() {
         print("abrir celula")
+    }
+}
+
+extension HomeViewController: HomeViewControllerDelegate {
+    
+    func reload() {
+        homeView.reloadCollection()
     }
 }

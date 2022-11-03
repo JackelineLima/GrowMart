@@ -11,7 +11,7 @@ protocol HomeView2Delegate: AnyObject {
     func didTapCell()
     func didTapSegmented(index: Int)
     func numberOfRows() -> Int
-    func getProducts() -> [Product]
+    func getProducts() -> [ProductResponse]
 }
 
 final class HomeView2: UIView, ViewCodable {
@@ -153,9 +153,10 @@ final class HomeView2: UIView, ViewCodable {
     }
     
     func reloadCollection() {
-        collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
-    
 }
 
 extension HomeView2: UICollectionViewDelegate, UICollectionViewDataSource {
