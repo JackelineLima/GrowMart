@@ -45,9 +45,9 @@ class PreferencesSellViewController: UIViewController {
         case .clothes:
             //            let coordinator = AddProductCoordinator(navigationController: navigationController!)
             //            coordinator.start()
-//            viewModel.navigateToHome(index: preference.rawValue)
-            let controller = ProductDetailViewController()
-            navigationController?.pushViewController(controller, animated: true)
+            viewModel.navigateToHome(index: preference.rawValue)
+//            let controller = ProductDetailViewController(viewModel: )
+//            navigationController?.pushViewController(controller, animated: true)
 //            present(controller, animated: true)
         case .accessories:
             viewModel.navigateToHome(index: preference.rawValue)

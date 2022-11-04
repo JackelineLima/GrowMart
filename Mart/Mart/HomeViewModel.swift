@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomeViewModelProtocol {
+    func navigatoToProductDetail()
     func callService()
     func navigatoToCar()
     var products: [ProductResponse] { get }
@@ -46,5 +47,9 @@ class HomeViewModel: HomeViewModelProtocol {
     
     func navigatoToCar() {
         coordinator.navigateToCar()
+    }
+    
+    func navigatoToProductDetail() {
+        coordinator.navigateToProductDetail()
     }
 }

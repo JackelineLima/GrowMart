@@ -7,6 +7,20 @@
 
 import Foundation
 
-class ProductDetailViewModel {
+protocol ProductDetailViewModelProtocol {
+    func backButton()
+}
+
+class ProductDetailViewModel: ProductDetailViewModelProtocol {
     
+    let coordinator: ProductDetailCoodinatorProtocol
+    
+    init(coordinator: ProductDetailCoodinatorProtocol) {
+        self.coordinator = coordinator
+    }
+    
+
+    func backButton() {
+        coordinator.popViewController()
+    }
 }

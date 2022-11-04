@@ -34,4 +34,9 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
         let coodinator = ProfileCoordinator(navigationController: navigationController)
         coodinator.start()
     }
+    
+    func navigateToProductDetail() {
+        let coodinator = ProductDetailCoodinator(navigationController: navigationController)
+        coodinator.start()
+    }
 }

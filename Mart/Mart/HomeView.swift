@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol HomeView2Delegate: AnyObject {
-    func didTapCell()
+protocol HomeViewDelegate: AnyObject {
+    func didTapProduct(at index: Int)
     func didTapSegmented(index: Int)
     func numberOfRows() -> Int
     func getProducts() -> [ProductResponse]
 }
 
-final class HomeView2: UIView, ViewCodable {
+final class HomeView: UIView, ViewCodable {
     
-    weak var delegate: HomeView2Delegate?
+    weak var delegate: HomeViewDelegate?
     private var categoryIndex: Int
     private let accessories: [String] = ["roupas", "acessórios", "outros"]
 
@@ -159,7 +159,7 @@ final class HomeView2: UIView, ViewCodable {
     }
 }
 
-extension HomeView2: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         delegate?.numberOfRows() ?? 0
@@ -175,28 +175,14 @@ extension HomeView2: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        delegate?.didTapProduct(at: indexPath.row)
     }
     
 }
 
-extension HomeView2: SegmentedBarDelegate {
+extension HomeView: SegmentedBarDelegate {
 
     func didTapSegmented(index: Int) {
         delegate?.didTapSegmented(index: index)
-    }
-}
-
-extension HomeView2: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("position y \(scrollView.contentOffset.y)")
-        if scrollView.contentOffset.y == 183.0 {
-//            collectionView.isScrollEnabled = true
-//            self.scrollView.isScrollEnabled = false
-        } else if scrollView.contentOffset.y < -0 {
-//            collectionView.isScrollEnabled = false
-//            self.scrollView.isScrollEnabled = true
-        }
     }
 }

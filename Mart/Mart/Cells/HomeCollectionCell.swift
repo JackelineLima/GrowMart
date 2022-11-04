@@ -47,6 +47,12 @@ class HomeCollectionCell: UICollectionViewCell, ViewCodable {
         return label
     }()
     
+    private lazy var favoriteButton: FavoriteButton = {
+        let element = FavoriteButton()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.addTarget(self, action: #selector(didTapFavorite), for: .touchUpInside)
+        return element
+    }()
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,10 +68,12 @@ class HomeCollectionCell: UICollectionViewCell, ViewCodable {
         contentView.addSubview(containerView)
         containerView.addSubview(priceLabel)
         containerView.addSubview(nameLabel)
+        containerView.addSubview(favoriteButton)
     }
     
     public func setupConstraints() {
         NSLayoutConstraint.activate([
+            
             productImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             productImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
@@ -82,7 +90,13 @@ class HomeCollectionCell: UICollectionViewCell, ViewCodable {
             
             nameLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
-            nameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8)
+            nameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
+            nameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8),
+            
+            favoriteButton.widthAnchor.constraint(equalToConstant: 32),
+            favoriteButton.heightAnchor.constraint(equalToConstant: 32),
+            favoriteButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
+            favoriteButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
         ])
     }
     
@@ -99,5 +113,19 @@ class HomeCollectionCell: UICollectionViewCell, ViewCodable {
         
         guard let url = product.image else { return }
         productImageView.addImageFromURL(urlString: url)
+    }
+    
+    @objc func didTapFavorite() {
+        print("ok")
+    }
+    
+    private func setupGestureRecognizerForCell() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func didTap(_ gesture: UIGestureRecognizer) {
+//        onTap?()
+        print("okkk")
     }
 }

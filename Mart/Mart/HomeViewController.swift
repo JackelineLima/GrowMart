@@ -13,7 +13,7 @@ protocol HomeViewControllerDelegate: AnyObject {
 
 class HomeViewController: DefaultViewController {
     
-    private lazy var homeView = HomeView2(categoryIndex: viewModel.categoryIndex)
+    private lazy var homeView = HomeView(categoryIndex: viewModel.categoryIndex)
     private var viewModel: HomeViewModelProtocol
 
     init(viewModel: HomeViewModelProtocol) {
@@ -43,7 +43,11 @@ class HomeViewController: DefaultViewController {
     }
 }
 
-extension HomeViewController: HomeView2Delegate {
+extension HomeViewController: HomeViewDelegate {
+    
+    func didTapProduct(at index: Int) {
+        viewModel.navigatoToProductDetail()
+    }
     
     func numberOfRows() -> Int {
         viewModel.products.count
@@ -57,10 +61,6 @@ extension HomeViewController: HomeView2Delegate {
         viewModel.categoryIndex = index
         viewModel.callService()
         homeView.reloadCollection()
-    }
-    
-    func didTapCell() {
-        print("abrir celula")
     }
 }
 
