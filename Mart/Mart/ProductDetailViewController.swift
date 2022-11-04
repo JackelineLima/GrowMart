@@ -7,10 +7,13 @@
 
 import UIKit
 
+protocol ProductDetailViewControllerProtocol: AnyObject {
+    func set(product: ProductResponse)
+}
+
 class ProductDetailViewController: DefaultViewController {
     
     private let productDetailView = ProductDetailView()
-    private let networkManager = NetworkManager()
     private let viewModel: ProductDetailViewModelProtocol
     
     init(viewModel: ProductDetailViewModelProtocol) {
@@ -25,27 +28,13 @@ class ProductDetailViewController: DefaultViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLeftButtonNavigation(action: #selector(backButton))
-        callService()
+        viewModel.callService()
     }
     
     override func loadView() {
         super.loadView()
         productDetailView.delegate = self
         view = productDetailView
-    }
-    
-    private func callService() {
-        networkManager.execute(endpoint: ProductsApi.get(id: "1")) { [weak self] (response: Result<ProductResponse, NetworkResponse>) in
-            guard let safeSelf = self else { return }
-            
-            switch response {
-            case let .success(data):
-                safeSelf.productDetailView.set(product: data)
-            case .failure:
-                // Apresentar estado de erro
-                break
-            }
-        }
     }
     
     @objc func backButton() {
@@ -66,5 +55,11 @@ extension ProductDetailViewController: ProductDetailViewDelegate {
         ], applicationActivities: nil)
         controller.popoverPresentationController?.sourceView = self.view
         present(controller, animated: true, completion: nil)
+    }
+}
+
+extension ProductDetailViewController: ProductDetailViewControllerProtocol {
+    func set(product: ProductResponse) {
+        productDetailView.set(product: product)
     }
 }

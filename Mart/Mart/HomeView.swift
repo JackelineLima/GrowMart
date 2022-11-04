@@ -25,6 +25,7 @@ final class HomeView: UIView, ViewCodable {
         search.placeholder = "buscar"
         search.borderStyle = .roundedRect
         search.layer.borderColor = UIColor.black.cgColor
+        search.layer.borderWidth = 1
         search.layer.cornerRadius = 5
         search.rightViewMode = .always
         search.font = UIFontStyle.customFont(name: .f16PrimaryRegular)
