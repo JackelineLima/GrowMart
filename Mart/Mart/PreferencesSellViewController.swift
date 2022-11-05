@@ -13,11 +13,10 @@ protocol PreferencesSellViewControllerDelegate: AnyObject {
 
 class PreferencesSellViewController: UIViewController {
     
-    private var viewModel: PreferencesSellProtocol
-    private lazy var preferencesView = PreferencesSellView()
-    let networkManager = NetworkManager()
+    private var viewModel: PreferencesSellViewModelProtocol
+    private var preferencesView = PreferencesSellView()
     
-    init(viewModel: PreferencesSellProtocol) {
+    init(viewModel: PreferencesSellViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,10 +33,8 @@ class PreferencesSellViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        preferencesView.delegate = self
         view = preferencesView
-        preferencesView.buttonAction = { preference in
-            self.navigateToPreferences(preference)
-        }
     }
     
     private func navigateToPreferences(_ preference: TypePreferences) {
@@ -58,11 +55,19 @@ class PreferencesSellViewController: UIViewController {
 }
 
 extension PreferencesSellViewController: PreferencesSellViewControllerDelegate {
+    
     func renderButtons(categories: [CategoryResponse]?) {
         if let categories = categories {
             DispatchQueue.main.async {
                 self.preferencesView.renderButtons(categories: categories)
             }
         }
+    }
+}
+
+extension PreferencesSellViewController: PreferencesSellViewDelegate {
+    
+    func buttonAction(preferences: TypePreferences) {
+        viewModel.navigateToHome(index: preferences.rawValue)
     }
 }

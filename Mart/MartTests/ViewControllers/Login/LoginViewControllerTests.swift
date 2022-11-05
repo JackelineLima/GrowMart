@@ -12,6 +12,9 @@ import SnapshotTesting
 final class LoginViewControllerTests: XCTestCase {
     
     let coodinator = LoginCoordinatorMock()
+    
+    // MARK: - Subject Under Tests
+    private var sut: LoginViewController!
 
     func testExample() throws {
         let component = LoginViewController(coordinator: coodinator)

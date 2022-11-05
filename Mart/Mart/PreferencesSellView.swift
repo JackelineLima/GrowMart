@@ -14,10 +14,14 @@ enum TypePreferences: Int {
     case others
 }
 
+protocol PreferencesSellViewDelegate: AnyObject {
+    func buttonAction(preferences: TypePreferences)
+}
+
 final class PreferencesSellView: UIView {
 
+    weak var delegate: PreferencesSellViewDelegate?
     private var categories: [CategoryResponse] = []
-    var buttonAction: ((TypePreferences) -> Void)?
     
     private lazy var preferencesStackView: UIStackView = {
         let stackView = UIStackView()
@@ -69,15 +73,15 @@ final class PreferencesSellView: UIView {
     
     private func setupButtonAction() {
         othersButton.setAction {
-            self.buttonAction?(.others)
+            self.delegate?.buttonAction(preferences: .others)
         }
         
         accessoriesButton.setAction {
-            self.buttonAction?(.accessories)
+            self.delegate?.buttonAction(preferences: .accessories)
         }
         
         clothesButton.setAction {
-            self.buttonAction?(.clothes)
+            self.delegate?.buttonAction(preferences: .clothes)
         }
     }
     

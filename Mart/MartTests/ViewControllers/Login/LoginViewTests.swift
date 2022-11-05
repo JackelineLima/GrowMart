@@ -42,16 +42,3 @@ final class LoginViewTests: XCTestCase {
     }
 
 }
-
-class LoginViewSpy: LoginViewDelegate {
-    var continueButtonFacebookCalled = false
-    var continueButtonGoogleCalled = false
-    
-    func continueButtonFacebook() {
-        continueButtonFacebookCalled = true
-    }
-    
-    func continueButtonGoogle() {
-        continueButtonGoogleCalled = true
-    }
-}

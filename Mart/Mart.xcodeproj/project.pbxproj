@@ -39,6 +39,12 @@
 		376BABDC291438D500FD54D7 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BABDB291438D500FD54D7 /* ProductDetailViewModel.swift */; };
 		376BABDE291440DA00FD54D7 /* ProductDetailCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BABDD291440DA00FD54D7 /* ProductDetailCoodinator.swift */; };
 		376BAD1F291555F200FD54D7 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD1E291555F200FD54D7 /* FavoriteButton.swift */; };
+		376BAD23291586E300FD54D7 /* LoginViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD22291586E300FD54D7 /* LoginViewSpy.swift */; };
+		376BAD262915883400FD54D7 /* PreferencesSellViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD252915883400FD54D7 /* PreferencesSellViewControllerTests.swift */; };
+		376BAD282915889D00FD54D7 /* PreferencesSellViewModelSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD272915889D00FD54D7 /* PreferencesSellViewModelSpy.swift */; };
+		376BAD2C29159A1800FD54D7 /* PreferencesSellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD2B29159A1800FD54D7 /* PreferencesSellViewModelTests.swift */; };
+		376BAD2F29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD2E29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift */; };
+		376BAD3129159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */; };
 		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
@@ -76,7 +82,7 @@
 		37B2C29228EE652C00E8F6B4 /* ButtonCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29128EE652C00E8F6B4 /* ButtonCellTests.swift */; };
 		37B2C29528EE671800E8F6B4 /* Mirror+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29428EE671800E8F6B4 /* Mirror+Extensions.swift */; };
 		37B2C29728EE693300E8F6B4 /* ButtonCellSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29628EE693300E8F6B4 /* ButtonCellSpy.swift */; };
-		37B2C29B28EE6E4800E8F6B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29A28EE6E4800E8F6B4 /* LoginViewController.swift */; };
+		37B2C29B28EE6E4800E8F6B4 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29A28EE6E4800E8F6B4 /* LoginViewControllerTests.swift */; };
 		37B2C29E28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B2C29D28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift */; };
 		37B3682328D9FB9C0044ED58 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3682228D9FB9C0044ED58 /* HeaderView.swift */; };
 		37B466D228C3ECDF006C18D8 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */; };
@@ -183,6 +189,12 @@
 		376BABDB291438D500FD54D7 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		376BABDD291440DA00FD54D7 /* ProductDetailCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCoodinator.swift; sourceTree = "<group>"; };
 		376BAD1E291555F200FD54D7 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		376BAD22291586E300FD54D7 /* LoginViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewSpy.swift; sourceTree = "<group>"; };
+		376BAD252915883400FD54D7 /* PreferencesSellViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewControllerTests.swift; sourceTree = "<group>"; };
+		376BAD272915889D00FD54D7 /* PreferencesSellViewModelSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewModelSpy.swift; sourceTree = "<group>"; };
+		376BAD2B29159A1800FD54D7 /* PreferencesSellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewModelTests.swift; sourceTree = "<group>"; };
+		376BAD2E29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewControllerSpy.swift; sourceTree = "<group>"; };
+		376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellCoodinatorSpy.swift; sourceTree = "<group>"; };
 		377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
@@ -221,7 +233,7 @@
 		37B2C29128EE652C00E8F6B4 /* ButtonCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellTests.swift; sourceTree = "<group>"; };
 		37B2C29428EE671800E8F6B4 /* Mirror+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mirror+Extensions.swift"; sourceTree = "<group>"; };
 		37B2C29628EE693300E8F6B4 /* ButtonCellSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellSpy.swift; sourceTree = "<group>"; };
-		37B2C29A28EE6E4800E8F6B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		37B2C29A28EE6E4800E8F6B4 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		37B2C29D28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorMock.swift; sourceTree = "<group>"; };
 		37B3682228D9FB9C0044ED58 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		37B466CE28C3ECDF006C18D8 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
@@ -414,6 +426,26 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
+		376BAD242915880900FD54D7 /* PreferencesSell */ = {
+			isa = PBXGroup;
+			children = (
+				376BAD2D29159A7100FD54D7 /* Spies */,
+				376BAD252915883400FD54D7 /* PreferencesSellViewControllerTests.swift */,
+				376BAD2B29159A1800FD54D7 /* PreferencesSellViewModelTests.swift */,
+			);
+			path = PreferencesSell;
+			sourceTree = "<group>";
+		};
+		376BAD2D29159A7100FD54D7 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				376BAD272915889D00FD54D7 /* PreferencesSellViewModelSpy.swift */,
+				376BAD2E29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift */,
+				376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
 		37852F4F28CCE1DD00DD2425 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +616,7 @@
 		37B2C29928EE6E3100E8F6B4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				376BAD242915880900FD54D7 /* PreferencesSell */,
 				37B2C29C28EE6E9D00E8F6B4 /* Login */,
 			);
 			path = ViewControllers;
@@ -592,9 +625,10 @@
 		37B2C29C28EE6E9D00E8F6B4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				37B2C29A28EE6E4800E8F6B4 /* LoginViewController.swift */,
+				37B2C29A28EE6E4800E8F6B4 /* LoginViewControllerTests.swift */,
 				37B2C29D28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift */,
 				378CA00E28EF37EB003DE99F /* LoginViewTests.swift */,
+				376BAD22291586E300FD54D7 /* LoginViewSpy.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1053,19 +1087,25 @@
 				37CDAC55290F31050052C71F /* NetworkManagerTests.swift in Sources */,
 				37CDAC4D290F304B0052C71F /* RouterTests.swift in Sources */,
 				37CDAC5A290F31D90052C71F /* ParameterEncodingTests.swift in Sources */,
-				37B2C29B28EE6E4800E8F6B4 /* LoginViewController.swift in Sources */,
+				37B2C29B28EE6E4800E8F6B4 /* LoginViewControllerTests.swift in Sources */,
 				378CA00F28EF37EB003DE99F /* LoginViewTests.swift in Sources */,
+				376BAD282915889D00FD54D7 /* PreferencesSellViewModelSpy.swift in Sources */,
 				37CDAC58290F31950052C71F /* CategoriesEndpointTests.swift in Sources */,
 				37B2C29528EE671800E8F6B4 /* Mirror+Extensions.swift in Sources */,
 				37B2C29728EE693300E8F6B4 /* ButtonCellSpy.swift in Sources */,
 				37CDAC5D290F33220052C71F /* URLSessionDataTaskSpy.swift in Sources */,
+				376BAD262915883400FD54D7 /* PreferencesSellViewControllerTests.swift in Sources */,
 				37B2C28D28EE5F1500E8F6B4 /* UIButtonPreferencesTests.swift in Sources */,
 				37CDAC61290F33810052C71F /* NetworkRouterMock.swift in Sources */,
+				376BAD2F29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift in Sources */,
+				376BAD3129159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift in Sources */,
 				37B2C29E28EE6EBC00E8F6B4 /* LoginCoordinatorMock.swift in Sources */,
+				376BAD2C29159A1800FD54D7 /* PreferencesSellViewModelTests.swift in Sources */,
 				37B2C28F28EE634200E8F6B4 /* SegmentedBarTests.swift in Sources */,
 				37CDAC50290F30C00052C71F /* CategoriesJsonData.swift in Sources */,
 				37B2C28528EE5E4400E8F6B4 /* BaseTests.swift in Sources */,
 				37B2C29228EE652C00E8F6B4 /* ButtonCellTests.swift in Sources */,
+				376BAD23291586E300FD54D7 /* LoginViewSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1303,6 +1343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1469,6 +1510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://growmart-api.herokuapp.com/v1";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1501,6 +1543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://growmart-api.herokuapp.com/v1";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

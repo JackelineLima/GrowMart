@@ -13,6 +13,7 @@ public enum AuthApi {
 }
 
 extension AuthApi: EndpointType {
+    
     var path: String {
         switch self {
         case .auth: return "auth"

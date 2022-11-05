@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol PreferencesSellProtocol {
+protocol PreferencesSellViewModelProtocol {
     func callService()
     func navigateToHome(index category: Int)
     func delegate(_ delegate: PreferencesSellViewControllerDelegate)
 }
 
-class PreferencesSellViewModel: PreferencesSellProtocol {
+class PreferencesSellViewModel: PreferencesSellViewModelProtocol {
     
     weak var delegate: PreferencesSellViewControllerDelegate?
     private let coordinator: PreferencesSellCoordinatorProtocol
