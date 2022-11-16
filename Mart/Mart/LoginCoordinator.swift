@@ -25,7 +25,7 @@ class LoginCoordinator: LoginCoordinatorProtocol {
     }
     
     func navigateToPreferences() {
-        let coodinator = PreferencesSellCoordinator(navigationController: navigationController)
+        let coodinator = PreferencesCoordinator(navigationController: navigationController)
         coodinator.start()
     }
 }

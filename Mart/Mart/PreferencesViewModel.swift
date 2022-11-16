@@ -7,24 +7,24 @@
 
 import Foundation
 
-protocol PreferencesSellViewModelProtocol {
+protocol PreferencesViewModelProtocol {
     func callService()
     func navigateToHome(index category: Int)
-    func delegate(_ delegate: PreferencesSellViewControllerDelegate)
+    func delegate(_ delegate: PreferencesViewControllerDelegate)
 }
 
-class PreferencesSellViewModel: PreferencesSellViewModelProtocol {
+class PreferencesViewModel: PreferencesViewModelProtocol {
     
-    weak var delegate: PreferencesSellViewControllerDelegate?
-    private let coordinator: PreferencesSellCoordinatorProtocol
+    weak var delegate: PreferencesViewControllerDelegate?
+    private let coordinator: PreferencesCoordinatorProtocol
     private let networkManager: NetworkManager
     
-    init(coordinator: PreferencesSellCoordinatorProtocol, networkManager: NetworkManager = NetworkManager()) {
+    init(coordinator: PreferencesCoordinatorProtocol, networkManager: NetworkManager = NetworkManager()) {
         self.coordinator = coordinator
         self.networkManager = networkManager
     }
     
-    func delegate(_ delegate: PreferencesSellViewControllerDelegate) {
+    func delegate(_ delegate: PreferencesViewControllerDelegate) {
         self.delegate = delegate
     }
     

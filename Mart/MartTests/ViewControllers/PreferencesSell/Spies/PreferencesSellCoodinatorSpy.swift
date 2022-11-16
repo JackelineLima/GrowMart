@@ -8,7 +8,7 @@
 import Foundation
 @testable import Mart
 
-class PreferencesSellCoodinatorSpy: PreferencesSellCoordinatorProtocol {
+class PreferencesSellCoodinatorSpy: PreferencesCoordinatorProtocol {
     var startCalled = false
     var navigateToHomeCalled = false
     func start() {

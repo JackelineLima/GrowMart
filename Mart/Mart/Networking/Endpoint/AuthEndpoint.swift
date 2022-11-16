@@ -25,6 +25,19 @@ extension AuthApi: EndpointType {
         case .auth: return "auth"
         }
     }
+    
+    var httpMethod: HTTPMethod {
+        .post
+    }
+    
+    var task: HTTPTask {
+        switch self {
+        case let .auth(login, password):
+            return .requestParameters(bodyParameters: ["login": login, "password" : password],
+                                      bodyEncoding: .jsonEncoding,
+                                      urlParameters: nil)
+        }
+    }
 }
 
 // MARK: - Response

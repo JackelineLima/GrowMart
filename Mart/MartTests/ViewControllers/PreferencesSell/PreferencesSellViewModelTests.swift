@@ -10,13 +10,13 @@ import XCTest
 
 final class PreferencesSellViewModelTests: XCTestCase {
     
-    private var sut: PreferencesSellViewModel!
+    private var sut: PreferencesViewModel!
     private var viewSpy: PreferencesSellViewControllerSpy!
     private var coordinatorSpy: PreferencesSellCoodinatorSpy!
 
     override func setUpWithError() throws {
         coordinatorSpy = PreferencesSellCoodinatorSpy()
-        sut = PreferencesSellViewModel(coordinator: coordinatorSpy)
+        sut = PreferencesViewModel(coordinator: coordinatorSpy)
     }
 
     override func tearDownWithError() throws {

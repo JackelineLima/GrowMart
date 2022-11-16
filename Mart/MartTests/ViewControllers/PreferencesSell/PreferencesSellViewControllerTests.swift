@@ -10,12 +10,12 @@ import XCTest
 
 final class PreferencesSellViewControllerTests: XCTestCase {
 
-    private var sut: PreferencesSellViewController!
+    private var sut: PreferencesViewController!
     private var viewModelSpy: PreferencesSellViewModelSpy!
 
     override func setUpWithError() throws {
         viewModelSpy = PreferencesSellViewModelSpy()
-        sut = PreferencesSellViewController(viewModel: viewModelSpy)
+        sut = PreferencesViewController(viewModel: viewModelSpy)
     }
 
     override func tearDownWithError() throws {

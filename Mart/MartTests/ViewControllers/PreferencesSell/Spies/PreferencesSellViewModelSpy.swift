@@ -8,7 +8,7 @@
 import Foundation
 @testable import Mart
 
-class PreferencesSellViewModelSpy: PreferencesSellViewModelProtocol {
+class PreferencesSellViewModelSpy: PreferencesViewModelProtocol {
     var callServiceCalled = false
     var navigateToHomeCalled = false
     var delegateCalled = false
@@ -21,7 +21,7 @@ class PreferencesSellViewModelSpy: PreferencesSellViewModelProtocol {
         navigateToHomeCalled = true
     }
     
-    func delegate(_ delegate: Mart.PreferencesSellViewControllerDelegate) {
+    func delegate(_ delegate: Mart.PreferencesViewControllerDelegate) {
         delegateCalled = true
     }
 }

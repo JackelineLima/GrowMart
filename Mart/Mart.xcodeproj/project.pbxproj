@@ -35,7 +35,7 @@
 		37542B5B28E4E3D6000C8791 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37542B5928E4E3D6000C8791 /* Localizable.strings */; };
 		375DD4B4290D63480058C05B /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DD4B3290D63480058C05B /* AuthEndpoint.swift */; };
 		375DD4B6290D63840058C05B /* ProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DD4B5290D63840058C05B /* ProductsEndpoint.swift */; };
-		375DD4B8290D63F50058C05B /* PreferencesSellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DD4B7290D63F50058C05B /* PreferencesSellViewModel.swift */; };
+		375DD4B8290D63F50058C05B /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375DD4B7290D63F50058C05B /* PreferencesViewModel.swift */; };
 		376BABDC291438D500FD54D7 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BABDB291438D500FD54D7 /* ProductDetailViewModel.swift */; };
 		376BABDE291440DA00FD54D7 /* ProductDetailCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BABDD291440DA00FD54D7 /* ProductDetailCoodinator.swift */; };
 		376BAD1F291555F200FD54D7 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD1E291555F200FD54D7 /* FavoriteButton.swift */; };
@@ -45,6 +45,9 @@
 		376BAD2C29159A1800FD54D7 /* PreferencesSellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD2B29159A1800FD54D7 /* PreferencesSellViewModelTests.swift */; };
 		376BAD2F29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD2E29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift */; };
 		376BAD3129159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */; };
+		376BAF172919544C00FD54D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAF162919544C00FD54D7 /* TabBarViewController.swift */; };
+		376BAF19291954BD00FD54D7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAF18291954BD00FD54D7 /* LoginViewModel.swift */; };
+		376BAF1B291959A800FD54D7 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAF1A291959A800FD54D7 /* UserDefaultsWrapper.swift */; };
 		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
 		37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5028CCE1EE00DD2425 /* SearchBar.swift */; };
 		37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37852F5228CCE24A00DD2425 /* SegmentedBar.swift */; };
@@ -91,9 +94,9 @@
 		37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */; };
 		37B7C13628D8DFB7003ADDBC /* InfoGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B7C13528D8DFB7003ADDBC /* InfoGroupView.swift */; };
 		37B7C13828D8E61B003ADDBC /* LabelValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B7C13728D8E61B003ADDBC /* LabelValueView.swift */; };
-		37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */; };
-		37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30328B54ABD00134380 /* PreferencesSellView.swift */; };
-		37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */; };
+		37B9C30228B5492F00134380 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30128B5492F00134380 /* PreferencesViewController.swift */; };
+		37B9C30428B54ABD00134380 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30328B54ABD00134380 /* PreferencesView.swift */; };
+		37B9C30628B54B4D00134380 /* PreferencesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30528B54B4D00134380 /* PreferencesCoordinator.swift */; };
 		37B9C30828B54D7100134380 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9C30728B54D7100134380 /* LoginCoordinator.swift */; };
 		37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BF25DB28B1349E00E0066A /* LoginView.swift */; };
 		37C3B37F28CF780500CFA1EE /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3B37E28CF780500CFA1EE /* HomeCollectionCell.swift */; };
@@ -185,7 +188,7 @@
 		37542B5A28E4E3D6000C8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		375DD4B3290D63480058C05B /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		375DD4B5290D63840058C05B /* ProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndpoint.swift; sourceTree = "<group>"; };
-		375DD4B7290D63F50058C05B /* PreferencesSellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewModel.swift; sourceTree = "<group>"; };
+		375DD4B7290D63F50058C05B /* PreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
 		376BABDB291438D500FD54D7 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		376BABDD291440DA00FD54D7 /* ProductDetailCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCoodinator.swift; sourceTree = "<group>"; };
 		376BAD1E291555F200FD54D7 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -195,6 +198,9 @@
 		376BAD2B29159A1800FD54D7 /* PreferencesSellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewModelTests.swift; sourceTree = "<group>"; };
 		376BAD2E29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewControllerSpy.swift; sourceTree = "<group>"; };
 		376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellCoodinatorSpy.swift; sourceTree = "<group>"; };
+		376BAF162919544C00FD54D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		376BAF18291954BD00FD54D7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		376BAF1A291959A800FD54D7 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		37852F5028CCE1EE00DD2425 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		37852F5228CCE24A00DD2425 /* SegmentedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBar.swift; sourceTree = "<group>"; };
@@ -242,9 +248,9 @@
 		37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
 		37B7C13528D8DFB7003ADDBC /* InfoGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoGroupView.swift; sourceTree = "<group>"; };
 		37B7C13728D8E61B003ADDBC /* LabelValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelValueView.swift; sourceTree = "<group>"; };
-		37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewController.swift; sourceTree = "<group>"; };
-		37B9C30328B54ABD00134380 /* PreferencesSellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellView.swift; sourceTree = "<group>"; };
-		37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellCoordinator.swift; sourceTree = "<group>"; };
+		37B9C30128B5492F00134380 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		37B9C30328B54ABD00134380 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		37B9C30528B54B4D00134380 /* PreferencesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesCoordinator.swift; sourceTree = "<group>"; };
 		37B9C30728B54D7100134380 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		37BF25DB28B1349E00E0066A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Mart/LoginView.swift; sourceTree = SOURCE_ROOT; };
 		37C3B37E28CF780500CFA1EE /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
@@ -446,6 +452,14 @@
 			path = Spies;
 			sourceTree = "<group>";
 		};
+		376BAF152919542F00FD54D7 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				376BAF162919544C00FD54D7 /* TabBarViewController.swift */,
+			);
+			name = Tabbar;
+			sourceTree = "<group>";
+		};
 		37852F4F28CCE1DD00DD2425 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +508,7 @@
 				37EB508328B11CD100185E83 /* LoginViewController.swift */,
 				37BF25DB28B1349E00E0066A /* LoginView.swift */,
 				37B9C30728B54D7100134380 /* LoginCoordinator.swift */,
+				376BAF18291954BD00FD54D7 /* LoginViewModel.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -646,20 +661,21 @@
 			name = Checkout;
 			sourceTree = "<group>";
 		};
-		37B9C30028B548AE00134380 /* PreferencesSell */ = {
+		37B9C30028B548AE00134380 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				37B9C30128B5492F00134380 /* PreferencesSellViewController.swift */,
-				37B9C30328B54ABD00134380 /* PreferencesSellView.swift */,
-				37B9C30528B54B4D00134380 /* PreferencesSellCoordinator.swift */,
-				375DD4B7290D63F50058C05B /* PreferencesSellViewModel.swift */,
+				37B9C30128B5492F00134380 /* PreferencesViewController.swift */,
+				37B9C30328B54ABD00134380 /* PreferencesView.swift */,
+				37B9C30528B54B4D00134380 /* PreferencesCoordinator.swift */,
+				375DD4B7290D63F50058C05B /* PreferencesViewModel.swift */,
 			);
-			name = PreferencesSell;
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 		37BF25DD28B1356E00E0066A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				376BAF152919542F00FD54D7 /* Tabbar */,
 				37CDAD922910662F0052C71F /* ProductDetail */,
 				3740F96028EC9E7400D0AC3F /* AddProduct */,
 				37B466CD28C3ECB7006C18D8 /* Checkout */,
@@ -667,7 +683,7 @@
 				37E1009828D8A7A8008E461F /* EditProfile */,
 				3798D67E28BAB7C100887BC6 /* Home */,
 				379A1CC928B27F880090E451 /* Login */,
-				37B9C30028B548AE00134380 /* PreferencesSell */,
+				37B9C30028B548AE00134380 /* Preferences */,
 				37E1009728D8A79F008E461F /* Profile */,
 			);
 			name = Views;
@@ -822,6 +838,7 @@
 				37EB508828B11CD100185E83 /* Assets.xcassets */,
 				37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */,
 				37EB508D28B11CD100185E83 /* Info.plist */,
+				376BAF1A291959A800FD54D7 /* UserDefaultsWrapper.swift */,
 			);
 			path = Mart;
 			sourceTree = "<group>";
@@ -1129,6 +1146,8 @@
 				376BAD1F291555F200FD54D7 /* FavoriteButton.swift in Sources */,
 				3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */,
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
+				376BAF1B291959A800FD54D7 /* UserDefaultsWrapper.swift in Sources */,
+				376BAF172919544C00FD54D7 /* TabBarViewController.swift in Sources */,
 				3798D68428BAB7E000887BC6 /* HomeCoordinator.swift in Sources */,
 				374A0E6F28EDDCF000D2D396 /* PhotoCell.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
@@ -1147,6 +1166,7 @@
 				37B7C13628D8DFB7003ADDBC /* InfoGroupView.swift in Sources */,
 				37E100A628D8A7D9008E461F /* EditProfileViewController.swift in Sources */,
 				374A0E6D28EDDCDC00D2D396 /* AddPhotoCell.swift in Sources */,
+				376BAF19291954BD00FD54D7 /* LoginViewModel.swift in Sources */,
 				378FE4D128B1257B0058B5F2 /* UIView+Extensions.swift in Sources */,
 				378CD49028ECA8A30047EE21 /* RightIconTextField.swift in Sources */,
 				37A07ADF28D12694006295FB /* HomeCollectionView.swift in Sources */,
@@ -1157,12 +1177,12 @@
 				37852F5328CCE24A00DD2425 /* SegmentedBar.swift in Sources */,
 				37E1009F28D8A7CA008E461F /* ProfileView.swift in Sources */,
 				37E1009D28D8A7CA008E461F /* ProfileCoordinator.swift in Sources */,
-				37B9C30228B5492F00134380 /* PreferencesSellViewController.swift in Sources */,
+				37B9C30228B5492F00134380 /* PreferencesViewController.swift in Sources */,
 				37AF8DD728E87F9E00AD5693 /* FirebaseConfiguratorEntryPoint.swift in Sources */,
 				374A0E6B28EDDAC000D2D396 /* CarouselPhotosCell.swift in Sources */,
 				378FE4D328B125A50058B5F2 /* UIStackView+Extensions.swift in Sources */,
 				37D5C56B28E1D6D800385B06 /* SimpleTextfieldCell.swift in Sources */,
-				37B9C30428B54ABD00134380 /* PreferencesSellView.swift in Sources */,
+				37B9C30428B54ABD00134380 /* PreferencesView.swift in Sources */,
 				3740F95F28EC992700D0AC3F /* BaseViewTable.swift in Sources */,
 				37EB508028B11CD100185E83 /* AppDelegate.swift in Sources */,
 				3740F96628EC9E8E00D0AC3F /* AddProductViewController.swift in Sources */,
@@ -1180,9 +1200,9 @@
 				37CDAD942910668E0052C71F /* ProductDetailViewController.swift in Sources */,
 				37CDAD96291066B70052C71F /* ProductDetailView.swift in Sources */,
 				375DD4B4290D63480058C05B /* AuthEndpoint.swift in Sources */,
-				375DD4B8290D63F50058C05B /* PreferencesSellViewModel.swift in Sources */,
+				375DD4B8290D63F50058C05B /* PreferencesViewModel.swift in Sources */,
 				37AF8DD528E87EF500AD5693 /* CompositeEntryPoint.swift in Sources */,
-				37B9C30628B54B4D00134380 /* PreferencesSellCoordinator.swift in Sources */,
+				37B9C30628B54B4D00134380 /* PreferencesCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
 				378CA01128EF3FCC003DE99F /* SimpleTextViewCell.swift in Sources */,
 				3714E1FD29099D7600EC08C0 /* JSONParameterEncoder.swift in Sources */,

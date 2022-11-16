@@ -8,7 +8,7 @@
 import Foundation
 @testable import Mart
 
-class PreferencesSellViewControllerSpy: PreferencesSellViewControllerDelegate {
+class PreferencesSellViewControllerSpy: PreferencesViewControllerDelegate {
     var renderButtonsCalled = false
     
     func renderButtons(categories: [Mart.CategoryResponse]?) {

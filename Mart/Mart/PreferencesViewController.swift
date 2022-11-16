@@ -7,16 +7,16 @@
 
 import UIKit
 
-protocol PreferencesSellViewControllerDelegate: AnyObject {
+protocol PreferencesViewControllerDelegate: AnyObject {
     func renderButtons(categories: [CategoryResponse]?)
 }
 
-class PreferencesSellViewController: UIViewController {
+class PreferencesViewController: UIViewController {
     
-    private var viewModel: PreferencesSellViewModelProtocol
-    private var preferencesView = PreferencesSellView()
+    private var viewModel: PreferencesViewModelProtocol
+    private var preferencesView = PreferencesView()
     
-    init(viewModel: PreferencesSellViewModelProtocol) {
+    init(viewModel: PreferencesViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -54,7 +54,7 @@ class PreferencesSellViewController: UIViewController {
     }
 }
 
-extension PreferencesSellViewController: PreferencesSellViewControllerDelegate {
+extension PreferencesViewController: PreferencesViewControllerDelegate {
     
     func renderButtons(categories: [CategoryResponse]?) {
         if let categories = categories {
@@ -65,7 +65,7 @@ extension PreferencesSellViewController: PreferencesSellViewControllerDelegate {
     }
 }
 
-extension PreferencesSellViewController: PreferencesSellViewDelegate {
+extension PreferencesViewController: PreferencesViewDelegate {
     
     func buttonAction(preferences: TypePreferences) {
         viewModel.navigateToHome(index: preferences.rawValue)

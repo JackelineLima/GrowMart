@@ -10,6 +10,7 @@ import UIKit
 protocol LoginViewDelegate: AnyObject {
     func continueButtonFacebook()
     func continueButtonGoogle()
+    func didTap(login: String, password: String)
 }
 
 final class LoginView: UIView {
@@ -19,7 +20,7 @@ final class LoginView: UIView {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 27
+        stackView.spacing = 16
         return stackView
     }()
     
@@ -35,6 +36,42 @@ final class LoginView: UIView {
         view.image = UIImage(named: "bags")
         view.contentMode = .scaleAspectFit
         return view
+    }()
+    
+    private lazy var loginTextField: RightIconTextField = {
+        let element = RightIconTextField()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.layer.borderColor = UIColor(rgb: 0x25282B).cgColor
+        element.layer.borderWidth = 1
+        element.layer.cornerRadius = 5
+        element.font = UIFontStyle.customFont(name: .f18PrimaryMedium)
+        element.placeholder = "login"
+        return element
+    }()
+    
+    private lazy var passwordTextField: RightIconTextField = {
+        let element = RightIconTextField()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.layer.borderColor = UIColor(rgb: 0x25282B).cgColor
+        element.layer.borderWidth = 1
+        element.layer.cornerRadius = 5
+        element.font = UIFontStyle.customFont(name: .f18PrimaryMedium)
+        element.isSecureTextEntry = true
+        element.placeholder = "senha"
+        return element
+    }()
+    
+    private lazy var loginButton: UIButton = {
+        let element = UIButton()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.layer.cornerRadius = 5
+        element.addTarget(self, action: #selector(didTapLogin), for: .touchUpInside)
+        element.configuration = .setButtonConfiguration(
+            backgroundColor: .init(rgb: 0xFFC13B),
+            title: "entrar",
+            font: .f18PrimaryMedium,
+            textColor: .white)
+        return element
     }()
     
     private lazy var facebookButton: UIButton = {
@@ -60,7 +97,7 @@ final class LoginView: UIView {
         button.addTarget(self, action: #selector(continueButtonGoogle), for: .touchUpInside)
         return button
     }()
-
+    
     init() {
         super.init(frame: .zero)
         setupView()
@@ -87,6 +124,9 @@ extension LoginView: ViewCodable {
         addSubview(stackView)
         stackView.addArrangedSubview(logoImageView)
         stackView.addArrangedSubview(bagsImageView)
+        stackView.addArrangedSubview(loginTextField)
+        stackView.addArrangedSubview(passwordTextField)
+        stackView.addArrangedSubview(loginButton)
         stackView.addArrangedSubview(facebookButton)
         stackView.addArrangedSubview(googleButton)
     }
@@ -95,6 +135,8 @@ extension LoginView: ViewCodable {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            loginTextField.heightAnchor.constraint(equalToConstant: 40),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 40),
             stackView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.75),
             facebookButton.heightAnchor.constraint(equalToConstant: 40),
             googleButton.heightAnchor.constraint(equalToConstant: 40)
@@ -105,6 +147,11 @@ extension LoginView: ViewCodable {
         subviews.forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
         stackView.subviews.forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
         backgroundColor = .white
-        stackView.setCustomSpacing(16, after: facebookButton)
+        stackView.setCustomSpacing(24, after: passwordTextField)
+    }
+    
+    @objc func didTapLogin() {
+        delegate?.didTap(login: loginTextField.text ?? "",
+                        password: passwordTextField.text ?? "")
     }
 }

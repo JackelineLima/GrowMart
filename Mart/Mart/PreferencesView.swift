@@ -14,13 +14,13 @@ enum TypePreferences: Int {
     case others
 }
 
-protocol PreferencesSellViewDelegate: AnyObject {
+protocol PreferencesViewDelegate: AnyObject {
     func buttonAction(preferences: TypePreferences)
 }
 
-final class PreferencesSellView: UIView {
+final class PreferencesView: UIView {
 
-    weak var delegate: PreferencesSellViewDelegate?
+    weak var delegate: PreferencesViewDelegate?
     private var categories: [CategoryResponse] = []
     
     private lazy var preferencesStackView: UIStackView = {
@@ -36,7 +36,7 @@ final class PreferencesSellView: UIView {
     private lazy var preferecensLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "O que você quer comprar?"
+        label.text = "O que você quer comprar/vender?"
         label.textAlignment = .center
         label.textColor = .init(rgb: 0x1E3D59)
         label.font = UIFontStyle.customFont(name: .f30PrimaryExtraBold)
@@ -93,7 +93,7 @@ final class PreferencesSellView: UIView {
     }
 }
 
-extension PreferencesSellView: ViewCodable {
+extension PreferencesView: ViewCodable {
     
     func buildViewHierarchy() {
         addSubViews([preferecensLabel, preferencesStackView])
