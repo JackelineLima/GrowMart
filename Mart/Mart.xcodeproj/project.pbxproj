@@ -412,6 +412,7 @@
 				3740F96428EC9E8E00D0AC3F /* AddProductViewModel.swift */,
 			);
 			name = AddProduct;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		374A0E6928EDD97200D2D396 /* Cells */ = {
@@ -458,6 +459,7 @@
 				376BAF162919544C00FD54D7 /* TabBarViewController.swift */,
 			);
 			name = Tabbar;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37852F4F28CCE1DD00DD2425 /* Commons */ = {
@@ -500,6 +502,7 @@
 				37A9C7D428CFBE5E0036FE76 /* HomeView.swift */,
 			);
 			name = Home;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		379A1CC928B27F880090E451 /* Login */ = {
@@ -511,6 +514,7 @@
 				376BAF18291954BD00FD54D7 /* LoginViewModel.swift */,
 			);
 			name = Login;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		379A1CCA28B282B30090E451 /* Fonts */ = {
@@ -557,6 +561,7 @@
 				376BAD1E291555F200FD54D7 /* FavoriteButton.swift */,
 			);
 			name = Components;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37AF8DD128E87E8900AD5693 /* AppDelegate */ = {
@@ -659,6 +664,7 @@
 				37B466D128C3ECDF006C18D8 /* CheckoutViewModel.swift */,
 			);
 			name = Checkout;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37B9C30028B548AE00134380 /* Preferences */ = {
@@ -670,23 +676,7 @@
 				375DD4B7290D63F50058C05B /* PreferencesViewModel.swift */,
 			);
 			name = Preferences;
-			sourceTree = "<group>";
-		};
-		37BF25DD28B1356E00E0066A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				376BAF152919542F00FD54D7 /* Tabbar */,
-				37CDAD922910662F0052C71F /* ProductDetail */,
-				3740F96028EC9E7400D0AC3F /* AddProduct */,
-				37B466CD28C3ECB7006C18D8 /* Checkout */,
-				37AEB5EC28BA6B6200987F56 /* Components */,
-				37E1009828D8A7A8008E461F /* EditProfile */,
-				3798D67E28BAB7C100887BC6 /* Home */,
-				379A1CC928B27F880090E451 /* Login */,
-				37B9C30028B548AE00134380 /* Preferences */,
-				37E1009728D8A79F008E461F /* Profile */,
-			);
-			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37BF25DE28B1358000E0066A /* Utils */ = {
@@ -779,6 +769,7 @@
 				376BABDD291440DA00FD54D7 /* ProductDetailCoodinator.swift */,
 			);
 			name = ProductDetail;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37E1009728D8A79F008E461F /* Profile */ = {
@@ -790,6 +781,7 @@
 				37E1009C28D8A7CA008E461F /* ProfileViewModel.swift */,
 			);
 			name = Profile;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37E1009828D8A7A8008E461F /* EditProfile */ = {
@@ -801,6 +793,7 @@
 				37E100A428D8A7D9008E461F /* EditProfileViewModel.swift */,
 			);
 			name = EditProfile;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		37EB507328B11CD100185E83 = {
@@ -827,7 +820,7 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
-				CBBEEB9D292582EF009DD49F /* Modules */,
+				CBBEEB9E292671DB009DD49F /* Modules */,
 				3714E1FA29099CFE00EC08C0 /* Networking */,
 				37AF8DD128E87E8900AD5693 /* AppDelegate */,
 				37542B5C28E4E493000C8791 /* Localizable */,
@@ -835,7 +828,6 @@
 				37B0700928C6B2B7004490B3 /* Model */,
 				379A1CCA28B282B30090E451 /* Fonts */,
 				37BF25DE28B1358000E0066A /* Utils */,
-				37BF25DD28B1356E00E0066A /* Views */,
 				37EB508828B11CD100185E83 /* Assets.xcassets */,
 				37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */,
 				37EB508D28B11CD100185E83 /* Info.plist */,
@@ -869,9 +861,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CBBEEB9D292582EF009DD49F /* Modules */ = {
+		CBBEEB9E292671DB009DD49F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				376BAF152919542F00FD54D7 /* Tabbar */,
+				37CDAD922910662F0052C71F /* ProductDetail */,
+				3740F96028EC9E7400D0AC3F /* AddProduct */,
+				37B466CD28C3ECB7006C18D8 /* Checkout */,
+				37AEB5EC28BA6B6200987F56 /* Components */,
+				37E1009828D8A7A8008E461F /* EditProfile */,
+				3798D67E28BAB7C100887BC6 /* Home */,
+				379A1CC928B27F880090E451 /* Login */,
+				37B9C30028B548AE00134380 /* Preferences */,
+				37E1009728D8A79F008E461F /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
