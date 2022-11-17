@@ -45,7 +45,6 @@
 		376BAD2C29159A1800FD54D7 /* PreferencesSellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD2B29159A1800FD54D7 /* PreferencesSellViewModelTests.swift */; };
 		376BAD2F29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD2E29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift */; };
 		376BAD3129159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */; };
-		376BAF172919544C00FD54D7 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAF162919544C00FD54D7 /* TabBarViewController.swift */; };
 		376BAF19291954BD00FD54D7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAF18291954BD00FD54D7 /* LoginViewModel.swift */; };
 		376BAF1B291959A800FD54D7 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BAF1A291959A800FD54D7 /* UserDefaultsWrapper.swift */; };
 		377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */; };
@@ -198,7 +197,6 @@
 		376BAD2B29159A1800FD54D7 /* PreferencesSellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewModelTests.swift; sourceTree = "<group>"; };
 		376BAD2E29159AB900FD54D7 /* PreferencesSellViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellViewControllerSpy.swift; sourceTree = "<group>"; };
 		376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesSellCoodinatorSpy.swift; sourceTree = "<group>"; };
-		376BAF162919544C00FD54D7 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		376BAF18291954BD00FD54D7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		376BAF1A291959A800FD54D7 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		377D35A328DA5A2C007BEA76 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
@@ -451,15 +449,6 @@
 				376BAD3029159B8B00FD54D7 /* PreferencesSellCoodinatorSpy.swift */,
 			);
 			path = Spies;
-			sourceTree = "<group>";
-		};
-		376BAF152919542F00FD54D7 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				376BAF162919544C00FD54D7 /* TabBarViewController.swift */,
-			);
-			name = Tabbar;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		37852F4F28CCE1DD00DD2425 /* Commons */ = {
@@ -820,7 +809,7 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
-				CBBEEB9E292671DB009DD49F /* Modules */,
+				CBE8757A292675570002267F /* Modules */,
 				3714E1FA29099CFE00EC08C0 /* Networking */,
 				37AF8DD128E87E8900AD5693 /* AppDelegate */,
 				37542B5C28E4E493000C8791 /* Localizable */,
@@ -861,10 +850,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CBBEEB9E292671DB009DD49F /* Modules */ = {
+		CBE8757A292675570002267F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				376BAF152919542F00FD54D7 /* Tabbar */,
 				37CDAD922910662F0052C71F /* ProductDetail */,
 				3740F96028EC9E7400D0AC3F /* AddProduct */,
 				37B466CD28C3ECB7006C18D8 /* Checkout */,
@@ -1157,7 +1145,6 @@
 				3798D68728BAB7E000887BC6 /* HomeViewModel.swift in Sources */,
 				37BF25DC28B1349E00E0066A /* LoginView.swift in Sources */,
 				376BAF1B291959A800FD54D7 /* UserDefaultsWrapper.swift in Sources */,
-				376BAF172919544C00FD54D7 /* TabBarViewController.swift in Sources */,
 				3798D68428BAB7E000887BC6 /* HomeCoordinator.swift in Sources */,
 				374A0E6F28EDDCF000D2D396 /* PhotoCell.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
