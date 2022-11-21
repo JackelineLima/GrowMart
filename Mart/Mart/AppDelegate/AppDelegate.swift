@@ -15,6 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let appDelegateEntryPoint = EntryPointFactory.makeEntryPoints()
     
+    lazy var coreDataStack: CoreDataStack = .init(modelName: "Favorites")
+
+    static let sharedAppDelegate: AppDelegate = {
+        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("Unexpected app delegate type, did it change? \(String(describing: UIApplication.shared.delegate))")
+        }
+        return delegate
+    }()
+    
     var startupEntryPoint: StartupConfiguratorEntryPoint? {
         if #available(iOS 13, *) {
             guard let firstEntryPoint = appDelegateEntryPoint.sceneDelegationEntryPoint.first(where: { $0 is StartupConfiguratorEntryPoint }),

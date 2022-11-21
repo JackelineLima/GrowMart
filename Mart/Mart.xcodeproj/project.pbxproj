@@ -142,6 +142,14 @@
 		37F0D7E328C66BBF0018694A /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F0D7E228C66BBF0018694A /* CheckoutTableViewCell.swift */; };
 		87CF320DA2C8AB29D1D22D8D /* Pods_Mart_MartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D9F0502FD282E9904552C5 /* Pods_Mart_MartTests.framework */; };
 		A785EEC3F5189C50BE00D601 /* Pods_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3617D7A714B9231A80F3EBCE /* Pods_Mart.framework */; };
+		CBE8757C292676830002267F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8757B292676830002267F /* TabBarViewController.swift */; };
+		CBE8758029269CFC0002267F /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE8757F29269CFC0002267F /* FavoritesViewController.swift */; };
+		CBEEF711292BDD90004B06F7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEEF710292BDD90004B06F7 /* FavoritesView.swift */; };
+		CBEEF713292BDE25004B06F7 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEEF712292BDE25004B06F7 /* FavoriteCell.swift */; };
+		CBEEF715292BDEEA004B06F7 /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEEF714292BDEEA004B06F7 /* FavoriteModel.swift */; };
+		CBEEF718292C018A004B06F7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEEF717292C018A004B06F7 /* CoreDataStack.swift */; };
+		CBEEF71B292C01F3004B06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEEF71A292C01F3004B06F7 /* DataManager.swift */; };
+		CBEEF71E292C03BA004B06F7 /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBEEF71C292C03BA004B06F7 /* Favorites.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -299,6 +307,15 @@
 		53EB52F8ADBE15D7C6615CD2 /* Pods-Mart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart.debug.xcconfig"; path = "Target Support Files/Pods-Mart/Pods-Mart.debug.xcconfig"; sourceTree = "<group>"; };
 		7AED3E0325FF3F8F67157DF6 /* Pods-Mart-MartTests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart-MartTests.mock.xcconfig"; path = "Target Support Files/Pods-Mart-MartTests/Pods-Mart-MartTests.mock.xcconfig"; sourceTree = "<group>"; };
 		BD71B4B3A23AD38608AC8EB9 /* Pods-Mart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart.release.xcconfig"; path = "Target Support Files/Pods-Mart/Pods-Mart.release.xcconfig"; sourceTree = "<group>"; };
+		CBE8757B292676830002267F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CBE8757F29269CFC0002267F /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		CBEEF710292BDD90004B06F7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		CBEEF712292BDE25004B06F7 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		CBEEF714292BDEEA004B06F7 /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
+		CBEEF717292C018A004B06F7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		CBEEF71A292C01F3004B06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CBEEF71D292C03BA004B06F7 /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
+		CBEEF71F292C1485004B06F7 /* auth.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = auth.json; sourceTree = "<group>"; };
 		EF87CDA58829EB81C31ADF5A /* Pods-Mart.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mart.mock.xcconfig"; path = "Target Support Files/Pods-Mart/Pods-Mart.mock.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -382,6 +399,7 @@
 				3714E20B29099E9100EC08C0 /* categories.json */,
 				37CDAEC82911951A0052C71F /* products.json */,
 				37CDAEC9291195520052C71F /* product-detail.json */,
+				CBEEF71F292C1485004B06F7 /* auth.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -550,7 +568,6 @@
 				376BAD1E291555F200FD54D7 /* FavoriteButton.swift */,
 			);
 			name = Components;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		37AF8DD128E87E8900AD5693 /* AppDelegate */ = {
@@ -571,6 +588,7 @@
 			children = (
 				378DC46028C6888800461CBD /* ProductModel.swift */,
 				378D30AC28D93C7400E021A8 /* EditProfile.swift */,
+				CBEEF714292BDEEA004B06F7 /* FavoriteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -809,6 +827,8 @@
 		37EB507E28B11CD100185E83 /* Mart */ = {
 			isa = PBXGroup;
 			children = (
+				CBEEF719292C01B2004B06F7 /* DataBase */,
+				37AEB5EC28BA6B6200987F56 /* Components */,
 				CBE8757A292675570002267F /* Modules */,
 				3714E1FA29099CFE00EC08C0 /* Networking */,
 				37AF8DD128E87E8900AD5693 /* AppDelegate */,
@@ -821,6 +841,7 @@
 				37EB508A28B11CD100185E83 /* LaunchScreen.storyboard */,
 				37EB508D28B11CD100185E83 /* Info.plist */,
 				376BAF1A291959A800FD54D7 /* UserDefaultsWrapper.swift */,
+				CBEEF71C292C03BA004B06F7 /* Favorites.xcdatamodeld */,
 			);
 			path = Mart;
 			sourceTree = "<group>";
@@ -853,10 +874,11 @@
 		CBE8757A292675570002267F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CBE8757E29269CEC0002267F /* Favorites */,
+				CBE8757D29269CB20002267F /* Tabbar */,
 				37CDAD922910662F0052C71F /* ProductDetail */,
 				3740F96028EC9E7400D0AC3F /* AddProduct */,
 				37B466CD28C3ECB7006C18D8 /* Checkout */,
-				37AEB5EC28BA6B6200987F56 /* Components */,
 				37E1009828D8A7A8008E461F /* EditProfile */,
 				3798D67E28BAB7C100887BC6 /* Home */,
 				379A1CC928B27F880090E451 /* Login */,
@@ -864,6 +886,41 @@
 				37E1009728D8A79F008E461F /* Profile */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		CBE8757D29269CB20002267F /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				CBE8757B292676830002267F /* TabBarViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		CBE8757E29269CEC0002267F /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				CBE8757F29269CFC0002267F /* FavoritesViewController.swift */,
+				CBEEF710292BDD90004B06F7 /* FavoritesView.swift */,
+				CBEEF712292BDE25004B06F7 /* FavoriteCell.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		CBEEF716292C017A004B06F7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CBEEF717292C018A004B06F7 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CBEEF719292C01B2004B06F7 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				CBEEF716292C017A004B06F7 /* CoreData */,
+				CBEEF71A292C01F3004B06F7 /* DataManager.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1128,6 +1185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEEF718292C018A004B06F7 /* CoreDataStack.swift in Sources */,
 				3714E21229099EED00EC08C0 /* HTTPTask.swift in Sources */,
 				3714E20929099E4D00EC08C0 /* NetworkManager.swift in Sources */,
 				375DD4B6290D63840058C05B /* ProductsEndpoint.swift in Sources */,
@@ -1148,8 +1206,10 @@
 				3798D68428BAB7E000887BC6 /* HomeCoordinator.swift in Sources */,
 				374A0E6F28EDDCF000D2D396 /* PhotoCell.swift in Sources */,
 				378FE4CF28B123D20058B5F2 /* ViewCodable.swift in Sources */,
+				CBE8758029269CFC0002267F /* FavoritesViewController.swift in Sources */,
 				3714E21A29099F5500EC08C0 /* AFRouter.swift in Sources */,
 				379A1CC828B27E920090E451 /* UIColor+Extensions.swift in Sources */,
+				CBEEF715292BDEEA004B06F7 /* FavoriteModel.swift in Sources */,
 				377D35A428DA5A2C007BEA76 /* UITableViewCell+Extensions.swift in Sources */,
 				3740F96728EC9E8E00D0AC3F /* AddProductView.swift in Sources */,
 				376BABDC291438D500FD54D7 /* ProductDetailViewModel.swift in Sources */,
@@ -1186,6 +1246,7 @@
 				373754F528C3F02B0060EF13 /* LineNavigationView.swift in Sources */,
 				3798D68528BAB7E000887BC6 /* HomeViewController.swift in Sources */,
 				37852F5128CCE1EE00DD2425 /* SearchBar.swift in Sources */,
+				CBEEF71B292C01F3004B06F7 /* DataManager.swift in Sources */,
 				3740F96A28ECA79600D0AC3F /* SelectorCell.swift in Sources */,
 				37A12C6228C7812C00E12950 /* DefaultViewController.swift in Sources */,
 				37542B5828E4E35F000C8791 /* Strings.swift in Sources */,
@@ -1199,6 +1260,7 @@
 				375DD4B4290D63480058C05B /* AuthEndpoint.swift in Sources */,
 				375DD4B8290D63F50058C05B /* PreferencesViewModel.swift in Sources */,
 				37AF8DD528E87EF500AD5693 /* CompositeEntryPoint.swift in Sources */,
+				CBEEF71E292C03BA004B06F7 /* Favorites.xcdatamodeld in Sources */,
 				37B9C30628B54B4D00134380 /* PreferencesCoordinator.swift in Sources */,
 				37E100A828D8A7D9008E461F /* EditProfileViewModel.swift in Sources */,
 				378CA01128EF3FCC003DE99F /* SimpleTextViewCell.swift in Sources */,
@@ -1216,6 +1278,7 @@
 				37B466D528C3ECDF006C18D8 /* CheckoutViewModel.swift in Sources */,
 				3714E20629099E1800EC08C0 /* HomeEndpoint.swift in Sources */,
 				37EB508228B11CD100185E83 /* SceneDelegate.swift in Sources */,
+				CBE8757C292676830002267F /* TabBarViewController.swift in Sources */,
 				37CE7FF128D91804009F04CC /* GrowButton.swift in Sources */,
 				3714E21429099F0200EC08C0 /* NetworkEnvironment.swift in Sources */,
 				3714E21829099F3300EC08C0 /* Router.swift in Sources */,
@@ -1224,8 +1287,10 @@
 				3714E21629099F1800EC08C0 /* NetworkLogger.swift in Sources */,
 				3740F96528EC9E8E00D0AC3F /* AddProductCoordinator.swift in Sources */,
 				37E1009E28D8A7CA008E461F /* ProfileViewController.swift in Sources */,
+				CBEEF711292BDD90004B06F7 /* FavoritesView.swift in Sources */,
 				37E100A028D8A7CA008E461F /* ProfileViewModel.swift in Sources */,
 				37F0D7E328C66BBF0018694A /* CheckoutTableViewCell.swift in Sources */,
+				CBEEF713292BDE25004B06F7 /* FavoriteCell.swift in Sources */,
 				37DDF2DD28B287DF003205DE /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1366,6 +1431,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				CURRENT_SCHEME_NAME = Mock;
 				DEVELOPMENT_TEAM = XJCQGGA77M;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1533,6 +1599,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				CURRENT_SCHEME_NAME = Debug;
 				DEVELOPMENT_TEAM = XJCQGGA77M;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1566,6 +1633,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				CURRENT_SCHEME_NAME = Release;
 				DEVELOPMENT_TEAM = XJCQGGA77M;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mart/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1621,6 +1689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CBEEF71C292C03BA004B06F7 /* Favorites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBEEF71D292C03BA004B06F7 /* Favorites.xcdatamodel */,
+			);
+			currentVersion = CBEEF71D292C03BA004B06F7 /* Favorites.xcdatamodel */;
+			path = Favorites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 37EB507428B11CD100185E83 /* Project object */;
 }

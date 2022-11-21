@@ -12,6 +12,10 @@ protocol HomeViewDelegate: AnyObject {
     func didTapSegmented(index: Int)
     func numberOfRows() -> Int
     func getProducts() -> [ProductResponse]
+    
+    func didTapFilterButton()
+    func isFavorite(id: String) -> Bool
+    func didTapFavorite(id: String, isFavorite: Bool)
 }
 
 final class HomeView: UIView, ViewCodable {
@@ -19,7 +23,7 @@ final class HomeView: UIView, ViewCodable {
     weak var delegate: HomeViewDelegate?
     private var categoryIndex: Int
     private let accessories: [String] = ["roupas", "acessórios", "outros"]
-
+    
     private lazy var search: SearchBar = {
         let search = SearchBar()
         search.placeholder = "buscar"
@@ -65,6 +69,24 @@ final class HomeView: UIView, ViewCodable {
         return segmented
     }()
     
+    private lazy var filterButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(didTapFilterButton), for: .touchUpInside)
+//        button.configuration = .setButtonConfiguration(backgroundColor: .init(rgb: 0xFFC13B), title: "filtros", font: .f18PrimarySemiBold, textColor: .white)
+        button.backgroundColor = .red
+        return button
+    }()
+    
+    private lazy var closeBannerButton: UIButton = {
+        let element = UIButton(type: .custom)
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.addTarget(self, action: #selector(didTapCloseBannerButton), for: .touchUpInside)
+        element.setImage(.makeWith(systemImage: .xmark, color: .white), for: .normal)
+        return element
+    }()
+    
     lazy var collectionView: HomeCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = .init(top: 32, left: 0, bottom: 16, right: 0)
@@ -88,18 +110,18 @@ final class HomeView: UIView, ViewCodable {
         backgroundColor = .white
         collectionView.isScrollEnabled = false
         setupView()
-
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func buildViewHierarchy() {
         addSubview(search)
         addSubview(scrollView)
         scrollView.addSubview(contentView)
-        contentView.addSubViews([bannerView, segmentedControl, collectionView])
+        contentView.addSubViews([bannerView, segmentedControl, collectionView, filterButton, closeBannerButton])
     }
     
     func setupConstraints() {
@@ -115,7 +137,7 @@ final class HomeView: UIView, ViewCodable {
             scrollView.topAnchor.constraint(equalTo: search.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 32),
@@ -140,16 +162,25 @@ final class HomeView: UIView, ViewCodable {
             bannerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             bannerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             bannerView.heightAnchor.constraint(equalToConstant: 150),
-
+            
+            closeBannerButton.heightAnchor.constraint(equalToConstant: 40),
+            closeBannerButton.widthAnchor.constraint(equalToConstant: 40),
+            closeBannerButton.topAnchor.constraint(equalTo: bannerView.topAnchor),
+            closeBannerButton.trailingAnchor.constraint(equalTo: bannerView.trailingAnchor),
+            
             segmentedControl.topAnchor.constraint(equalTo: bannerView.bottomAnchor, constant: 32),
             segmentedControl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             segmentedControl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             segmentedControl.heightAnchor.constraint(equalToConstant: 45),
-
+            
             collectionView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 8),
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            filterButton.heightAnchor.constraint(equalToConstant: 40),
+            filterButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            filterButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
         ])
     }
     
@@ -157,6 +188,22 @@ final class HomeView: UIView, ViewCodable {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
+    }
+    
+    @objc
+    func didTapFilterButton() {
+        delegate?.didTapFilterButton()
+    }
+    
+    @objc
+    func didTapCloseBannerButton() {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
+            self.bannerView.alpha = 0.0
+        }, completion: { _ in
+            self.bannerView.removeFromSuperview()
+            self.segmentedControl.topAnchor.constraint(equalTo: self.search.bottomAnchor,
+                                                       constant: 32).isActive = true
+        })
     }
 }
 
@@ -170,7 +217,13 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionCell.identifier, for: indexPath) as? HomeCollectionCell, let products = delegate?.getProducts() else { return UICollectionViewCell() }
         
-        cell.setup(with: products[indexPath.row])
+        var isFavorite = false
+        if let id = products[indexPath.row].id,
+           let value = delegate?.isFavorite(id: id) {
+            isFavorite = value
+        }
+        cell.delegate = self
+        cell.setup(with: products[indexPath.row], isFavorite: isFavorite)
         
         return cell
     }
@@ -182,8 +235,14 @@ extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 
 extension HomeView: SegmentedBarDelegate {
-
+    
     func didTapSegmented(index: Int) {
         delegate?.didTapSegmented(index: index)
+    }
+}
+
+extension HomeView: HomeViewCellDelegate {
+    func didTapFavorite(id: String, isFavorite: Bool) {
+        delegate?.didTapFavorite(id: id, isFavorite: isFavorite)
     }
 }

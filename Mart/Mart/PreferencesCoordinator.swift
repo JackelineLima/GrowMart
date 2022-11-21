@@ -26,6 +26,8 @@ class PreferencesCoordinator: PreferencesCoordinatorProtocol {
     
     func navigateToHome(index category: Int) {
         let coodinator = HomeCoordinator(navigationController: navigationController, category)
-        coodinator.start()
+        let coodinatorTab = TabBarCoodinator(navigationController: navigationController, category)
+        coodinatorTab.start()
+//        coodinator.start()
     }
 }

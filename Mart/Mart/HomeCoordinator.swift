@@ -31,7 +31,7 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
     }
     
     func navigateToCar() {
-        let coodinator = ProfileCoordinator(navigationController: navigationController)
+        let coodinator = CheckoutCoordinator(navigationController: navigationController)
         coodinator.start()
     }
     

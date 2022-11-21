@@ -45,6 +45,20 @@ class HomeViewController: DefaultViewController {
 
 extension HomeViewController: HomeViewDelegate {
     
+    func didTapFilterButton() {
+        
+    }
+    
+    func isFavorite(id: String) -> Bool {
+        
+        return false
+    }
+    
+    func didTapFavorite(id: String, isFavorite: Bool) {
+        
+    }
+    
+    
     func didTapProduct(at index: Int) {
         viewModel.navigatoToProductDetail()
     }

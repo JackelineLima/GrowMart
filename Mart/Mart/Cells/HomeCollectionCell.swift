@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol HomeViewCellDelegate: AnyObject {
+    func didTapFavorite(id: String, isFavorite: Bool)
+}
+
 class HomeCollectionCell: UICollectionViewCell, ViewCodable {
     
     static let identifier = "HomeCollectionCell"
+    
+    weak var delegate: HomeViewCellDelegate?
     
     private lazy var productImageView: UIImageView = {
         let image = UIImageView()
@@ -107,25 +113,19 @@ class HomeCollectionCell: UICollectionViewCell, ViewCodable {
         contentView.clipsToBounds = true
     }
     
-    public func setup(with product: ProductResponse) {
+    public func setup(with product: ProductResponse, isFavorite: Bool) {
         priceLabel.text = product.price
         nameLabel.text = product.name
+        favoriteButton.productId = product.id ?? ""
+        favoriteButton.isFavorite = isFavorite
         
         guard let url = product.image else { return }
         productImageView.addImageFromURL(urlString: url)
     }
     
     @objc func didTapFavorite() {
-        print("ok")
-    }
-    
-    private func setupGestureRecognizerForCell() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
-        self.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc private func didTap(_ gesture: UIGestureRecognizer) {
-//        onTap?()
-        print("okkk")
+        favoriteButton.toggleState()
+        delegate?.didTapFavorite(id: favoriteButton.productId,
+                                 isFavorite: favoriteButton.isFavorite)
     }
 }
