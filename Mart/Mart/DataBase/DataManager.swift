@@ -23,17 +23,13 @@ enum DataManagerKey: String {
 }
 
 class DataManager {
-    // MARK: Private Properties
+    
 //    private var source: DatabaseSource = .coreData
 ////    private lazy var realm = try! Realm()
-//
-//    // MARK: Public Properties
-//    
-//    static let shared = DataManager()
-//
-//    // MARK: Init
-//    
-//    private init() {}
+ 
+    static let shared = DataManager()
+
+    private init() {}
 //    
 //    // MARK: Public Methods
 //    func setupDatabaseSource(_ source: DatabaseSource) {
